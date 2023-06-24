@@ -22,7 +22,7 @@ package types
 
 const (
 	// DefaultEvmDenom is the default EVM denom.
-	DefaultEvmDenom = "abera"
+	DefaultEvmDenom = "ablack"
 )
 
 // DefaultParams contains the default values for all parameters.

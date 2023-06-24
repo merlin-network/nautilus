@@ -22,4 +22,4 @@ KEY1="val0"
 KEYRING="test"
 HOMEDIR="/root/.polard"
 
-polard genesis add-genesis-account $KEY1 100000000000000000000000000abera --keyring-backend $KEYRING --home "$HOMEDIR"
+polard genesis add-genesis-account $KEY1 100000000000000000000000000ablack --keyring-backend $KEYRING --home "$HOMEDIR"

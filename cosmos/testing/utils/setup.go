@@ -89,8 +89,8 @@ type TestEncodingConfig struct {
 func MakeTestEncodingConfig(modules ...module.AppModuleBasic) TestEncodingConfig {
 	aminoCodec := codec.NewLegacyAmino()
 	interfaceRegistry := codectestutil.CodecOptions{
-		AccAddressPrefix: "polar",
-		ValAddressPrefix: "polarvaloper",
+		AccAddressPrefix: "black",
+		ValAddressPrefix: "blackvaloper",
 	}.NewInterfaceRegistry()
 	codec := codec.NewProtoCodec(interfaceRegistry)
 

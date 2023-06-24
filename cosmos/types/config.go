@@ -30,7 +30,7 @@ import (
 
 const (
 	// Bech32Prefix defines the Bech32 prefix used for EthAccounts.
-	Bech32Prefix = "polar"
+	Bech32Prefix = "black"
 	// Bech32PrefixAccAddr defines the Bech32 prefix of an account's address.
 	Bech32PrefixAccAddr = Bech32Prefix
 	// Bech32PrefixAccPub defines the Bech32 prefix of an account's public key.

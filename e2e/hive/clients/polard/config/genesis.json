@@ -17,21 +17,21 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "polar1qk36tw89pgf5f8jhxf4hcug3q20u35x2p4jmm5",
+          "address": "black1qk36tw89pgf5f8jhxf4hcug3q20u35x2p4jmm5",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "polar1l4qr3q3535su2ggy7kh2j04a35wd8vyshtuafh",
+          "address": "black1l4qr3q3535su2ggy7kh2j04a35wd8vyshtuafh",
           "pub_key": null,
           "account_number": "1",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "polar16z3wul8jkjksw60kr2gumsv7hk9l5ck5597nwa",
+          "address": "black16z3wul8jkjksw60kr2gumsv7hk9l5ck5597nwa",
           "pub_key": null,
           "account_number": "2",
           "sequence": "0"
@@ -48,28 +48,28 @@
       },
       "balances": [
         {
-          "address": "polar1qk36tw89pgf5f8jhxf4hcug3q20u35x2p4jmm5",
+          "address": "black1qk36tw89pgf5f8jhxf4hcug3q20u35x2p4jmm5",
           "coins": [
             {
-              "denom": "abera",
+              "denom": "ablack",
               "amount": "100000000000000000000000000"
             }
           ]
         },
         {
-          "address": "polar16z3wul8jkjksw60kr2gumsv7hk9l5ck5597nwa",
+          "address": "black16z3wul8jkjksw60kr2gumsv7hk9l5ck5597nwa",
           "coins": [
             {
-              "denom": "abera",
+              "denom": "ablack",
               "amount": "100000000000000000000000000"
             }
           ]
         },
         {
-          "address": "polar1l4qr3q3535su2ggy7kh2j04a35wd8vyshtuafh",
+          "address": "black1l4qr3q3535su2ggy7kh2j04a35wd8vyshtuafh",
           "coins": [
             {
-              "denom": "abera",
+              "denom": "ablack",
               "amount": "100000000000000000000000000"
             }
           ]
@@ -77,7 +77,7 @@
       ],
       "supply": [
         {
-          "denom": "abera",
+          "denom": "ablack",
           "amount": "300000000000000000000000000"
         }
       ],
@@ -87,7 +87,7 @@
     "consensus": null,
     "crisis": {
       "constant_fee": {
-        "denom": "abera",
+        "denom": "ablack",
         "amount": "1000"
       }
     },
@@ -177,13 +177,13 @@
                 },
                 "min_self_delegation": "1",
                 "delegator_address": "",
-                "validator_address": "polarvaloper1qk36tw89pgf5f8jhxf4hcug3q20u35x2a8zasm",
+                "validator_address": "blackvaloper1qk36tw89pgf5f8jhxf4hcug3q20u35x2a8zasm",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
                   "key": "/GmlSP30BD2b713XWL2l3O3hMlDKH1FxmBlIP6Ox47E="
                 },
                 "value": {
-                  "denom": "abera",
+                  "denom": "ablack",
                   "amount": "1000000000000000000000"
                 }
               }
@@ -230,7 +230,7 @@
       "deposit_params": {
         "min_deposit": [
           {
-            "denom": "abera"
+            "denom": "ablack"
           }
         ]
       },
@@ -281,7 +281,7 @@
         "annual_provisions": "0.000000000000000000"
       },
       "params": {
-        "mint_denom": "abera",
+        "mint_denom": "ablack",
         "inflation_rate_change": "0.130000000000000000",
         "inflation_max": "0.200000000000000000",
         "inflation_min": "0.070000000000000000",
@@ -306,7 +306,7 @@
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
-        "bond_denom": "abera",
+        "bond_denom": "ablack",
         "min_commission_rate": "0.000000000000000000"
       },
       "last_total_power": "0",

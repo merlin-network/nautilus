@@ -135,7 +135,7 @@ var _ = Describe("Distribution Precompile", func() {
 		amt := big.NewInt(123450000000)
 		tx, err = bankPrecompile.Send(txr, tf.Address("alice"), contractAddress, []bbindings.CosmosCoin{
 			{
-				Denom:  "abera",
+				Denom:  "ablack",
 				Amount: amt,
 			},
 		})

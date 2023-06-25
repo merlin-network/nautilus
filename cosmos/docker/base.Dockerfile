@@ -21,7 +21,7 @@
 ARG GO_VERSION=1.20.4
 ARG GOARCH=amd64
 ARG GOOS=linux
-ARG NAME=polaris-cosmos
+ARG NAME=blackfury-highbury
 ARG APP_NAME=polard
 ARG DB_BACKEND=pebbledb
 ARG CMD_PATH=./cosmos/simapp/polard

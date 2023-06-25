@@ -1,7 +1,7 @@
 {
-  "app_name": "polaris-cosmos",
-  "app_version": "v0.0.0",
-  "genesis_time": "2023-05-30T23:14:44.991554Z",
+  "app_name": "blackfury",
+  "app_version": "v1.0.0",
+  "genesis_time": "2023-06-25T10:42:28.685972524Z",
   "chain_id": "highbury_710-1",
   "initial_height": 1,
   "app_hash": null,
@@ -17,21 +17,21 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "black1qk36tw89pgf5f8jhxf4hcug3q20u35x2p4jmm5",
+          "address": "black1vav6xcx7h8fnlxsaz4xzlysgtteav6c5fwdr5d",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "black1l4qr3q3535su2ggy7kh2j04a35wd8vyshtuafh",
+          "address": "black1tpzqwmahwr4n8ma9vvnqfdwrupj2hv9va9ttd8",
           "pub_key": null,
           "account_number": "1",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "black16z3wul8jkjksw60kr2gumsv7hk9l5ck5597nwa",
+          "address": "black1w046jwv5evpdwgenun8u4we0fx4a637482hnhf",
           "pub_key": null,
           "account_number": "2",
           "sequence": "0"
@@ -48,7 +48,7 @@
       },
       "balances": [
         {
-          "address": "black1qk36tw89pgf5f8jhxf4hcug3q20u35x2p4jmm5",
+          "address": "black1tpzqwmahwr4n8ma9vvnqfdwrupj2hv9va9ttd8",
           "coins": [
             {
               "denom": "ablack",
@@ -57,7 +57,7 @@
           ]
         },
         {
-          "address": "black16z3wul8jkjksw60kr2gumsv7hk9l5ck5597nwa",
+          "address": "black1vav6xcx7h8fnlxsaz4xzlysgtteav6c5fwdr5d",
           "coins": [
             {
               "denom": "ablack",
@@ -66,7 +66,7 @@
           ]
         },
         {
-          "address": "black1l4qr3q3535su2ggy7kh2j04a35wd8vyshtuafh",
+          "address": "black1w046jwv5evpdwgenun8u4we0fx4a637482hnhf",
           "coins": [
             {
               "denom": "ablack",
@@ -75,12 +75,7 @@
           ]
         }
       ],
-      "supply": [
-        {
-          "denom": "ablack",
-          "amount": "300000000000000000000000000"
-        }
-      ],
+      "supply": [],
       "denom_metadata": [],
       "send_enabled": []
     },
@@ -88,7 +83,7 @@
     "crisis": {
       "constant_fee": {
         "denom": "ablack",
-        "amount": "1000"
+        "amount": "100000"
       }
     },
     "distribution": {
@@ -123,7 +118,6 @@
         "daoForkBlock": 0,
         "daoForkSupport": true,
         "eip150Block": 0,
-        "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
         "eip155Block": 0,
         "eip158Block": 0,
         "byzantiumBlock": 0,
@@ -148,13 +142,13 @@
       "coinbase": "0x0000000000000000000000000000000000000000",
       "alloc": {
         "20f33ce90a13a4b5e7697e3544c3083b8f8a51d4": {
-          "balance": "0x4563918244f40000"
+          "balance": "0x1b1ae4d6e2ef500000"
         }
       },
       "number": "0x0",
       "gasUsed": "0x0",
       "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-      "baseFeePerGas": null
+      "baseFeePerGas": "0x3b9aca00"
     },
     "genutil": {
       "gen_txs": [
@@ -177,10 +171,10 @@
                 },
                 "min_self_delegation": "1",
                 "delegator_address": "",
-                "validator_address": "blackvaloper1qk36tw89pgf5f8jhxf4hcug3q20u35x2a8zasm",
+                "validator_address": "blackvaloper1vav6xcx7h8fnlxsaz4xzlysgtteav6c52x9q8g",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "/GmlSP30BD2b713XWL2l3O3hMlDKH1FxmBlIP6Ox47E="
+                  "key": "8y2lMd57kRUdSRi1BE2z0yNdnZNb05QwSKoM/x+hAAo="
                 },
                 "value": {
                   "denom": "ablack",
@@ -188,7 +182,7 @@
                 }
               }
             ],
-            "memo": "5361432688d620acfdc2d425c1430f0c01048b7c@192.168.0.220:26656",
+            "memo": "67ed583c230ffede50f5ea980794df033fcf89b8@34.93.171.55:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -198,7 +192,7 @@
               {
                 "public_key": {
                   "@type": "/polaris.crypto.ethsecp256k1.v1.PubKey",
-                  "key": "AwjItkzy4rgPzJypyOxK2YmjNhQJtLfAKQhRgBccZGDW"
+                  "key": "A1c+JHJj7fsCajdHdD/1BkQCuWsrvPsPYaUNvvVE2A6l"
                 },
                 "mode_info": {
                   "single": {
@@ -217,7 +211,7 @@
             "tip": null
           },
           "signatures": [
-            "btJah6+IcP/MrNqy+bjxVNsa28cFTZAXI2ON/c6O13NvF762yw9rzBzhWjLbjW5cWll4rR1IbvSWtElLG/733gA="
+            "6DX003FXh1q7MgBKtUgPe7KN5etS95i/OeveLE5GylE/f+YN7qrcVJ/fmYb3sOj/aR+oBUFqyHLZLjkBo0HrFwE="
           ]
         }
       ]
@@ -239,7 +233,7 @@
       "params": {
         "min_deposit": [
           {
-            "denom": "stake",
+            "denom": "ablack",
             "amount": "10000000"
           }
         ],
@@ -255,7 +249,7 @@
         "expedited_threshold": "0.667000000000000000",
         "expedited_min_deposit": [
           {
-            "denom": "stake",
+            "denom": "ablack",
             "amount": "50000000"
           }
         ],
@@ -264,16 +258,6 @@
         "burn_vote_veto": true
       },
       "constitution": ""
-    },
-    "group": {
-      "group_seq": "0",
-      "groups": [],
-      "group_members": [],
-      "group_policy_seq": "0",
-      "group_policies": [],
-      "proposal_seq": "0",
-      "proposals": [],
-      "votes": []
     },
     "mint": {
       "minter": {
@@ -289,6 +273,8 @@
         "blocks_per_year": "6311520"
       }
     },
+    "params": null,
+    "runtime": null,
     "slashing": {
       "params": {
         "signed_blocks_window": "100",

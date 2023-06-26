@@ -24,7 +24,7 @@ import (
 	"math/big"
 )
 
-const DefaultEIP155ChainID = 2061
+const DefaultEIP155ChainID = 710
 
 var zero = uint64(0)
 

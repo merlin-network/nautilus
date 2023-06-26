@@ -10,14 +10,14 @@ import {Cosmos} from "./CosmosTypes.sol";
 /**
  * @notice Polaris implementation of ERC20 + EIP-2612.
  *
- * The PolarisERC20 token is used as the ERC20 token representation of IBC-originated coins on
+ * The BlackERC20 token is used as the ERC20 token representation of IBC-originated coins on
  * Cosmos SDK Polaris chains. Uses the bank module to actually hold account balances and execute
  * transfers. The authz module is used to set approvals and permissions for spends.
  *
  * @author Berachain Team
  * @author Solmate (https://github.com/Rari-Capital/solmate/blob/main/src/tokens/ERC20.sol)
  */
-contract PolarisERC20 is IERC20 {
+contract BlackERC20 is IERC20 {
     /*//////////////////////////////////////////////////////////////
                               ERC20 STORAGE
     //////////////////////////////////////////////////////////////*/
@@ -103,7 +103,7 @@ contract PolarisERC20 is IERC20 {
     function approve(address spender, uint256 amount) public virtual returns (bool) {
         require(
             authz().setSendAllowance(msg.sender, spender, amountToCoins(amount), 0),
-            "PolarisERC20: failed to approve spend"
+            "BlackERC20: failed to approve spend"
         );
 
         emit Approval(msg.sender, spender, amount);
@@ -122,7 +122,7 @@ contract PolarisERC20 is IERC20 {
      * @return bool true if the transfer was successful.
      */
     function transfer(address to, uint256 amount) public virtual returns (bool) {
-        require(bank().send(msg.sender, to, amountToCoins(amount)), "PolarisERC20: failed to send tokens");
+        require(bank().send(msg.sender, to, amountToCoins(amount)), "BlackERC20: failed to send tokens");
 
         emit Transfer(msg.sender, to, amount);
         return true;
@@ -136,8 +136,8 @@ contract PolarisERC20 is IERC20 {
      * @return bool true if the transfer was successful.
      */
     function transferFrom(address from, address to, uint256 amount) public virtual returns (bool) {
-        require(amount <= authz().getSendAllowance(from, msg.sender, denom), "PolarisERC20: insufficient approval");
-        require(bank().send(from, to, amountToCoins(amount)), "PolarisERC20: failed to send bank tokens");
+        require(amount <= authz().getSendAllowance(from, msg.sender, denom), "BlackERC20: insufficient approval");
+        require(bank().send(from, to, amountToCoins(amount)), "BlackERC20: failed to send bank tokens");
 
         emit Transfer(from, to, amount);
         return true;
@@ -151,7 +151,7 @@ contract PolarisERC20 is IERC20 {
         public
         virtual
     {
-        require(deadline >= block.timestamp, "PolarisERC20: PERMIT_DEADLINE_EXPIRED");
+        require(deadline >= block.timestamp, "BlackERC20: PERMIT_DEADLINE_EXPIRED");
 
         // Unchecked because the only math done is incrementing
         // the owner's nonce which cannot realistically overflow.
@@ -180,11 +180,11 @@ contract PolarisERC20 is IERC20 {
                 s
             );
 
-            require(recoveredAddress != address(0) && recoveredAddress == owner, "PolarisERC20: INVALID_SIGNER");
+            require(recoveredAddress != address(0) && recoveredAddress == owner, "BlackERC20: INVALID_SIGNER");
 
             require(
                 authz().setSendAllowance(recoveredAddress, spender, amountToCoins(value), 0),
-                "PolarisERC20: failed to approve spend"
+                "BlackERC20: failed to approve spend"
             );
         }
 

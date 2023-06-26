@@ -48,7 +48,7 @@ contract Swapper {
     }
 
     // gets the Polaris ERC20 token for a given SDK coin denomination
-    function getPolarisERC20(string calldata denom) external view returns (IERC20) {
+    function getBlackERC20(string calldata denom) external view returns (IERC20) {
         return erc20Module.erc20AddressForCoinDenom(denom);
     }
 

@@ -57,7 +57,7 @@ var _ = Describe("Attributes", func() {
 			// many coins
 			manyCoins := sdk.NewCoins(
 				sdk.NewCoin("abgt", sdkmath.NewInt(1)),
-				sdk.NewCoin("ablack", sdkmath.NewInt(2)),
+				sdk.NewCoin("avblack", sdkmath.NewInt(2)),
 				sdk.NewCoin("ahoney", sdkmath.NewInt(3)),
 			)
 			coins, err = ConvertSdkCoins(manyCoins.String())
@@ -66,7 +66,7 @@ var _ = Describe("Attributes", func() {
 				[]libgenerated.CosmosCoin{
 					{
 						Amount: big.NewInt(2),
-						Denom:  "ablack",
+						Denom:  "avblack",
 					},
 					{
 						Amount: big.NewInt(1),

@@ -133,7 +133,7 @@ var _ = Describe("Bank Precompile Test", func() {
 			caller common.Address
 		)
 
-		denom := "ablack"
+		denom := "avblack"
 		denom2 := "atoken"
 
 		When("GetBalance", func() {
@@ -556,9 +556,9 @@ var _ = Describe("Bank Precompile Test", func() {
 					DenomUnits: []generated.IBankModuleDenomUnit{
 						{Denom: "bera", Exponent: uint32(0), Aliases: []string{"bera"}},
 						{Denom: "nblack", Exponent: uint32(9), Aliases: []string{"nanoblack"}},
-						{Denom: "ablack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
+						{Denom: "avblack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
 					},
-					Base:    "ablack",
+					Base:    "avblack",
 					Display: "bera",
 				}
 
@@ -738,9 +738,9 @@ func getTestMetadata() []banktypes.Metadata {
 			DenomUnits: []*banktypes.DenomUnit{
 				{Denom: "bera", Exponent: uint32(0), Aliases: []string{"bera"}},
 				{Denom: "nblack", Exponent: uint32(9), Aliases: []string{"nanoblack"}},
-				{Denom: "ablack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
+				{Denom: "avblack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
 			},
-			Base:    "ablack",
+			Base:    "avblack",
 			Display: "bera",
 		},
 		{

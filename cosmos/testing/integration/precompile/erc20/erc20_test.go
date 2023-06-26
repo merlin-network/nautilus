@@ -85,11 +85,11 @@ var _ = Describe("ERC20", func() {
 			})
 
 			It("should handle non-empty inputs", func() {
-				token, err := erc20Precompile.Erc20AddressForCoinDenom(nil, "ablack")
+				token, err := erc20Precompile.Erc20AddressForCoinDenom(nil, "avblack")
 				Expect(err).ToNot(HaveOccurred())
 				Expect(token).To(Equal(common.Address{}))
 
-				tokenAddr := common.BytesToAddress([]byte("ablack"))
+				tokenAddr := common.BytesToAddress([]byte("avblack"))
 				tokenBech32 := cosmlib.AddressToAccAddress(tokenAddr).String()
 
 				denom, err := erc20Precompile.CoinDenomForERC20Address(nil, tokenAddr)
@@ -141,7 +141,7 @@ var _ = Describe("ERC20", func() {
 				// check that the new ERC20 is minted to TestAddress
 				tokenAddr, err := erc20Precompile.Erc20AddressForCoinDenom(nil, "bOSMO")
 				Expect(err).ToNot(HaveOccurred())
-				token, err := cbindings.NewPolarisERC20(tokenAddr, tf.EthClient)
+				token, err := cbindings.NewBlackERC20(tokenAddr, tf.EthClient)
 				Expect(err).ToNot(HaveOccurred())
 				balance, err := token.BalanceOf(nil, tf.Address("alice"))
 				Expect(err).ToNot(HaveOccurred())
@@ -306,7 +306,7 @@ var _ = Describe("ERC20", func() {
 			ExpectSuccessReceipt(tf.EthClient, tx)
 
 			// check that the new ERC20 is minted to TestAddress
-			tokenAddr, err := swapper.GetPolarisERC20(nil, "bAKT")
+			tokenAddr, err := swapper.GetBlackERC20(nil, "bAKT")
 			Expect(err).ToNot(HaveOccurred())
 			Expect(tokenAddr.Bytes()).To(Equal(common.Address{}.Bytes()))
 
@@ -322,9 +322,9 @@ var _ = Describe("ERC20", func() {
 			ExpectSuccessReceipt(tf.EthClient, tx)
 
 			// check that the new ERC20 is minted to TestAddress
-			tokenAddr, err = swapper.GetPolarisERC20(nil, "bAKT")
+			tokenAddr, err = swapper.GetBlackERC20(nil, "bAKT")
 			Expect(err).ToNot(HaveOccurred())
-			token, err := cbindings.NewPolarisERC20(tokenAddr, tf.EthClient)
+			token, err := cbindings.NewBlackERC20(tokenAddr, tf.EthClient)
 			Expect(err).ToNot(HaveOccurred())
 			balance, err := token.BalanceOf(nil, tf.Address("alice"))
 			Expect(err).ToNot(HaveOccurred())

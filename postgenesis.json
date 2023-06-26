@@ -51,7 +51,7 @@
           "address": "black1tpzqwmahwr4n8ma9vvnqfdwrupj2hv9va9ttd8",
           "coins": [
             {
-              "denom": "ablack",
+              "denom": "avblack",
               "amount": "100000000000000000000000000"
             }
           ]
@@ -60,7 +60,7 @@
           "address": "black1vav6xcx7h8fnlxsaz4xzlysgtteav6c5fwdr5d",
           "coins": [
             {
-              "denom": "ablack",
+              "denom": "avblack",
               "amount": "100000000000000000000000000"
             }
           ]
@@ -69,7 +69,7 @@
           "address": "black1w046jwv5evpdwgenun8u4we0fx4a637482hnhf",
           "coins": [
             {
-              "denom": "ablack",
+              "denom": "avblack",
               "amount": "100000000000000000000000000"
             }
           ]
@@ -82,7 +82,7 @@
     "consensus": null,
     "crisis": {
       "constant_fee": {
-        "denom": "ablack",
+        "denom": "avblack",
         "amount": "100000"
       }
     },
@@ -177,7 +177,7 @@
                   "key": "8y2lMd57kRUdSRi1BE2z0yNdnZNb05QwSKoM/x+hAAo="
                 },
                 "value": {
-                  "denom": "ablack",
+                  "denom": "avblack",
                   "amount": "1000000000000000000000"
                 }
               }
@@ -224,7 +224,7 @@
       "deposit_params": {
         "min_deposit": [
           {
-            "denom": "ablack"
+            "denom": "avblack"
           }
         ]
       },
@@ -233,7 +233,7 @@
       "params": {
         "min_deposit": [
           {
-            "denom": "ablack",
+            "denom": "avblack",
             "amount": "10000000"
           }
         ],
@@ -249,7 +249,7 @@
         "expedited_threshold": "0.667000000000000000",
         "expedited_min_deposit": [
           {
-            "denom": "ablack",
+            "denom": "avblack",
             "amount": "50000000"
           }
         ],
@@ -265,7 +265,7 @@
         "annual_provisions": "0.000000000000000000"
       },
       "params": {
-        "mint_denom": "ablack",
+        "mint_denom": "avblack",
         "inflation_rate_change": "0.130000000000000000",
         "inflation_max": "0.200000000000000000",
         "inflation_min": "0.070000000000000000",
@@ -292,7 +292,7 @@
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
-        "bond_denom": "ablack",
+        "bond_denom": "avblack",
         "min_commission_rate": "0.000000000000000000"
       },
       "last_total_power": "0",

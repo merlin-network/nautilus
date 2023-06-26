@@ -46,8 +46,8 @@ type Contract struct {
 	bk bankkeeper.Keeper
 	em ERC20Module
 
-	polarisERC20ABI abi.ABI
-	polarisERC20Bin string
+	blackERC20ABI abi.ABI
+	blackERC20Bin string
 }
 
 // NewPrecompileContract returns a new instance of the auth module precompile contract.
@@ -62,8 +62,8 @@ func NewPrecompileContract(bk bankkeeper.Keeper, em ERC20Module) ethprecompile.S
 		),
 		bk:              bk,
 		em:              em,
-		polarisERC20ABI: abi.MustUnmarshalJSON(cbindings.PolarisERC20MetaData.ABI),
-		polarisERC20Bin: cbindings.PolarisERC20MetaData.Bin,
+		blackERC20ABI: abi.MustUnmarshalJSON(cbindings.BlackERC20MetaData.ABI),
+		blackERC20Bin: cbindings.BlackERC20MetaData.Bin,
 	}
 }
 

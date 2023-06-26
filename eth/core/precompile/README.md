@@ -1,6 +1,6 @@
 # Precompiles
 
-Polaris Ethereum supports the execution of **stateless** and **stateful** precompiled contracts. 
+Blackfury Ethereum supports the execution of **stateless** and **stateful** precompiled contracts. 
 
 ## Stateless Precompiles
 

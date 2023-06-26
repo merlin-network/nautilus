@@ -33,21 +33,21 @@ import (
 	libtypes "pkg.berachain.dev/polaris/lib/types"
 )
 
-// PolarisHostChain defines the plugins that the chain running the Polaris EVM should implement.
-type PolarisHostChain interface {
-	// GetBlockPlugin returns the `BlockPlugin` of the Polaris host chain.
+// BlackfuryHostChain defines the plugins that the chain running the Blackfury EVM should implement.
+type BlackfuryHostChain interface {
+	// GetBlockPlugin returns the `BlockPlugin` of the Blackfury host chain.
 	GetBlockPlugin() BlockPlugin
-	// GetConfigurationPlugin returns the `ConfigurationPlugin` of the Polaris host chain.
+	// GetConfigurationPlugin returns the `ConfigurationPlugin` of the Blackfury host chain.
 	GetConfigurationPlugin() ConfigurationPlugin
-	// GetGasPlugin returns the `GasPlugin` of the Polaris host chain.
+	// GetGasPlugin returns the `GasPlugin` of the Blackfury host chain.
 	GetGasPlugin() GasPlugin
-	// GetHistoricalPlugin returns the OPTIONAL `HistoricalPlugin` of the Polaris host chain.
+	// GetHistoricalPlugin returns the OPTIONAL `HistoricalPlugin` of the Blackfury host chain.
 	GetHistoricalPlugin() HistoricalPlugin
-	// GetPrecompilePlugin returns the OPTIONAL `PrecompilePlugin` of the Polaris host chain.
+	// GetPrecompilePlugin returns the OPTIONAL `PrecompilePlugin` of the Blackfury host chain.
 	GetPrecompilePlugin() PrecompilePlugin
-	// GetStatePlugin returns the `StatePlugin` of the Polaris host chain.
+	// GetStatePlugin returns the `StatePlugin` of the Blackfury host chain.
 	GetStatePlugin() StatePlugin
-	// GetTxPoolPlugin returns the `TxPoolPlugin` of the Polaris host chain.
+	// GetTxPoolPlugin returns the `TxPoolPlugin` of the Blackfury host chain.
 	GetTxPoolPlugin() TxPoolPlugin
 }
 
@@ -55,10 +55,10 @@ type PolarisHostChain interface {
 // Mandatory Plugins
 // =============================================================================
 
-// The following plugins should be implemented by the chain running the Polaris EVM and exposed via
-// the `PolarisHostChain` interface. All plugins should be resettable with a given context.
+// The following plugins should be implemented by the chain running the Blackfury EVM and exposed via
+// the `BlackfuryHostChain` interface. All plugins should be resettable with a given context.
 type (
-	// BlockPlugin defines the methods that the chain running the Polaris EVM should implement to
+	// BlockPlugin defines the methods that the chain running the Blackfury EVM should implement to
 	// support getting and setting block headers.
 	BlockPlugin interface {
 		// BlockPlugin implements `libtypes.Preparable`. Calling `Prepare` should reset the
@@ -77,17 +77,17 @@ type (
 		BaseFee() *big.Int
 	}
 
-	// ConfigurationPlugin defines the methods that the chain running Polaris EVM should
-	// implement in order to configuration the parameters of the Polaris EVM.
+	// ConfigurationPlugin defines the methods that the chain running Blackfury EVM should
+	// implement in order to configuration the parameters of the Blackfury EVM.
 	ConfigurationPlugin interface {
 		// ConfigurationPlugin implements `libtypes.Preparable`. Calling `Prepare` should reset
 		// the `ConfigurationPlugin` to a default state.
 		libtypes.Preparable
-		// ChainConfig returns the current chain configuration of the Polaris EVM.
+		// ChainConfig returns the current chain configuration of the Blackfury EVM.
 		ChainConfig() *params.ChainConfig
 	}
 
-	// GasPlugin is an interface that allows the Polaris EVM to consume gas on the host chain.
+	// GasPlugin is an interface that allows the Blackfury EVM to consume gas on the host chain.
 	GasPlugin interface {
 		// GasPlugin implements `libtypes.Preparable`. Calling `Prepare` should reset the
 		// GasPlugin to a default state.
@@ -112,14 +112,14 @@ type (
 		BlockGasLimit() uint64
 	}
 
-	// StatePlugin defines the methods that the chain running Polaris EVM should implement.
+	// StatePlugin defines the methods that the chain running Blackfury EVM should implement.
 	StatePlugin interface {
 		state.Plugin
 		// StateAtBlockNumber returns the state at the given block height.
 		StateAtBlockNumber(uint64) (StatePlugin, error)
 	}
 
-	// TxPoolPlugin defines the methods that the chain running Polaris EVM should implement to
+	// TxPoolPlugin defines the methods that the chain running Blackfury EVM should implement to
 	// support the transaction pool.
 	TxPoolPlugin interface {
 		// SetBaseFee sets the base fee of the transaction pool.
@@ -149,9 +149,9 @@ type (
 // Optional Plugins
 // =============================================================================
 
-// `The following plugins are OPTIONAL to be implemented by the chain running Polaris EVM.
+// `The following plugins are OPTIONAL to be implemented by the chain running Blackfury EVM.
 type (
-	// HistoricalPlugin defines the methods that the chain running Polaris EVM should implement
+	// HistoricalPlugin defines the methods that the chain running Blackfury EVM should implement
 	// in order to support storing historical blocks, receipts, and transactions. This plugin will
 	// be used by the RPC backend to support certain methods on the Ethereum JSON RPC spec.
 	// Implementing this plugin is optional.
@@ -175,7 +175,7 @@ type (
 		StoreTransactions(uint64, common.Hash, types.Transactions) error
 	}
 
-	// PrecompilePlugin defines the methods that the chain running Polaris EVM should implement
+	// PrecompilePlugin defines the methods that the chain running Blackfury EVM should implement
 	// in order to support running their own stateful precompiled contracts. Implementing this
 	// plugin is optional.
 	PrecompilePlugin = precompile.Plugin

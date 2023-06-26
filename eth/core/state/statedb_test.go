@@ -42,7 +42,7 @@ var (
 )
 
 var _ = Describe("StateDB", func() {
-	var sdb vm.PolarisStateDB
+	var sdb vm.BlackfuryStateDB
 	var sp *mock.PluginMock
 
 	BeforeEach(func() {

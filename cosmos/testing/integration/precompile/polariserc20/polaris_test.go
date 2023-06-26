@@ -35,7 +35,7 @@ import (
 	. "pkg.berachain.dev/polaris/cosmos/testing/integration/utils"
 )
 
-func TestPolarisERC20(t *testing.T) {
+func TestBlackfuryERC20(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "cosmos/testing/integration/precompile/polariserc20:integration")
 }
@@ -58,7 +58,7 @@ var _ = Describe("ERC20", func() {
 			ExpectSuccessReceipt(tf.EthClient, tx)
 
 			// check that the new ERC20 is minted to TestAddress
-			tokenAddr, err := swapper.GetPolarisERC20(nil, "bAKT")
+			tokenAddr, err := swapper.GetBlackfuryERC20(nil, "bAKT")
 			Expect(err).ToNot(HaveOccurred())
 			Expect(tokenAddr.Bytes()).To(Equal(common.Address{}.Bytes()))
 
@@ -66,7 +66,7 @@ var _ = Describe("ERC20", func() {
 			Expect(err).ToNot(HaveOccurred())
 
 			// Create a polaris erc20 contract from the address.
-			tokenAddr, tx, token, err := cbindings.DeployPolarisERC20(
+			tokenAddr, tx, token, err := cbindings.DeployBlackfuryERC20(
 				tf.GenerateTransactOpts("alice"),
 				tf.EthClient,
 				"bAKT",

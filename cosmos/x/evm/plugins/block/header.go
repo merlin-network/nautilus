@@ -38,7 +38,7 @@ import (
 const prevHeaderHashes = 256
 
 // ===========================================================================
-// Polaris Block Header Tracking
+// Blackfury Block Header Tracking
 // ===========================================================================.
 
 // SetQueryContextFn sets the query context func for the plugin.

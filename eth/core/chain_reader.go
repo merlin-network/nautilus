@@ -91,7 +91,7 @@ func (bc *blockchain) CurrentBlock() *types.Header {
 	return block.Header()
 }
 
-// CurrentSnapBlock is UNUSED in Polaris.
+// CurrentSnapBlock is UNUSED in Blackfury.
 func (bc *blockchain) CurrentSnapBlock() *types.Header {
 	return nil
 }

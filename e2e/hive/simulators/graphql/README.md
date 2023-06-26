@@ -13,6 +13,6 @@ You must build a Polard image first, do so by running `mage cosmos:testHive pola
 
 After building an image, if you want to modify a testcase or the genesis, simply run `mage hive:setup hive:test polaris/graphql polard` after making your changes. 
 
-NOTE: If you change any of the core Polaris EVM logic in `./eth/...`, you must rebuild your Polard image. 
+NOTE: If you change any of the core Blackfury EVM logic in `./eth/...`, you must rebuild your Polard image. 
 
 

@@ -31,8 +31,8 @@ type (
 	ERC20Module interface { //nolint:revive // good name.
 		erc20types.QueryServiceServer
 
-		// RegisterERC20CoinPair registers a new ERC20 originated token <> Polaris Coin pair and
-		// returns the new Polaris Coin denom.
+		// RegisterERC20CoinPair registers a new ERC20 originated token <> Blackfury Coin pair and
+		// returns the new Blackfury Coin denom.
 		RegisterERC20CoinPair(ctx sdk.Context, token common.Address) string
 
 		// RegisterCoinERC20Pair registers a new IBC-originated SDK Coin <> ERC20 token pair.

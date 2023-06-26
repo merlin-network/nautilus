@@ -32,7 +32,7 @@ import (
 var _ types.MsgServiceServer = &Keeper{}
 
 // EthTransaction implements the  MsgServiceServer interface. It processes an incoming request
-// and applies it to the Polaris Chain.
+// and applies it to the Blackfury Chain.
 func (k *Keeper) EthTransaction(
 	ctx context.Context, msg *types.WrappedEthereumTransaction,
 ) (*types.WrappedEthereumTransactionResult, error) {

@@ -44,13 +44,13 @@ import (
 type Keeper struct {
 	// ak is the reference to the AccountKeeper.
 	ak state.AccountKeeper
-	// provider is the struct that houses the Polaris EVM.
-	polaris *polar.Polaris
+	// provider is the struct that houses the Blackfury EVM.
+	polaris *polar.Blackfury
 	// The (unexposed) key used to access the store from the Context.
 	storeKey storetypes.StoreKey
 	// authority is the bech32 address that is allowed to execute governance proposals.
 	authority string
-	// The host contains various plugins that are are used to implement `core.PolarisHostChain`.
+	// The host contains various plugins that are are used to implement `core.BlackfuryHostChain`.
 	host Host
 
 	// temp syncing
@@ -83,7 +83,7 @@ func NewKeeper(
 	return k
 }
 
-// Setup sets up the plugins in the Host. It also build the Polaris EVM Provider.
+// Setup sets up the plugins in the Host. It also build the Blackfury EVM Provider.
 func (k *Keeper) Setup(
 	_ *storetypes.KVStoreKey,
 	qc func(height int64, prove bool) (sdk.Context, error),
@@ -94,7 +94,7 @@ func (k *Keeper) Setup(
 	// Setup plugins in the Host
 	k.host.Setup(k.storeKey, nil, k.ak, qc)
 
-	// Build the Polaris EVM Provider
+	// Build the Blackfury EVM Provider
 	cfg, err := polar.LoadConfigFromFilePath(polarisConfigPath)
 	// TODO: fix properly
 	if err != nil || cfg.GPO == nil {

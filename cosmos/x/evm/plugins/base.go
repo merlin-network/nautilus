@@ -26,13 +26,13 @@ import (
 	"pkg.berachain.dev/polaris/eth/core"
 )
 
-// Base is the base interface which all x/evm Polaris plugins must implement
+// Base is the base interface which all x/evm Blackfury plugins must implement
 
 type Base interface {
 	IsPlugin()
 }
 
-// HasGenesis represents the base class that all x/evm Polaris plugins which have
+// HasGenesis represents the base class that all x/evm Blackfury plugins which have
 // InitGenesis or ExportGenesis methods must implement
 
 type HasGenesis interface {

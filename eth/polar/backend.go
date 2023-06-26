@@ -47,7 +47,7 @@ import (
 	"pkg.berachain.dev/polaris/lib/utils"
 )
 
-// Backend represents the backend object for a Polaris chain. It extends the standard
+// Backend represents the backend object for a Blackfury chain. It extends the standard
 // go-ethereum backend object.
 type Backend interface {
 	polarapi.EthBackend
@@ -58,7 +58,7 @@ type Backend interface {
 // backend represents the backend for the JSON-RPC service.
 type backend struct {
 	extRPCEnabled bool
-	polar         *Polaris
+	polar         *Blackfury
 	cfg           *Config
 	gpo           *gasprice.Oracle
 	logger        log.Logger
@@ -70,7 +70,7 @@ type backend struct {
 
 // NewBackend returns a new `Backend` object.
 func NewBackend(
-	polar *Polaris,
+	polar *Blackfury,
 	extRPCEnabled bool,
 	cfg *Config,
 ) Backend {
@@ -130,12 +130,12 @@ func (b *backend) FeeHistory(ctx context.Context, blockCount uint64, lastBlock r
 	return b.gpo.FeeHistory(ctx, blockCount, lastBlock, rewardPercentiles)
 }
 
-// ChainDb is unused in Polaris.
+// ChainDb is unused in Blackfury.
 func (b *backend) ChainDb() ethdb.Database { //nolint:stylecheck // conforms to interface.
 	return ethdb.Database(nil)
 }
 
-// AccountManager is unused in Polaris.
+// AccountManager is unused in Blackfury.
 func (b *backend) AccountManager() *accounts.Manager {
 	return &accounts.Manager{}
 }
@@ -174,7 +174,7 @@ func (b *backend) UnprotectedAllowed() bool {
 // ==============================================================================
 
 // SetHead is used for state sync on ethereum, we leave state sync up to the host
-// chain and thus it is not implemented in Polaris.
+// chain and thus it is not implemented in Blackfury.
 func (b *backend) SetHead(_ uint64) {
 	panic("not implemented")
 }
@@ -360,7 +360,7 @@ func (b *backend) GetTransaction(
 	return txLookup.Tx, txLookup.BlockHash, txLookup.BlockNum, txLookup.TxIndex, nil
 }
 
-// PendingBlockAndReceipts returns the pending block (equivalent to current block in Polaris)
+// PendingBlockAndReceipts returns the pending block (equivalent to current block in Blackfury)
 // and associated receipts.
 func (b *backend) PendingBlockAndReceipts() (*types.Block, types.Receipts) {
 	block, receipts := b.polar.blockchain.PendingBlockAndReceipts()
@@ -412,7 +412,7 @@ func (b *backend) GetEVM(ctx context.Context, msg *core.Message, state vm.GethSt
 	}
 	txContext := core.NewEVMTxContext(msg)
 	return b.polar.blockchain.GetEVM(ctx, txContext,
-		utils.MustGetAs[vm.PolarisStateDB](state), header, vmConfig), state.Error
+		utils.MustGetAs[vm.BlackfuryStateDB](state), header, vmConfig), state.Error
 }
 
 // GetBlockContext returns a new block context to be used by a EVM.

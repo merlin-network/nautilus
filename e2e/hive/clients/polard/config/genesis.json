@@ -197,7 +197,7 @@
             "signer_infos": [
               {
                 "public_key": {
-                  "@type": "/polaris.crypto.ethsecp256k1.v1.PubKey",
+                  "@type": "/black.crypto.ethsecp256k1.v1.PubKey",
                   "key": "AwjItkzy4rgPzJypyOxK2YmjNhQJtLfAKQhRgBccZGDW"
                 },
                 "mode_info": {

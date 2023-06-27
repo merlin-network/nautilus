@@ -550,13 +550,13 @@ var _ = Describe("Bank Precompile Test", func() {
 
 			It("should succeed", func() {
 				expectedResult := generated.IBankModuleDenomMetadata{
-					Name:        "Blackfury Black",
-					Symbol:      "BLACK",
+					Name:        "Blackfury vBlack",
+					Symbol:      "vBLACK",
 					Description: "The Black.",
 					DenomUnits: []generated.IBankModuleDenomUnit{
 						{Denom: "vblack", Exponent: uint32(0), Aliases: []string{"vblack"}},
-						{Denom: "nblack", Exponent: uint32(9), Aliases: []string{"nanoblack"}},
-						{Denom: "avblack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
+						{Denom: "nvblack", Exponent: uint32(9), Aliases: []string{"nanovblack"}},
+						{Denom: "avblack", Exponent: uint32(18), Aliases: []string{"attovblack"}},
 					},
 					Base:    "avblack",
 					Display: "vblack",

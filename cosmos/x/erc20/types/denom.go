@@ -29,7 +29,7 @@ import (
 const (
 	// polarisDenomPrefix represents the bank module prefix all Polaris coin denominations will
 	// have (ERC20 originated token).
-	polarisDenomPrefix = "polaris/"
+	polarisDenomPrefix = "vblack/"
 
 	// lenPolarisDenomPrefix is the length of the polarisDenomPrefix.
 	lenPolarisDenomPrefix = 8

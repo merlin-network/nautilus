@@ -39,6 +39,8 @@ contract PrecompileConstructor {
         require(success, "failed to transfer avblack");
         avblack = erc20Module.erc20AddressForCoinDenom("avblack");
         denom = erc20Module.coinDenomForERC20Address(avblack);
-        require(keccak256(abi.encodePacked(denom)) == keccak256(abi.encodePacked("avblack")), "returned the wrong denom");
+        require(
+            keccak256(abi.encodePacked(denom)) == keccak256(abi.encodePacked("avblack")), "returned the wrong denom"
+        );
     }
 }

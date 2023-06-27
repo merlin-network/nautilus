@@ -58,7 +58,7 @@ func (c *Contract) transferCoinToERC20(
 	amount *big.Int,
 ) error {
 	var (
-		sdkCtx         = sdk.UnwrapSDKContext(ctx)
+		sdkCtx           = sdk.UnwrapSDKContext(ctx)
 		isBlackfuryDenom = erc20types.IsBlackfuryDenom(denom)
 	)
 

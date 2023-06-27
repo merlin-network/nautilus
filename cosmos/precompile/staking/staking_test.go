@@ -192,7 +192,7 @@ var _ = Describe("Staking", func() {
 					del,
 					sdk.NewCoins(
 						sdk.NewCoin(
-							"stake",
+							"avblack",
 							sdkmath.NewIntFromBigInt(amountToDelegate),
 						),
 					),
@@ -255,7 +255,7 @@ var _ = Describe("Staking", func() {
 					del,
 					sdk.NewCoins(
 						sdk.NewCoin(
-							"stake",
+							"avblack",
 							sdkmath.NewIntFromBigInt(amountToDelegate),
 						),
 					),

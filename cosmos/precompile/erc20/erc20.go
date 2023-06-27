@@ -60,8 +60,8 @@ func NewPrecompileContract(bk bankkeeper.Keeper, em ERC20Module) ethprecompile.S
 			// ),
 			common.HexToAddress("0x696969"), // TODO: module addresses are broken
 		),
-		bk:              bk,
-		em:              em,
+		bk:                bk,
+		em:                em,
 		blackfuryERC20ABI: abi.MustUnmarshalJSON(cbindings.BlackfuryERC20MetaData.ABI),
 		blackfuryERC20Bin: cbindings.BlackfuryERC20MetaData.Bin,
 	}

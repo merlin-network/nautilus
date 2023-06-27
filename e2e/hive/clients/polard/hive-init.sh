@@ -84,7 +84,7 @@ cat $GENESIS
 
 # Allocate genesis accounts (cosmos formatted addresses)
 for KEY in "${KEYS[@]}"; do
-    polard genesis add-genesis-account $KEY 100000000000000000000000000avblack --keyring-backend $KEYRING --home "$HOMEDIR"
+    polard genesis add-genesis-account $KEY 1000000000000000000000000avblack --keyring-backend $KEYRING --home "$HOMEDIR"
 done
 
 # Sign genesis transaction

@@ -222,7 +222,7 @@ func getTestMetadata() []banktypes.Metadata {
 			Description: "The Black.",
 			DenomUnits: []*banktypes.DenomUnit{
 				{Denom: "vblack", Exponent: uint32(0), Aliases: []string{"vblack"}},
-				{Denom: "nblack", Exponent: uint32(9), Aliases: []string{"nanoblack"}},
+				{Denom: "nvblack", Exponent: uint32(9), Aliases: []string{"nanoblack"}},
 				{Denom: "avblack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
 			},
 			Base:    "avblack",

@@ -14,8 +14,8 @@
   <a href="https://magefile.org" target="_blank">
     <img alt="Built with Mage" src="https://magefile.org/badge.svg" />
   </a>
-  <a href="https://t.me/polaris_devs" target="_blank">
-    <img alt="Telegram Chat" src="https://img.shields.io/endpoint?color=neon&logo=telegram&label=chat&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fpolaris_devs">
+  <a href="https://t.me/blackfury_devs" target="_blank">
+    <img alt="Telegram Chat" src="https://img.shields.io/endpoint?color=neon&logo=telegram&label=chat&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fblackfury_devs">
   </a>
   <a href="https://twitter.com/berachain" target="_blank">
     <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/berachain">

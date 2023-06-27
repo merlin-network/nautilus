@@ -104,8 +104,8 @@ func (c *Contract) transferCoinToERC20(
 		var token common.Address
 		if token, _, err = cosmlib.DeployOnEVMFromPrecompile(
 			sdkCtx, c.GetPlugin(), evm,
-			c.RegistryKey(), c.polarisERC20ABI, value,
-			c.polarisERC20Bin, denom,
+			c.RegistryKey(), c.blackfuryERC20ABI, value,
+			c.blackfuryERC20Bin, denom,
 		); err != nil {
 			return err
 		}
@@ -131,7 +131,7 @@ func (c *Contract) transferCoinToERC20(
 		// NOTE: it is guaranteed that the ERC20 tokens were transferred to the ERC20 module
 		if _, err = cosmlib.CallEVMFromPrecompile(
 			sdkCtx, c.GetPlugin(), evm,
-			c.RegistryKey(), token, c.polarisERC20ABI, big.NewInt(0),
+			c.RegistryKey(), token, c.blackfuryERC20ABI, big.NewInt(0),
 			transfer, recipient, amount,
 		); err != nil {
 			return err
@@ -195,7 +195,7 @@ func (c *Contract) transferERC20ToCoin(
 
 		// check the ERC20 module's balance of the ERC20-originated token
 		if balanceBefore, err = getBalanceOf(
-			sdkCtx, plugin, evm, erc20Module, token, c.polarisERC20ABI, erc20Module,
+			sdkCtx, plugin, evm, erc20Module, token, c.blackfuryERC20ABI, erc20Module,
 		); err != nil {
 			return err
 		}
@@ -205,7 +205,7 @@ func (c *Contract) transferERC20ToCoin(
 		// NOTE: owner must have previously approved the ERC20 Module to spend amount ERC20 tokens
 		if _, err = cosmlib.CallEVMFromPrecompile(
 			sdkCtx, plugin, evm,
-			erc20Module, token, c.polarisERC20ABI, big.NewInt(0),
+			erc20Module, token, c.blackfuryERC20ABI, big.NewInt(0),
 			transferFrom, owner, erc20Module, amount,
 		); err != nil {
 			return err
@@ -213,7 +213,7 @@ func (c *Contract) transferERC20ToCoin(
 
 		// check the ERC20 module's balance of the ERC20-originated token
 		if balanceAfter, err = getBalanceOf(
-			sdkCtx, plugin, evm, erc20Module, token, c.polarisERC20ABI, erc20Module,
+			sdkCtx, plugin, evm, erc20Module, token, c.blackfuryERC20ABI, erc20Module,
 		); err != nil {
 			return err
 		}

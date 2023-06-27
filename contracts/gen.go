@@ -32,7 +32,7 @@ package contracts
 //go:generate abigen --pkg governance --abi ./out/Governance.sol/IGovernanceModule.abi.json --bin ./out/Governance.sol/IGovernanceModule.bin --out ./bindings/cosmos/precompile/governance/i_governance_module.abigen.go --type GovernanceModule
 //go:generate abigen --pkg erc20 --abi ./out/ERC20Module.sol/IERC20Module.abi.json --bin ./out/ERC20Module.sol/IERC20Module.bin --out ./bindings/cosmos/precompile/erc20/i_erc20_module.abigen.go --type ERC20Module
 
-//go:generate abigen --pkg cosmos --abi ./out/BlackfuryERC20.sol/BlackfuryERC20.abi.json --bin ./out/BlackfuryERC20.sol/BlackfuryERC20.bin --out ./bindings/cosmos/polaris_erc20.abigen.go --type BlackfuryERC20
+//go:generate abigen --pkg cosmos --abi ./out/BlackfuryERC20.sol/BlackfuryERC20.abi.json --bin ./out/BlackfuryERC20.sol/BlackfuryERC20.bin --out ./bindings/cosmos/blackfury_erc20.abigen.go --type BlackfuryERC20
 
 //go:generate abigen --pkg lib --abi ./out/CosmosTypes.sol/CosmosTypes.abi.json --bin ./out/CosmosTypes.sol/CosmosTypes.bin --out ./bindings/cosmos/lib/cosmos_types.abigen.go --type CosmosTypes
 

@@ -20,8 +20,8 @@ var (
 )
 
 func init() {
-	file_polaris_erc20_v1alpha1_query_proto_init()
-	md_ERC20AddressForCoinDenomRequest = File_polaris_erc20_v1alpha1_query_proto.Messages().ByName("ERC20AddressForCoinDenomRequest")
+	file_blackfury_erc20_v1alpha1_query_proto_init()
+	md_ERC20AddressForCoinDenomRequest = File_blackfury_erc20_v1alpha1_query_proto.Messages().ByName("ERC20AddressForCoinDenomRequest")
 	fd_ERC20AddressForCoinDenomRequest_denom = md_ERC20AddressForCoinDenomRequest.Fields().ByName("denom")
 }
 
@@ -34,7 +34,7 @@ func (x *ERC20AddressForCoinDenomRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *ERC20AddressForCoinDenomRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[0]
+	mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -440,8 +440,8 @@ var (
 )
 
 func init() {
-	file_polaris_erc20_v1alpha1_query_proto_init()
-	md_ERC20AddressForCoinDenomResponse = File_polaris_erc20_v1alpha1_query_proto.Messages().ByName("ERC20AddressForCoinDenomResponse")
+	file_blackfury_erc20_v1alpha1_query_proto_init()
+	md_ERC20AddressForCoinDenomResponse = File_blackfury_erc20_v1alpha1_query_proto.Messages().ByName("ERC20AddressForCoinDenomResponse")
 	fd_ERC20AddressForCoinDenomResponse_token = md_ERC20AddressForCoinDenomResponse.Fields().ByName("token")
 }
 
@@ -454,7 +454,7 @@ func (x *ERC20AddressForCoinDenomResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *ERC20AddressForCoinDenomResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[1]
+	mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -860,8 +860,8 @@ var (
 )
 
 func init() {
-	file_polaris_erc20_v1alpha1_query_proto_init()
-	md_CoinDenomForERC20AddressRequest = File_polaris_erc20_v1alpha1_query_proto.Messages().ByName("CoinDenomForERC20AddressRequest")
+	file_blackfury_erc20_v1alpha1_query_proto_init()
+	md_CoinDenomForERC20AddressRequest = File_blackfury_erc20_v1alpha1_query_proto.Messages().ByName("CoinDenomForERC20AddressRequest")
 	fd_CoinDenomForERC20AddressRequest_token = md_CoinDenomForERC20AddressRequest.Fields().ByName("token")
 }
 
@@ -874,7 +874,7 @@ func (x *CoinDenomForERC20AddressRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *CoinDenomForERC20AddressRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[2]
+	mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1280,8 +1280,8 @@ var (
 )
 
 func init() {
-	file_polaris_erc20_v1alpha1_query_proto_init()
-	md_CoinDenomForERC20AddressResponse = File_polaris_erc20_v1alpha1_query_proto.Messages().ByName("CoinDenomForERC20AddressResponse")
+	file_blackfury_erc20_v1alpha1_query_proto_init()
+	md_CoinDenomForERC20AddressResponse = File_blackfury_erc20_v1alpha1_query_proto.Messages().ByName("CoinDenomForERC20AddressResponse")
 	fd_CoinDenomForERC20AddressResponse_denom = md_CoinDenomForERC20AddressResponse.Fields().ByName("denom")
 }
 
@@ -1294,7 +1294,7 @@ func (x *CoinDenomForERC20AddressResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *CoinDenomForERC20AddressResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[3]
+	mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1740,7 +1740,7 @@ type ERC20AddressForCoinDenomRequest struct {
 func (x *ERC20AddressForCoinDenomRequest) Reset() {
 	*x = ERC20AddressForCoinDenomRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[0]
+		mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1754,7 +1754,7 @@ func (*ERC20AddressForCoinDenomRequest) ProtoMessage() {}
 
 // Deprecated: Use ERC20AddressForCoinDenomRequest.ProtoReflect.Descriptor instead.
 func (*ERC20AddressForCoinDenomRequest) Descriptor() ([]byte, []int) {
-	return file_polaris_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{0}
+	return file_blackfury_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *ERC20AddressForCoinDenomRequest) GetDenom() string {
@@ -1777,7 +1777,7 @@ type ERC20AddressForCoinDenomResponse struct {
 func (x *ERC20AddressForCoinDenomResponse) Reset() {
 	*x = ERC20AddressForCoinDenomResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[1]
+		mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1791,7 +1791,7 @@ func (*ERC20AddressForCoinDenomResponse) ProtoMessage() {}
 
 // Deprecated: Use ERC20AddressForCoinDenomResponse.ProtoReflect.Descriptor instead.
 func (*ERC20AddressForCoinDenomResponse) Descriptor() ([]byte, []int) {
-	return file_polaris_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{1}
+	return file_blackfury_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *ERC20AddressForCoinDenomResponse) GetToken() string {
@@ -1814,7 +1814,7 @@ type CoinDenomForERC20AddressRequest struct {
 func (x *CoinDenomForERC20AddressRequest) Reset() {
 	*x = CoinDenomForERC20AddressRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[2]
+		mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1828,7 +1828,7 @@ func (*CoinDenomForERC20AddressRequest) ProtoMessage() {}
 
 // Deprecated: Use CoinDenomForERC20AddressRequest.ProtoReflect.Descriptor instead.
 func (*CoinDenomForERC20AddressRequest) Descriptor() ([]byte, []int) {
-	return file_polaris_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{2}
+	return file_blackfury_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *CoinDenomForERC20AddressRequest) GetToken() string {
@@ -1851,7 +1851,7 @@ type CoinDenomForERC20AddressResponse struct {
 func (x *CoinDenomForERC20AddressResponse) Reset() {
 	*x = CoinDenomForERC20AddressResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[3]
+		mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1865,7 +1865,7 @@ func (*CoinDenomForERC20AddressResponse) ProtoMessage() {}
 
 // Deprecated: Use CoinDenomForERC20AddressResponse.ProtoReflect.Descriptor instead.
 func (*CoinDenomForERC20AddressResponse) Descriptor() ([]byte, []int) {
-	return file_polaris_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{3}
+	return file_blackfury_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *CoinDenomForERC20AddressResponse) GetDenom() string {
@@ -1875,9 +1875,9 @@ func (x *CoinDenomForERC20AddressResponse) GetDenom() string {
 	return ""
 }
 
-var File_polaris_erc20_v1alpha1_query_proto protoreflect.FileDescriptor
+var File_blackfury_erc20_v1alpha1_query_proto protoreflect.FileDescriptor
 
-var file_polaris_erc20_v1alpha1_query_proto_rawDesc = []byte{
+var file_blackfury_erc20_v1alpha1_query_proto_rawDesc = []byte{
 	0x0a, 0x22, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2f, 0x65, 0x72, 0x63, 0x32, 0x30, 0x2f,
 	0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2f, 0x71, 0x75, 0x65, 0x72, 0x79, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x12, 0x16, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2e, 0x65, 0x72,
@@ -1946,25 +1946,25 @@ var file_polaris_erc20_v1alpha1_query_proto_rawDesc = []byte{
 }
 
 var (
-	file_polaris_erc20_v1alpha1_query_proto_rawDescOnce sync.Once
-	file_polaris_erc20_v1alpha1_query_proto_rawDescData = file_polaris_erc20_v1alpha1_query_proto_rawDesc
+	file_blackfury_erc20_v1alpha1_query_proto_rawDescOnce sync.Once
+	file_blackfury_erc20_v1alpha1_query_proto_rawDescData = file_blackfury_erc20_v1alpha1_query_proto_rawDesc
 )
 
-func file_polaris_erc20_v1alpha1_query_proto_rawDescGZIP() []byte {
-	file_polaris_erc20_v1alpha1_query_proto_rawDescOnce.Do(func() {
-		file_polaris_erc20_v1alpha1_query_proto_rawDescData = protoimpl.X.CompressGZIP(file_polaris_erc20_v1alpha1_query_proto_rawDescData)
+func file_blackfury_erc20_v1alpha1_query_proto_rawDescGZIP() []byte {
+	file_blackfury_erc20_v1alpha1_query_proto_rawDescOnce.Do(func() {
+		file_blackfury_erc20_v1alpha1_query_proto_rawDescData = protoimpl.X.CompressGZIP(file_blackfury_erc20_v1alpha1_query_proto_rawDescData)
 	})
-	return file_polaris_erc20_v1alpha1_query_proto_rawDescData
+	return file_blackfury_erc20_v1alpha1_query_proto_rawDescData
 }
 
-var file_polaris_erc20_v1alpha1_query_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_polaris_erc20_v1alpha1_query_proto_goTypes = []interface{}{
+var file_blackfury_erc20_v1alpha1_query_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_blackfury_erc20_v1alpha1_query_proto_goTypes = []interface{}{
 	(*ERC20AddressForCoinDenomRequest)(nil),  // 0: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest
 	(*ERC20AddressForCoinDenomResponse)(nil), // 1: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse
 	(*CoinDenomForERC20AddressRequest)(nil),  // 2: polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest
 	(*CoinDenomForERC20AddressResponse)(nil), // 3: polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse
 }
-var file_polaris_erc20_v1alpha1_query_proto_depIdxs = []int32{
+var file_blackfury_erc20_v1alpha1_query_proto_depIdxs = []int32{
 	0, // 0: polaris.erc20.v1alpha1.QueryService.ERC20AddressForCoinDenom:input_type -> polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest
 	2, // 1: polaris.erc20.v1alpha1.QueryService.CoinDenomForERC20Address:input_type -> polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest
 	1, // 2: polaris.erc20.v1alpha1.QueryService.ERC20AddressForCoinDenom:output_type -> polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse
@@ -1976,13 +1976,13 @@ var file_polaris_erc20_v1alpha1_query_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_polaris_erc20_v1alpha1_query_proto_init() }
-func file_polaris_erc20_v1alpha1_query_proto_init() {
-	if File_polaris_erc20_v1alpha1_query_proto != nil {
+func init() { file_blackfury_erc20_v1alpha1_query_proto_init() }
+func file_blackfury_erc20_v1alpha1_query_proto_init() {
+	if File_blackfury_erc20_v1alpha1_query_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_polaris_erc20_v1alpha1_query_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_erc20_v1alpha1_query_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ERC20AddressForCoinDenomRequest); i {
 			case 0:
 				return &v.state
@@ -1994,7 +1994,7 @@ func file_polaris_erc20_v1alpha1_query_proto_init() {
 				return nil
 			}
 		}
-		file_polaris_erc20_v1alpha1_query_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_erc20_v1alpha1_query_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ERC20AddressForCoinDenomResponse); i {
 			case 0:
 				return &v.state
@@ -2006,7 +2006,7 @@ func file_polaris_erc20_v1alpha1_query_proto_init() {
 				return nil
 			}
 		}
-		file_polaris_erc20_v1alpha1_query_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_erc20_v1alpha1_query_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CoinDenomForERC20AddressRequest); i {
 			case 0:
 				return &v.state
@@ -2018,7 +2018,7 @@ func file_polaris_erc20_v1alpha1_query_proto_init() {
 				return nil
 			}
 		}
-		file_polaris_erc20_v1alpha1_query_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_erc20_v1alpha1_query_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CoinDenomForERC20AddressResponse); i {
 			case 0:
 				return &v.state
@@ -2035,18 +2035,18 @@ func file_polaris_erc20_v1alpha1_query_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_polaris_erc20_v1alpha1_query_proto_rawDesc,
+			RawDescriptor: file_blackfury_erc20_v1alpha1_query_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_polaris_erc20_v1alpha1_query_proto_goTypes,
-		DependencyIndexes: file_polaris_erc20_v1alpha1_query_proto_depIdxs,
-		MessageInfos:      file_polaris_erc20_v1alpha1_query_proto_msgTypes,
+		GoTypes:           file_blackfury_erc20_v1alpha1_query_proto_goTypes,
+		DependencyIndexes: file_blackfury_erc20_v1alpha1_query_proto_depIdxs,
+		MessageInfos:      file_blackfury_erc20_v1alpha1_query_proto_msgTypes,
 	}.Build()
-	File_polaris_erc20_v1alpha1_query_proto = out.File
-	file_polaris_erc20_v1alpha1_query_proto_rawDesc = nil
-	file_polaris_erc20_v1alpha1_query_proto_goTypes = nil
-	file_polaris_erc20_v1alpha1_query_proto_depIdxs = nil
+	File_blackfury_erc20_v1alpha1_query_proto = out.File
+	file_blackfury_erc20_v1alpha1_query_proto_rawDesc = nil
+	file_blackfury_erc20_v1alpha1_query_proto_goTypes = nil
+	file_blackfury_erc20_v1alpha1_query_proto_depIdxs = nil
 }

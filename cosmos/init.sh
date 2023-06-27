@@ -90,12 +90,12 @@ if [[ $overwrite == "y" || $overwrite == "Y" ]]; then
 
 	# Allocate genesis accounts (cosmos formatted addresses)
 	for KEY in "${KEYS[@]}"; do
-		./bin/polard genesis add-genesis-account $KEY 100000000000000000000000000avblack --keyring-backend $KEYRING --home "$HOMEDIR"
+		./bin/polard genesis add-genesis-account $KEY 1000000000000000000000000avblack --keyring-backend $KEYRING --home "$HOMEDIR"
 	done
 
 
 	# Sign genesis transaction
-	./bin/polard genesis gentx ${KEYS[0]} 1000000000000000000000avblack --keyring-backend $KEYRING --chain-id $CHAINID --home "$HOMEDIR"
+	./bin/polard genesis gentx ${KEYS[0]} 10000000000000000000avblack --keyring-backend $KEYRING --chain-id $CHAINID --home "$HOMEDIR"
 	## In case you want to create multiple validators at genesis
 	## 1. Back to `./bin/polard keys add` step, init more keys
 	## 2. Back to `./bin/polard add-genesis-account` step, add balance for those

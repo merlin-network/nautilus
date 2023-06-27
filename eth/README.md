@@ -5,7 +5,7 @@ underlying consensus layer. This folder's directory structure closely resembles 
 is meant to be a thin wrapper around the existing geth codebase. The following architecture diagram
 shows how Blackfury Ethereum integrates into the application level of a host chain.
 
-![polaris_architecture.png](../docs/web/public/polaris_architecture.png)
+![blackfury_architecture.png](../docs/web/public/blackfury_architecture.png)
 
 ## api
 

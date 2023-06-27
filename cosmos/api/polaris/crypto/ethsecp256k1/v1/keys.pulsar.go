@@ -18,8 +18,8 @@ var (
 )
 
 func init() {
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_init()
-	md_PubKey = File_polaris_crypto_ethsecp256k1_v1_keys_proto.Messages().ByName("PubKey")
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_init()
+	md_PubKey = File_blackfury_crypto_ethsecp256k1_v1_keys_proto.Messages().ByName("PubKey")
 	fd_PubKey_key = md_PubKey.Fields().ByName("key")
 }
 
@@ -32,7 +32,7 @@ func (x *PubKey) ProtoReflect() protoreflect.Message {
 }
 
 func (x *PubKey) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0]
+	mi := &file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -440,8 +440,8 @@ var (
 )
 
 func init() {
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_init()
-	md_PrivKey = File_polaris_crypto_ethsecp256k1_v1_keys_proto.Messages().ByName("PrivKey")
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_init()
+	md_PrivKey = File_blackfury_crypto_ethsecp256k1_v1_keys_proto.Messages().ByName("PrivKey")
 	fd_PrivKey_key = md_PrivKey.Fields().ByName("key")
 }
 
@@ -454,7 +454,7 @@ func (x *PrivKey) ProtoReflect() protoreflect.Message {
 }
 
 func (x *PrivKey) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1]
+	mi := &file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -904,7 +904,7 @@ type PubKey struct {
 func (x *PubKey) Reset() {
 	*x = PubKey{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0]
+		mi := &file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -918,7 +918,7 @@ func (*PubKey) ProtoMessage() {}
 
 // Deprecated: Use PubKey.ProtoReflect.Descriptor instead.
 func (*PubKey) Descriptor() ([]byte, []int) {
-	return file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP(), []int{0}
+	return file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *PubKey) GetKey() []byte {
@@ -942,7 +942,7 @@ type PrivKey struct {
 func (x *PrivKey) Reset() {
 	*x = PrivKey{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1]
+		mi := &file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -956,7 +956,7 @@ func (*PrivKey) ProtoMessage() {}
 
 // Deprecated: Use PrivKey.ProtoReflect.Descriptor instead.
 func (*PrivKey) Descriptor() ([]byte, []int) {
-	return file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP(), []int{1}
+	return file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *PrivKey) GetKey() []byte {
@@ -966,9 +966,9 @@ func (x *PrivKey) GetKey() []byte {
 	return nil
 }
 
-var File_polaris_crypto_ethsecp256k1_v1_keys_proto protoreflect.FileDescriptor
+var File_blackfury_crypto_ethsecp256k1_v1_keys_proto protoreflect.FileDescriptor
 
-var file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDesc = []byte{
+var file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDesc = []byte{
 	0x0a, 0x29, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2f, 0x63, 0x72, 0x79, 0x70, 0x74, 0x6f,
 	0x2f, 0x65, 0x74, 0x68, 0x73, 0x65, 0x63, 0x70, 0x32, 0x35, 0x36, 0x6b, 0x31, 0x2f, 0x76, 0x31,
 	0x2f, 0x6b, 0x65, 0x79, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x1e, 0x70, 0x6f, 0x6c,
@@ -998,23 +998,23 @@ var file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDesc = []byte{
 }
 
 var (
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescOnce sync.Once
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescData = file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDesc
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescOnce sync.Once
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescData = file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDesc
 )
 
-func file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP() []byte {
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescOnce.Do(func() {
-		file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescData = protoimpl.X.CompressGZIP(file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescData)
+func file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP() []byte {
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescOnce.Do(func() {
+		file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescData = protoimpl.X.CompressGZIP(file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescData)
 	})
-	return file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescData
+	return file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescData
 }
 
-var file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_polaris_crypto_ethsecp256k1_v1_keys_proto_goTypes = []interface{}{
+var file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_blackfury_crypto_ethsecp256k1_v1_keys_proto_goTypes = []interface{}{
 	(*PubKey)(nil),  // 0: black.crypto.ethsecp256k1.v1.PubKey
 	(*PrivKey)(nil), // 1: black.crypto.ethsecp256k1.v1.PrivKey
 }
-var file_polaris_crypto_ethsecp256k1_v1_keys_proto_depIdxs = []int32{
+var file_blackfury_crypto_ethsecp256k1_v1_keys_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -1022,13 +1022,13 @@ var file_polaris_crypto_ethsecp256k1_v1_keys_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_polaris_crypto_ethsecp256k1_v1_keys_proto_init() }
-func file_polaris_crypto_ethsecp256k1_v1_keys_proto_init() {
-	if File_polaris_crypto_ethsecp256k1_v1_keys_proto != nil {
+func init() { file_blackfury_crypto_ethsecp256k1_v1_keys_proto_init() }
+func file_blackfury_crypto_ethsecp256k1_v1_keys_proto_init() {
+	if File_blackfury_crypto_ethsecp256k1_v1_keys_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PubKey); i {
 			case 0:
 				return &v.state
@@ -1040,7 +1040,7 @@ func file_polaris_crypto_ethsecp256k1_v1_keys_proto_init() {
 				return nil
 			}
 		}
-		file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PrivKey); i {
 			case 0:
 				return &v.state
@@ -1057,18 +1057,18 @@ func file_polaris_crypto_ethsecp256k1_v1_keys_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDesc,
+			RawDescriptor: file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_polaris_crypto_ethsecp256k1_v1_keys_proto_goTypes,
-		DependencyIndexes: file_polaris_crypto_ethsecp256k1_v1_keys_proto_depIdxs,
-		MessageInfos:      file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes,
+		GoTypes:           file_blackfury_crypto_ethsecp256k1_v1_keys_proto_goTypes,
+		DependencyIndexes: file_blackfury_crypto_ethsecp256k1_v1_keys_proto_depIdxs,
+		MessageInfos:      file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes,
 	}.Build()
-	File_polaris_crypto_ethsecp256k1_v1_keys_proto = out.File
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDesc = nil
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_goTypes = nil
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_depIdxs = nil
+	File_blackfury_crypto_ethsecp256k1_v1_keys_proto = out.File
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDesc = nil
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_goTypes = nil
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_depIdxs = nil
 }

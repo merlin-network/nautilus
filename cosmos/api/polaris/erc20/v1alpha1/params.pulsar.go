@@ -17,8 +17,8 @@ var (
 )
 
 func init() {
-	file_polaris_erc20_v1alpha1_params_proto_init()
-	md_Params = File_polaris_erc20_v1alpha1_params_proto.Messages().ByName("Params")
+	file_blackfury_erc20_v1alpha1_params_proto_init()
+	md_Params = File_blackfury_erc20_v1alpha1_params_proto.Messages().ByName("Params")
 }
 
 var _ protoreflect.Message = (*fastReflection_Params)(nil)
@@ -30,7 +30,7 @@ func (x *Params) ProtoReflect() protoreflect.Message {
 }
 
 func (x *Params) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_erc20_v1alpha1_params_proto_msgTypes[0]
+	mi := &file_blackfury_erc20_v1alpha1_params_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -411,7 +411,7 @@ type Params struct {
 func (x *Params) Reset() {
 	*x = Params{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_erc20_v1alpha1_params_proto_msgTypes[0]
+		mi := &file_blackfury_erc20_v1alpha1_params_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -425,12 +425,12 @@ func (*Params) ProtoMessage() {}
 
 // Deprecated: Use Params.ProtoReflect.Descriptor instead.
 func (*Params) Descriptor() ([]byte, []int) {
-	return file_polaris_erc20_v1alpha1_params_proto_rawDescGZIP(), []int{0}
+	return file_blackfury_erc20_v1alpha1_params_proto_rawDescGZIP(), []int{0}
 }
 
-var File_polaris_erc20_v1alpha1_params_proto protoreflect.FileDescriptor
+var File_blackfury_erc20_v1alpha1_params_proto protoreflect.FileDescriptor
 
-var file_polaris_erc20_v1alpha1_params_proto_rawDesc = []byte{
+var file_blackfury_erc20_v1alpha1_params_proto_rawDesc = []byte{
 	0x0a, 0x23, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2f, 0x65, 0x72, 0x63, 0x32, 0x30, 0x2f,
 	0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2f, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x2e,
 	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x16, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2e, 0x65,
@@ -453,22 +453,22 @@ var file_polaris_erc20_v1alpha1_params_proto_rawDesc = []byte{
 }
 
 var (
-	file_polaris_erc20_v1alpha1_params_proto_rawDescOnce sync.Once
-	file_polaris_erc20_v1alpha1_params_proto_rawDescData = file_polaris_erc20_v1alpha1_params_proto_rawDesc
+	file_blackfury_erc20_v1alpha1_params_proto_rawDescOnce sync.Once
+	file_blackfury_erc20_v1alpha1_params_proto_rawDescData = file_blackfury_erc20_v1alpha1_params_proto_rawDesc
 )
 
-func file_polaris_erc20_v1alpha1_params_proto_rawDescGZIP() []byte {
-	file_polaris_erc20_v1alpha1_params_proto_rawDescOnce.Do(func() {
-		file_polaris_erc20_v1alpha1_params_proto_rawDescData = protoimpl.X.CompressGZIP(file_polaris_erc20_v1alpha1_params_proto_rawDescData)
+func file_blackfury_erc20_v1alpha1_params_proto_rawDescGZIP() []byte {
+	file_blackfury_erc20_v1alpha1_params_proto_rawDescOnce.Do(func() {
+		file_blackfury_erc20_v1alpha1_params_proto_rawDescData = protoimpl.X.CompressGZIP(file_blackfury_erc20_v1alpha1_params_proto_rawDescData)
 	})
-	return file_polaris_erc20_v1alpha1_params_proto_rawDescData
+	return file_blackfury_erc20_v1alpha1_params_proto_rawDescData
 }
 
-var file_polaris_erc20_v1alpha1_params_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_polaris_erc20_v1alpha1_params_proto_goTypes = []interface{}{
+var file_blackfury_erc20_v1alpha1_params_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_blackfury_erc20_v1alpha1_params_proto_goTypes = []interface{}{
 	(*Params)(nil), // 0: polaris.erc20.v1alpha1.Params
 }
-var file_polaris_erc20_v1alpha1_params_proto_depIdxs = []int32{
+var file_blackfury_erc20_v1alpha1_params_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -476,13 +476,13 @@ var file_polaris_erc20_v1alpha1_params_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_polaris_erc20_v1alpha1_params_proto_init() }
-func file_polaris_erc20_v1alpha1_params_proto_init() {
-	if File_polaris_erc20_v1alpha1_params_proto != nil {
+func init() { file_blackfury_erc20_v1alpha1_params_proto_init() }
+func file_blackfury_erc20_v1alpha1_params_proto_init() {
+	if File_blackfury_erc20_v1alpha1_params_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_polaris_erc20_v1alpha1_params_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_erc20_v1alpha1_params_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Params); i {
 			case 0:
 				return &v.state
@@ -499,18 +499,18 @@ func file_polaris_erc20_v1alpha1_params_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_polaris_erc20_v1alpha1_params_proto_rawDesc,
+			RawDescriptor: file_blackfury_erc20_v1alpha1_params_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   1,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_polaris_erc20_v1alpha1_params_proto_goTypes,
-		DependencyIndexes: file_polaris_erc20_v1alpha1_params_proto_depIdxs,
-		MessageInfos:      file_polaris_erc20_v1alpha1_params_proto_msgTypes,
+		GoTypes:           file_blackfury_erc20_v1alpha1_params_proto_goTypes,
+		DependencyIndexes: file_blackfury_erc20_v1alpha1_params_proto_depIdxs,
+		MessageInfos:      file_blackfury_erc20_v1alpha1_params_proto_msgTypes,
 	}.Build()
-	File_polaris_erc20_v1alpha1_params_proto = out.File
-	file_polaris_erc20_v1alpha1_params_proto_rawDesc = nil
-	file_polaris_erc20_v1alpha1_params_proto_goTypes = nil
-	file_polaris_erc20_v1alpha1_params_proto_depIdxs = nil
+	File_blackfury_erc20_v1alpha1_params_proto = out.File
+	file_blackfury_erc20_v1alpha1_params_proto_rawDesc = nil
+	file_blackfury_erc20_v1alpha1_params_proto_goTypes = nil
+	file_blackfury_erc20_v1alpha1_params_proto_depIdxs = nil
 }

@@ -19,8 +19,8 @@ var (
 )
 
 func init() {
-	file_polaris_evm_module_v1alpha1_module_proto_init()
-	md_Module = File_polaris_evm_module_v1alpha1_module_proto.Messages().ByName("Module")
+	file_blackfury_evm_module_v1alpha1_module_proto_init()
+	md_Module = File_blackfury_evm_module_v1alpha1_module_proto.Messages().ByName("Module")
 	fd_Module_authority = md_Module.Fields().ByName("authority")
 }
 
@@ -33,7 +33,7 @@ func (x *Module) ProtoReflect() protoreflect.Message {
 }
 
 func (x *Module) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_evm_module_v1alpha1_module_proto_msgTypes[0]
+	mi := &file_blackfury_evm_module_v1alpha1_module_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -479,7 +479,7 @@ type Module struct {
 func (x *Module) Reset() {
 	*x = Module{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_evm_module_v1alpha1_module_proto_msgTypes[0]
+		mi := &file_blackfury_evm_module_v1alpha1_module_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -493,7 +493,7 @@ func (*Module) ProtoMessage() {}
 
 // Deprecated: Use Module.ProtoReflect.Descriptor instead.
 func (*Module) Descriptor() ([]byte, []int) {
-	return file_polaris_evm_module_v1alpha1_module_proto_rawDescGZIP(), []int{0}
+	return file_blackfury_evm_module_v1alpha1_module_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Module) GetAuthority() string {
@@ -503,9 +503,9 @@ func (x *Module) GetAuthority() string {
 	return ""
 }
 
-var File_polaris_evm_module_v1alpha1_module_proto protoreflect.FileDescriptor
+var File_blackfury_evm_module_v1alpha1_module_proto protoreflect.FileDescriptor
 
-var file_polaris_evm_module_v1alpha1_module_proto_rawDesc = []byte{
+var file_blackfury_evm_module_v1alpha1_module_proto_rawDesc = []byte{
 	0x0a, 0x28, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2f, 0x65, 0x76, 0x6d, 0x2f, 0x6d, 0x6f,
 	0x64, 0x75, 0x6c, 0x65, 0x2f, 0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2f, 0x6d, 0x6f,
 	0x64, 0x75, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x1b, 0x70, 0x6f, 0x6c, 0x61,
@@ -538,22 +538,22 @@ var file_polaris_evm_module_v1alpha1_module_proto_rawDesc = []byte{
 }
 
 var (
-	file_polaris_evm_module_v1alpha1_module_proto_rawDescOnce sync.Once
-	file_polaris_evm_module_v1alpha1_module_proto_rawDescData = file_polaris_evm_module_v1alpha1_module_proto_rawDesc
+	file_blackfury_evm_module_v1alpha1_module_proto_rawDescOnce sync.Once
+	file_blackfury_evm_module_v1alpha1_module_proto_rawDescData = file_blackfury_evm_module_v1alpha1_module_proto_rawDesc
 )
 
-func file_polaris_evm_module_v1alpha1_module_proto_rawDescGZIP() []byte {
-	file_polaris_evm_module_v1alpha1_module_proto_rawDescOnce.Do(func() {
-		file_polaris_evm_module_v1alpha1_module_proto_rawDescData = protoimpl.X.CompressGZIP(file_polaris_evm_module_v1alpha1_module_proto_rawDescData)
+func file_blackfury_evm_module_v1alpha1_module_proto_rawDescGZIP() []byte {
+	file_blackfury_evm_module_v1alpha1_module_proto_rawDescOnce.Do(func() {
+		file_blackfury_evm_module_v1alpha1_module_proto_rawDescData = protoimpl.X.CompressGZIP(file_blackfury_evm_module_v1alpha1_module_proto_rawDescData)
 	})
-	return file_polaris_evm_module_v1alpha1_module_proto_rawDescData
+	return file_blackfury_evm_module_v1alpha1_module_proto_rawDescData
 }
 
-var file_polaris_evm_module_v1alpha1_module_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_polaris_evm_module_v1alpha1_module_proto_goTypes = []interface{}{
+var file_blackfury_evm_module_v1alpha1_module_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_blackfury_evm_module_v1alpha1_module_proto_goTypes = []interface{}{
 	(*Module)(nil), // 0: polaris.evm.module.v1alpha1.Module
 }
-var file_polaris_evm_module_v1alpha1_module_proto_depIdxs = []int32{
+var file_blackfury_evm_module_v1alpha1_module_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -561,13 +561,13 @@ var file_polaris_evm_module_v1alpha1_module_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_polaris_evm_module_v1alpha1_module_proto_init() }
-func file_polaris_evm_module_v1alpha1_module_proto_init() {
-	if File_polaris_evm_module_v1alpha1_module_proto != nil {
+func init() { file_blackfury_evm_module_v1alpha1_module_proto_init() }
+func file_blackfury_evm_module_v1alpha1_module_proto_init() {
+	if File_blackfury_evm_module_v1alpha1_module_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_polaris_evm_module_v1alpha1_module_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_evm_module_v1alpha1_module_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Module); i {
 			case 0:
 				return &v.state
@@ -584,18 +584,18 @@ func file_polaris_evm_module_v1alpha1_module_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_polaris_evm_module_v1alpha1_module_proto_rawDesc,
+			RawDescriptor: file_blackfury_evm_module_v1alpha1_module_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   1,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_polaris_evm_module_v1alpha1_module_proto_goTypes,
-		DependencyIndexes: file_polaris_evm_module_v1alpha1_module_proto_depIdxs,
-		MessageInfos:      file_polaris_evm_module_v1alpha1_module_proto_msgTypes,
+		GoTypes:           file_blackfury_evm_module_v1alpha1_module_proto_goTypes,
+		DependencyIndexes: file_blackfury_evm_module_v1alpha1_module_proto_depIdxs,
+		MessageInfos:      file_blackfury_evm_module_v1alpha1_module_proto_msgTypes,
 	}.Build()
-	File_polaris_evm_module_v1alpha1_module_proto = out.File
-	file_polaris_evm_module_v1alpha1_module_proto_rawDesc = nil
-	file_polaris_evm_module_v1alpha1_module_proto_goTypes = nil
-	file_polaris_evm_module_v1alpha1_module_proto_depIdxs = nil
+	File_blackfury_evm_module_v1alpha1_module_proto = out.File
+	file_blackfury_evm_module_v1alpha1_module_proto_rawDesc = nil
+	file_blackfury_evm_module_v1alpha1_module_proto_goTypes = nil
+	file_blackfury_evm_module_v1alpha1_module_proto_depIdxs = nil
 }

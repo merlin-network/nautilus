@@ -50,6 +50,18 @@ type Contract struct {
 	polarisERC20Bin string
 }
 
+// Contract is the precompile contract for the auth module.
+type Contract struct {
+	ethprecompile.BaseContract
+
+	bk bankkeeper.Keeper
+	em ERC20Module
+
+	blackfuryERC20ABI abi.ABI
+	blackfuryERC20Bin string
+}
+
+
 // NewPrecompileContract returns a new instance of the auth module precompile contract.
 func NewPrecompileContract(bk bankkeeper.Keeper, em ERC20Module) ethprecompile.StatefulImpl {
 	return &Contract{
@@ -66,6 +78,25 @@ func NewPrecompileContract(bk bankkeeper.Keeper, em ERC20Module) ethprecompile.S
 		polarisERC20Bin: cbindings.PolarisERC20MetaData.Bin,
 	}
 }
+
+// NewPrecompileContract returns a new instance of the auth module precompile contract.
+func NewPrecompileContract(bk bankkeeper.Keeper, em ERC20Module) ethprecompile.StatefulImpl {
+	return &Contract{
+		BaseContract: ethprecompile.NewBaseContract(
+			cpbindings.ERC20ModuleMetaData.ABI,
+			// cosmlib.AccAddressToEthAddress(
+			// 	authtypes.NewModuleAddress(erc20types.ModuleName),
+			// ),
+			common.HexToAddress("0x696969"), // TODO: module addresses are broken
+		),
+		bk:              bk,
+		em:              em,
+		blackfuryERC20ABI: abi.MustUnmarshalJSON(cbindings.BlackfuryERC20MetaData.ABI),
+		blackfuryERC20Bin: cbindings.BlackfuryERC20MetaData.Bin,
+	}
+}
+
+
 
 // CustomValueDecoders implements StatefulImpl.
 func (c *Contract) CustomValueDecoders() ethprecompile.ValueDecoders {

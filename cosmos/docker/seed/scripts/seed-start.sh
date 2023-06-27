@@ -21,4 +21,4 @@
 HOMEDIR="/root/.polard"
 LOGLEVEL="info"
 
-polard start --log_level $LOGLEVEL --minimum-gas-prices=0.0001ablack --home "$HOMEDIR"
+polard start --log_level $LOGLEVEL --minimum-gas-prices=0.0001avblack --home "$HOMEDIR"

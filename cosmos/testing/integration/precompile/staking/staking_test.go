@@ -149,7 +149,7 @@ var _ = Describe("Staking", func() {
 		amt := big.NewInt(123450000000)
 		tx, err = bankPrecompile.Send(txr, tf.Address("alice"), contractAddr, []bbindings.CosmosCoin{
 			{
-				Denom:  "ablack",
+				Denom:  "avblack",
 				Amount: amt,
 			},
 		})

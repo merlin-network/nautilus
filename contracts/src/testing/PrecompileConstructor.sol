@@ -31,14 +31,14 @@ import {IERC20Module} from "../cosmos/precompile/ERC20Module.sol";
 // An example of calling a precompile from the contract's constructor.
 contract PrecompileConstructor {
     IERC20Module public immutable erc20Module = IERC20Module(0x0000000000000000000000000000000000696969);
-    IERC20 public ablack;
+    IERC20 public avblack;
     string public denom;
 
     constructor() {
-        bool success = erc20Module.transferCoinToERC20From("ablack", msg.sender, msg.sender, 123456789);
-        require(success, "failed to transfer ablack");
-        ablack = erc20Module.erc20AddressForCoinDenom("ablack");
-        denom = erc20Module.coinDenomForERC20Address(ablack);
-        require(keccak256(abi.encodePacked(denom)) == keccak256(abi.encodePacked("ablack")), "returned the wrong denom");
+        bool success = erc20Module.transferCoinToERC20From("avblack", msg.sender, msg.sender, 123456789);
+        require(success, "failed to transfer avblack");
+        avblack = erc20Module.erc20AddressForCoinDenom("avblack");
+        denom = erc20Module.coinDenomForERC20Address(avblack);
+        require(keccak256(abi.encodePacked(denom)) == keccak256(abi.encodePacked("avblack")), "returned the wrong denom");
     }
 }

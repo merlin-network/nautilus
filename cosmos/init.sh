@@ -81,21 +81,21 @@ if [[ $overwrite == "y" || $overwrite == "Y" ]]; then
 		./bin/polard keys add $KEY --keyring-backend $KEYRING --algo $KEYALGO --home "$HOMEDIR"
 	done
 
-	# Change parameter token denominations to ablack
-	jq '.app_state["staking"]["params"]["bond_denom"]="ablack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-	jq '.app_state["crisis"]["constant_fee"]["denom"]="ablack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-	jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="ablack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-	jq '.app_state["mint"]["params"]["mint_denom"]="ablack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	# Change parameter token denominations to avblack
+	jq '.app_state["staking"]["params"]["bond_denom"]="avblack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	jq '.app_state["crisis"]["constant_fee"]["denom"]="avblack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="avblack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	jq '.app_state["mint"]["params"]["mint_denom"]="avblack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 	jq '.consensus["params"]["block"]["max_gas"]="30000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 	# Allocate genesis accounts (cosmos formatted addresses)
 	for KEY in "${KEYS[@]}"; do
-		./bin/polard genesis add-genesis-account $KEY 100000000000000000000000000ablack --keyring-backend $KEYRING --home "$HOMEDIR"
+		./bin/polard genesis add-genesis-account $KEY 100000000000000000000000000avblack --keyring-backend $KEYRING --home "$HOMEDIR"
 	done
 
 
 	# Sign genesis transaction
-	./bin/polard genesis gentx ${KEYS[0]} 1000000000000000000000ablack --keyring-backend $KEYRING --chain-id $CHAINID --home "$HOMEDIR"
+	./bin/polard genesis gentx ${KEYS[0]} 1000000000000000000000avblack --keyring-backend $KEYRING --chain-id $CHAINID --home "$HOMEDIR"
 	## In case you want to create multiple validators at genesis
 	## 1. Back to `./bin/polard keys add` step, init more keys
 	## 2. Back to `./bin/polard add-genesis-account` step, add balance for those
@@ -115,4 +115,4 @@ if [[ $overwrite == "y" || $overwrite == "Y" ]]; then
 fi
 
 # Start the node (remove the --pruning=nothing flag if historical queries are not needed)m
-./bin/polard start --pruning=nothing "$TRACE" --log_level $LOGLEVEL --api.enabled-unsafe-cors --api.enable --api.swagger --minimum-gas-prices=0.0001ablack --home "$HOMEDIR"
+./bin/polard start --pruning=nothing "$TRACE" --log_level $LOGLEVEL --api.enabled-unsafe-cors --api.enable --api.swagger --minimum-gas-prices=0.0001avblack --home "$HOMEDIR"

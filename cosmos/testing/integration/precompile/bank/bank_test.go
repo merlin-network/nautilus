@@ -53,7 +53,7 @@ var _ = SynchronizedBeforeSuite(func() []byte {
 }, func(data []byte) {})
 
 var _ = Describe("Bank", func() {
-	denom := "ablack"
+	denom := "avblack"
 	denom2 := "atoken"
 	denom3 := "stake"
 
@@ -86,13 +86,13 @@ var _ = Describe("Bank", func() {
 			DenomUnits: []bindings.IBankModuleDenomUnit{
 				{Denom: "bera", Exponent: uint32(0), Aliases: []string{"bera"}},
 				{Denom: "nblack", Exponent: uint32(9), Aliases: []string{"nanoblack"}},
-				{Denom: "ablack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
+				{Denom: "avblack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
 			},
-			Base:    "ablack",
+			Base:    "avblack",
 			Display: "bera",
 		}
 
-		// charlie initially has 1000000000000000000 ablack
+		// charlie initially has 1000000000000000000 avblack
 		balance, err := bankPrecompile.GetBalance(nil, tf.Address("charlie"), denom)
 		Expect(err).ShouldNot(HaveOccurred())
 		Expect(balance.Cmp(big.NewInt(1000000000000000000))).To(Equal(0))
@@ -110,12 +110,12 @@ var _ = Describe("Bank", func() {
 		err = tf.Network.WaitForNextBlock()
 		Expect(err).ToNot(HaveOccurred())
 
-		// charlie now has 1000000000000001000 ablack
+		// charlie now has 1000000000000001000 avblack
 		balance, err = bankPrecompile.GetBalance(nil, tf.Address("charlie"), denom)
 		Expect(err).ShouldNot(HaveOccurred())
 		Expect(balance).To(Equal(big.NewInt(1000000000000001000)))
 
-		// bob has 100 ablack and 100 atoken
+		// bob has 100 avblack and 100 atoken
 		allBalance, err := bankPrecompile.GetAllBalances(nil, tf.Address("bob"))
 		Expect(err).ShouldNot(HaveOccurred())
 		Expect(allBalance).To(Equal(expectedAllBalance))
@@ -140,7 +140,7 @@ var _ = Describe("Bank", func() {
 		Expect(err).ShouldNot(HaveOccurred())
 		Expect(denomMetadata).To(Equal(evmDenomMetadata))
 
-		sendEnabled, err := bankPrecompile.GetSendEnabled(nil, "ablack")
+		sendEnabled, err := bankPrecompile.GetSendEnabled(nil, "avblack")
 		Expect(err).ShouldNot(HaveOccurred())
 		Expect(sendEnabled).To(BeTrue())
 	})
@@ -161,7 +161,7 @@ var _ = Describe("Bank", func() {
 			},
 		}
 
-		// donate 1000000 ablack from account 0 to contractAddr
+		// donate 1000000 avblack from account 0 to contractAddr
 		_, err = contract.Donate(tf.GenerateTransactOpts("alice"), coinsToDonate)
 		Expect(err).ToNot(HaveOccurred())
 
@@ -169,12 +169,12 @@ var _ = Describe("Bank", func() {
 		err = tf.Network.WaitForNextBlock()
 		Expect(err).ToNot(HaveOccurred())
 
-		// contractAddr should have 1000000 ablack
+		// contractAddr should have 1000000 avblack
 		balance, err := bankPrecompile.GetBalance(nil, contractAddr, denom)
 		Expect(err).ShouldNot(HaveOccurred())
 		Expect(balance).To(Equal(big.NewInt(1000000)))
 
-		// withdraw all 1000000 ablack from contractAddr to account 0
+		// withdraw all 1000000 avblack from contractAddr to account 0
 		_, err = contract.WithdrawDonations(tf.GenerateTransactOpts("alice"))
 		Expect(err).ToNot(HaveOccurred())
 
@@ -182,7 +182,7 @@ var _ = Describe("Bank", func() {
 		err = tf.Network.WaitForNextBlock()
 		Expect(err).ToNot(HaveOccurred())
 
-		// contractAddr should have 0 ablack
+		// contractAddr should have 0 avblack
 		balance, err = bankPrecompile.GetBalance(nil, contractAddr, denom)
 		Expect(err).ShouldNot(HaveOccurred())
 		Expect(balance.Cmp(big.NewInt(0))).To(Equal(0))

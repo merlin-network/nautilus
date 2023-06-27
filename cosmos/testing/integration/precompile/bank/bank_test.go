@@ -80,16 +80,16 @@ var _ = Describe("Bank", func() {
 			},
 		}
 		evmDenomMetadata := bindings.IBankModuleDenomMetadata{
-			Name:        "Berachain bera",
+			Name:        "Blackfury Black",
 			Symbol:      "BLACK",
-			Description: "The Bera.",
+			Description: "The vBlack.",
 			DenomUnits: []bindings.IBankModuleDenomUnit{
-				{Denom: "bera", Exponent: uint32(0), Aliases: []string{"bera"}},
+				{Denom: "vblack", Exponent: uint32(0), Aliases: []string{"vblack"}},
 				{Denom: "nblack", Exponent: uint32(9), Aliases: []string{"nanoblack"}},
 				{Denom: "avblack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
 			},
 			Base:    "avblack",
-			Display: "bera",
+			Display: "vblack",
 		}
 
 		// charlie initially has 1000000000000000000 avblack
@@ -97,7 +97,7 @@ var _ = Describe("Bank", func() {
 		Expect(err).ShouldNot(HaveOccurred())
 		Expect(balance.Cmp(big.NewInt(1000000000000000000))).To(Equal(0))
 
-		// Send 1000 bera from alice to charlie
+		// Send 1000 vblack from alice to charlie
 		_, err = bankPrecompile.Send(
 			tf.GenerateTransactOpts("alice"),
 			tf.Address("alice"),

@@ -113,7 +113,7 @@
     },
     "evm": {
       "config": {
-        "chainId": 2061,
+        "chainId": 710-1,
         "homesteadBlock": 0,
         "daoForkBlock": 0,
         "daoForkSupport": true,

@@ -2,7 +2,7 @@
   "app_name": "polaris-cosmos",
   "app_version": "v0.0.0",
   "genesis_time": "2023-05-30T23:14:44.991554Z",
-  "chain_id": "polaris-2061",
+  "chain_id": "highbury_710-1",
   "initial_height": 1,
   "app_hash": null,
   "app_state": {
@@ -51,7 +51,7 @@
           "address": "black1qk36tw89pgf5f8jhxf4hcug3q20u35x2p4jmm5",
           "coins": [
             {
-              "denom": "ablack",
+              "denom": "avblack",
               "amount": "100000000000000000000000000"
             }
           ]
@@ -60,7 +60,7 @@
           "address": "black16z3wul8jkjksw60kr2gumsv7hk9l5ck5597nwa",
           "coins": [
             {
-              "denom": "ablack",
+              "denom": "avblack",
               "amount": "100000000000000000000000000"
             }
           ]
@@ -69,7 +69,7 @@
           "address": "black1l4qr3q3535su2ggy7kh2j04a35wd8vyshtuafh",
           "coins": [
             {
-              "denom": "ablack",
+              "denom": "avblack",
               "amount": "100000000000000000000000000"
             }
           ]
@@ -77,7 +77,7 @@
       ],
       "supply": [
         {
-          "denom": "ablack",
+          "denom": "avblack",
           "amount": "300000000000000000000000000"
         }
       ],
@@ -87,7 +87,7 @@
     "consensus": null,
     "crisis": {
       "constant_fee": {
-        "denom": "ablack",
+        "denom": "avblack",
         "amount": "1000"
       }
     },
@@ -118,7 +118,7 @@
     },
     "evm": {
       "config": {
-        "chainId": 2061,
+        "chainId": 710,
         "homesteadBlock": 0,
         "daoForkBlock": 0,
         "daoForkSupport": true,
@@ -183,7 +183,7 @@
                   "key": "/GmlSP30BD2b713XWL2l3O3hMlDKH1FxmBlIP6Ox47E="
                 },
                 "value": {
-                  "denom": "ablack",
+                  "denom": "avblack",
                   "amount": "1000000000000000000000"
                 }
               }
@@ -197,7 +197,7 @@
             "signer_infos": [
               {
                 "public_key": {
-                  "@type": "/polaris.crypto.ethsecp256k1.v1.PubKey",
+                  "@type": "/black.crypto.ethsecp256k1.v1.PubKey",
                   "key": "AwjItkzy4rgPzJypyOxK2YmjNhQJtLfAKQhRgBccZGDW"
                 },
                 "mode_info": {
@@ -230,7 +230,7 @@
       "deposit_params": {
         "min_deposit": [
           {
-            "denom": "ablack"
+            "denom": "avblack"
           }
         ]
       },
@@ -281,7 +281,7 @@
         "annual_provisions": "0.000000000000000000"
       },
       "params": {
-        "mint_denom": "ablack",
+        "mint_denom": "avblack",
         "inflation_rate_change": "0.130000000000000000",
         "inflation_max": "0.200000000000000000",
         "inflation_min": "0.070000000000000000",
@@ -306,7 +306,7 @@
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
-        "bond_denom": "ablack",
+        "bond_denom": "avblack",
         "min_commission_rate": "0.000000000000000000"
       },
       "last_total_power": "0",

@@ -83,7 +83,7 @@ export default {
         text: (
             <div>
                 <p>
-                    © {new Date().getFullYear()} Berachain Foundation.
+                    © {new Date().getFullYear()} Blackchain Foundation.
                 </p>
             </div>
         )

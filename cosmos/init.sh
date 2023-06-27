@@ -1,7 +1,7 @@
 #!/bin/bash
 # SPDX-License-Identifier: BUSL-1.1
 #
-# Copyright (C) 2023, Berachain Foundation. All rights reserved.
+# Copyright (C) 2023, Blackchain Foundation. All rights reserved.
 # Use of this software is govered by the Business Source License included
 # in the LICENSE file of this repository and at www.mariadb.com/bsl11.
 #
@@ -23,7 +23,7 @@
 KEYS[0]="dev0"
 KEYS[1]="dev1"
 KEYS[2]="dev2"
-CHAINID="polaris-2061"
+CHAINID="highbury_710-1"
 MONIKER="localtestnet"
 # Remember to change to other types of keyring like 'file' in-case exposing to outside world,
 # otherwise your balance will be wiped quickly
@@ -32,7 +32,7 @@ KEYRING="test"
 KEYALGO="eth_secp256k1"
 LOGLEVEL="info"
 # Set dedicated home directory for the ./bin/polard instance
-HOMEDIR="./.tmp/polard"
+HOMEDIR="$HOME/.polard"
 # to trace evm
 #TRACE="--trace"
 TRACE=""
@@ -81,21 +81,21 @@ if [[ $overwrite == "y" || $overwrite == "Y" ]]; then
 		./bin/polard keys add $KEY --keyring-backend $KEYRING --algo $KEYALGO --home "$HOMEDIR"
 	done
 
-	# Change parameter token denominations to ablack
-	jq '.app_state["staking"]["params"]["bond_denom"]="ablack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-	jq '.app_state["crisis"]["constant_fee"]["denom"]="ablack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-	jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="ablack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
-	jq '.app_state["mint"]["params"]["mint_denom"]="ablack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	# Change parameter token denominations to avblack
+	jq '.app_state["staking"]["params"]["bond_denom"]="avblack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	jq '.app_state["crisis"]["constant_fee"]["denom"]="avblack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="avblack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	jq '.app_state["mint"]["params"]["mint_denom"]="avblack"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 	jq '.consensus["params"]["block"]["max_gas"]="30000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 	# Allocate genesis accounts (cosmos formatted addresses)
 	for KEY in "${KEYS[@]}"; do
-		./bin/polard genesis add-genesis-account $KEY 100000000000000000000000000ablack --keyring-backend $KEYRING --home "$HOMEDIR"
+		./bin/polard genesis add-genesis-account $KEY 100000000000000000000000000avblack --keyring-backend $KEYRING --home "$HOMEDIR"
 	done
 
 
 	# Sign genesis transaction
-	./bin/polard genesis gentx ${KEYS[0]} 1000000000000000000000ablack --keyring-backend $KEYRING --chain-id $CHAINID --home "$HOMEDIR"
+	./bin/polard genesis gentx ${KEYS[0]} 1000000000000000000000avblack --keyring-backend $KEYRING --chain-id $CHAINID --home "$HOMEDIR"
 	## In case you want to create multiple validators at genesis
 	## 1. Back to `./bin/polard keys add` step, init more keys
 	## 2. Back to `./bin/polard add-genesis-account` step, add balance for those
@@ -115,4 +115,4 @@ if [[ $overwrite == "y" || $overwrite == "Y" ]]; then
 fi
 
 # Start the node (remove the --pruning=nothing flag if historical queries are not needed)m
-./bin/polard start --pruning=nothing "$TRACE" --log_level $LOGLEVEL --api.enabled-unsafe-cors --api.enable --api.swagger --minimum-gas-prices=0.0001ablack --home "$HOMEDIR"
+./bin/polard start --pruning=nothing "$TRACE" --log_level $LOGLEVEL --api.enabled-unsafe-cors --api.enable --api.swagger --minimum-gas-prices=0.0001avblack --home "$HOMEDIR"

@@ -14,7 +14,7 @@ import {Cosmos} from "./CosmosTypes.sol";
  * Cosmos SDK Polaris chains. Uses the bank module to actually hold account balances and execute
  * transfers. The authz module is used to set approvals and permissions for spends.
  *
- * @author Berachain Team
+ * @author Blackchain Team
  * @author Solmate (https://github.com/Rari-Capital/solmate/blob/main/src/tokens/ERC20.sol)
  */
 contract PolarisERC20 is IERC20 {

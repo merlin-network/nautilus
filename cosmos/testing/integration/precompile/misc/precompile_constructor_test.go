@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 //
-// Copyright (C) 2023, Berachain Foundation. All rights reserved.
+// Copyright (C) 2023, Blackchain Foundation. All rights reserved.
 // Use of this software is govered by the Business Source License included
 // in the LICENSE file of this repository and at www.mariadb.com/bsl11.
 //
@@ -42,12 +42,12 @@ var _ = Describe("Miscellaneous Precompile Tests", func() {
 			err = tf.Network.WaitForNextBlock()
 			Expect(err).NotTo(HaveOccurred())
 
-			ablackAddr, err := contract.Ablack(nil)
+			avblackAddr, err := contract.Ablack(nil)
 			Expect(err).NotTo(HaveOccurred())
-			Expect(ablackAddr).ToNot(BeEmpty())
-			ablackStr, err := contract.Denom(nil)
+			Expect(avblackAddr).ToNot(BeEmpty())
+			avblackStr, err := contract.Denom(nil)
 			Expect(err).NotTo(HaveOccurred())
-			Expect(ablackStr).To(Equal("ablack"))
+			Expect(avblackStr).To(Equal("avblack"))
 		})
 	})
 })

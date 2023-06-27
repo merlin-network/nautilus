@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 //
-// Copyright (C) 2023, Berachain Foundation. All rights reserved.
+// Copyright (C) 2023, Blackchain Foundation. All rights reserved.
 // Use of this software is govered by the Business Source License included
 // in the LICENSE file of this repository and at www.mariadb.com/bsl11.
 //
@@ -115,15 +115,15 @@ func DefaultConfig(keysMap map[string]*ethsecp256k1.PrivKey) network.Config {
 				val.GetCtx().Logger, cdb.NewMemDB(), nil, true, sims.EmptyAppOptions{},
 				baseapp.SetPruning(pruningtypes.NewPruningOptionsFromString(val.GetAppConfig().Pruning)),
 				baseapp.SetMinGasPrices(val.GetAppConfig().MinGasPrices),
-				baseapp.SetChainID("polaris-2061"),
+				baseapp.SetChainID("highbury_710-1"),
 			)
 		},
 		GenesisState:    BuildGenesisState(keysMap),
 		TimeoutCommit:   time.Second,
-		ChainID:         "polaris-2061",
+		ChainID:         "highbury_710-1",
 		NumValidators:   1,
-		BondDenom:       "ablack",
-		MinGasPrices:    fmt.Sprintf("0.00000%s", "ablack"),
+		BondDenom:       "avblack",
+		MinGasPrices:    fmt.Sprintf("0.00000%s", "avblack"),
 		AccountTokens:   sdk.TokensFromConsensusPower(thousand, sdk.DefaultPowerReduction),
 		StakingTokens:   sdk.TokensFromConsensusPower(fivehundred, sdk.DefaultPowerReduction),
 		BondedTokens:    sdk.TokensFromConsensusPower(onehundred, sdk.DefaultPowerReduction),
@@ -175,7 +175,7 @@ func BuildGenesisState(keysMap map[string]*ethsecp256k1.PrivKey) map[string]json
 	bankState.DenomMetadata = getTestMetadata()
 	bankState.SendEnabled = []banktypes.SendEnabled{
 		{
-			Denom:   "ablack",
+			Denom:   "avblack",
 			Enabled: true,
 		},
 		{
@@ -199,7 +199,7 @@ func BuildGenesisState(keysMap map[string]*ethsecp256k1.PrivKey) map[string]json
 	// Staking module
 	var stakingState stakingtypes.GenesisState
 	encoding.Codec.MustUnmarshalJSON(genState[stakingtypes.ModuleName], &stakingState)
-	stakingState.Params.BondDenom = "ablack"
+	stakingState.Params.BondDenom = "avblack"
 	genState[stakingtypes.ModuleName] = encoding.Codec.MustMarshalJSON(&stakingState)
 
 	// Distribution Module
@@ -217,16 +217,16 @@ func BuildGenesisState(keysMap map[string]*ethsecp256k1.PrivKey) map[string]json
 func getTestMetadata() []banktypes.Metadata {
 	return []banktypes.Metadata{
 		{
-			Name:        "Berachain bera",
-			Symbol:      "BLACK",
-			Description: "The Bera.",
+			Name:        "Blackchain vblack",
+			Symbol:      "vBLACK",
+			Description: "The Black.",
 			DenomUnits: []*banktypes.DenomUnit{
-				{Denom: "bera", Exponent: uint32(0), Aliases: []string{"bera"}},
+				{Denom: "vblack", Exponent: uint32(0), Aliases: []string{"vblack"}},
 				{Denom: "nblack", Exponent: uint32(9), Aliases: []string{"nanoblack"}},
-				{Denom: "ablack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
+				{Denom: "avblack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
 			},
-			Base:    "ablack",
-			Display: "bera",
+			Base:    "avblack",
+			Display: "vblack",
 		},
 		{
 			Name:        "Token",
@@ -269,7 +269,7 @@ func getCoinsForAccount(name string) sdk.Coins {
 	switch name {
 	case "alice":
 		return sdk.NewCoins(
-			sdk.NewCoin("ablack", sdkmath.NewInt(examoney)),
+			sdk.NewCoin("avblack", sdkmath.NewInt(examoney)),
 			sdk.NewCoin("bATOM", sdkmath.NewInt(examoney)),
 			sdk.NewCoin("bAKT", sdkmath.NewInt(12345)), //nolint:gomnd // its okay.
 			sdk.NewCoin("stake", sdkmath.NewInt(examoney)),
@@ -280,13 +280,13 @@ func getCoinsForAccount(name string) sdk.Coins {
 		)
 	case "bob":
 		return sdk.NewCoins(
-			sdk.NewCoin("ablack", sdkmath.NewInt(onehundred)),
+			sdk.NewCoin("avblack", sdkmath.NewInt(onehundred)),
 			sdk.NewCoin("atoken", sdkmath.NewInt(onehundred)),
 			sdk.NewCoin("stake", sdkmath.NewInt(examoney)),
 		)
 	case "charlie":
-		return sdk.NewCoins(sdk.NewCoin("ablack", sdkmath.NewInt(examoney)))
+		return sdk.NewCoins(sdk.NewCoin("avblack", sdkmath.NewInt(examoney)))
 	default:
-		return sdk.NewCoins(sdk.NewCoin("ablack", sdkmath.NewInt(examoney)))
+		return sdk.NewCoins(sdk.NewCoin("avblack", sdkmath.NewInt(examoney)))
 	}
 }

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 //
-// Copyright (C) 2023, Berachain Foundation. All rights reserved.
+// Copyright (C) 2023, Blackchain Foundation. All rights reserved.
 // Use of this software is govered by the Business Source License included
 // in the LICENSE file of this repository and at www.mariadb.com/bsl11.
 //
@@ -94,7 +94,7 @@ var _ = Describe("Governance Precompile", func() {
 			msg = banktypes.MsgSend{
 				FromAddress: caller.String(),
 				ToAddress:   testutil.Bob.String(),
-				Amount:      sdk.NewCoins(sdk.NewInt64Coin("ablack", 100)),
+				Amount:      sdk.NewCoins(sdk.NewInt64Coin("avblack", 100)),
 			}
 		})
 
@@ -148,11 +148,11 @@ var _ = Describe("Governance Precompile", func() {
 			Expect(res).To(BeNil())
 		})
 		It("should succeed", func() {
-			initDeposit := sdk.NewCoins(sdk.NewInt64Coin("ablack", 100))
+			initDeposit := sdk.NewCoins(sdk.NewInt64Coin("avblack", 100))
 			govAcct := gk.GetGovernanceAccount(ctx).GetAddress()
 			err := cosmlib.MintCoinsToAddress(
 				ctx, bk, governancetypes.ModuleName,
-				cosmlib.AccAddressToEthAddress(govAcct), "ablack", big.NewInt(100),
+				cosmlib.AccAddressToEthAddress(govAcct), "avblack", big.NewInt(100),
 			)
 			Expect(err).ToNot(HaveOccurred())
 			message := &banktypes.MsgSend{

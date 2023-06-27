@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 //
-// Copyright (C) 2023, Berachain Foundation. All rights reserved.
+// Copyright (C) 2023, Blackchain Foundation. All rights reserved.
 // Use of this software is govered by the Business Source License included
 // in the LICENSE file of this repository and at www.mariadb.com/bsl11.
 //
@@ -85,11 +85,11 @@ var _ = Describe("ERC20", func() {
 			})
 
 			It("should handle non-empty inputs", func() {
-				token, err := erc20Precompile.Erc20AddressForCoinDenom(nil, "ablack")
+				token, err := erc20Precompile.Erc20AddressForCoinDenom(nil, "avblack")
 				Expect(err).ToNot(HaveOccurred())
 				Expect(token).To(Equal(common.Address{}))
 
-				tokenAddr := common.BytesToAddress([]byte("ablack"))
+				tokenAddr := common.BytesToAddress([]byte("avblack"))
 				tokenBech32 := cosmlib.AddressToAccAddress(tokenAddr).String()
 
 				denom, err := erc20Precompile.CoinDenomForERC20Address(nil, tokenAddr)

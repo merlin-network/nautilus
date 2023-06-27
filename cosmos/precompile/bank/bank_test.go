@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 //
-// Copyright (C) 2023, Berachain Foundation. All rights reserved.
+// Copyright (C) 2023, Blackchain Foundation. All rights reserved.
 // Use of this software is govered by the Business Source License included
 // in the LICENSE file of this repository and at www.mariadb.com/bsl11.
 //
@@ -133,7 +133,7 @@ var _ = Describe("Bank Precompile Test", func() {
 			caller common.Address
 		)
 
-		denom := "ablack"
+		denom := "avblack"
 		denom2 := "atoken"
 
 		When("GetBalance", func() {
@@ -550,16 +550,16 @@ var _ = Describe("Bank Precompile Test", func() {
 
 			It("should succeed", func() {
 				expectedResult := generated.IBankModuleDenomMetadata{
-					Name:        "Berachain bera",
-					Symbol:      "BLACK",
-					Description: "The Bera.",
+					Name:        "Blackchain vblack",
+					Symbol:      "vBLACK",
+					Description: "The Black.",
 					DenomUnits: []generated.IBankModuleDenomUnit{
-						{Denom: "bera", Exponent: uint32(0), Aliases: []string{"bera"}},
+						{Denom: "vblack", Exponent: uint32(0), Aliases: []string{"vblack"}},
 						{Denom: "nblack", Exponent: uint32(9), Aliases: []string{"nanoblack"}},
-						{Denom: "ablack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
+						{Denom: "avblack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
 					},
-					Base:    "ablack",
-					Display: "bera",
+					Base:    "avblack",
+					Display: "vblack",
 				}
 
 				metadata := getTestMetadata()
@@ -732,16 +732,16 @@ func FundAccount(ctx sdk.Context, bk bankkeeper.BaseKeeper, account sdk.AccAddre
 func getTestMetadata() []banktypes.Metadata {
 	return []banktypes.Metadata{
 		{
-			Name:        "Berachain bera",
-			Symbol:      "BLACK",
-			Description: "The Bera.",
+			Name:        "Blackchain vblack",
+			Symbol:      "vBLACK",
+			Description: "The Black.",
 			DenomUnits: []*banktypes.DenomUnit{
-				{Denom: "bera", Exponent: uint32(0), Aliases: []string{"bera"}},
+				{Denom: "vblack", Exponent: uint32(0), Aliases: []string{"vblack"}},
 				{Denom: "nblack", Exponent: uint32(9), Aliases: []string{"nanoblack"}},
-				{Denom: "ablack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
+				{Denom: "avblack", Exponent: uint32(18), Aliases: []string{"attoblack"}},
 			},
-			Base:    "ablack",
-			Display: "bera",
+			Base:    "avblack",
+			Display: "vblack",
 		},
 		{
 			Name:        "Token",

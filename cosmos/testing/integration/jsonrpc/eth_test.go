@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 //
-// Copyright (C) 2023, Berachain Foundation. All rights reserved.
+// Copyright (C) 2023, Blackchain Foundation. All rights reserved.
 // Use of this software is govered by the Business Source License included
 // in the LICENSE file of this repository and at www.mariadb.com/bsl11.
 //
@@ -54,7 +54,7 @@ var _ = Describe("Network", func() {
 
 	It("should support eth_chainId", func() {
 		chainID, err := client.ChainID(ctx)
-		Expect(chainID.String()).To(Equal("2061"))
+		Expect(chainID.String()).To(Equal("710"))
 		Expect(err).ToNot(HaveOccurred())
 	})
 

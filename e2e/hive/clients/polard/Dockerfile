@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-# Copyright (C) 2022, Berachain Foundation. All rights reserved.
+# Copyright (C) 2022, Blackchain Foundation. All rights reserved.
 # See the file LICENSE for licensing terms.
 #
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
@@ -29,8 +29,8 @@ ADD config /config
 # Build the ethereum style genesis from the cosmos genesis.
 RUN ./build_eth_genesis.sh
 
-RUN export HIVE_CHAIN_ID=2061
-RUN export HIVE_NETWORK_ID=2061
+RUN export HIVE_CHAIN_ID=710
+RUN export HIVE_NETWORK_ID=710
 
 # Export the usual networking ports to allow outside access to the node
 EXPOSE 8545 8546 8547 8551 30303 30303/udp

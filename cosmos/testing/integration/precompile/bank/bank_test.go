@@ -55,7 +55,7 @@ var _ = SynchronizedBeforeSuite(func() []byte {
 var _ = Describe("Bank", func() {
 	denom := "avblack"
 	denom2 := "atoken"
-	denom3 := "stake"
+	denom3 := "vblack"
 
 	It("should call functions on the precompile directly", func() {
 		numberOfDenoms := 8

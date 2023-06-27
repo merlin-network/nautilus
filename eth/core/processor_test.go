@@ -61,7 +61,7 @@ var (
 
 var _ = Describe("StateProcessor", func() {
 	var (
-		sdb *vmmock.PolarisStateDBMock
+		sdb *vmmock.BlackfuryStateDBMock
 		bp  *mock.BlockPluginMock
 		gp  *mock.GasPluginMock
 		cp  *mock.ConfigurationPluginMock

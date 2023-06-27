@@ -37,7 +37,7 @@ type (
 	GenesisAccount = core.GenesisAccount
 )
 
-// DefaultGenesis is the default genesis block used by Polaris.
+// DefaultGenesis is the default genesis block used by Blackfury.
 var DefaultGenesis = &core.Genesis{
 	// Genesis Config
 	Config: params.DefaultChainConfig,

@@ -47,8 +47,8 @@ contract Swapper {
         require(transferred, "Swapper: transferCoinToERC20 failed");
     }
 
-    // gets the Polaris ERC20 token for a given SDK coin denomination
-    function getPolarisERC20(string calldata denom) external view returns (IERC20) {
+    // gets the Blackfury ERC20 token for a given SDK coin denomination
+    function getBlackfuryERC20(string calldata denom) external view returns (IERC20) {
         return erc20Module.erc20AddressForCoinDenom(denom);
     }
 

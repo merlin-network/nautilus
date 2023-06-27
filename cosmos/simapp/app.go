@@ -120,10 +120,10 @@ func init() {
 	DefaultNodeHome = filepath.Join(userHomeDir, ".polard")
 }
 
-// NewPolarisApp returns a reference to an initialized SimApp.
+// NewBlackfuryApp returns a reference to an initialized SimApp.
 //
 //nolint:funlen // from sdk.
-func NewPolarisApp(
+func NewBlackfuryApp(
 	logger log.Logger,
 	db dbm.DB,
 	traceStore io.Writer,
@@ -134,7 +134,7 @@ func NewPolarisApp(
 	var (
 		app          = &SimApp{}
 		appBuilder   *runtime.AppBuilder
-		ethTxMempool = evmmempool.NewPolarisEthereumTxPool()
+		ethTxMempool = evmmempool.NewBlackfuryEthereumTxPool()
 		// merge the AppConfig and other configuration in one config
 		appConfig = depinject.Configs(
 			AppConfig,

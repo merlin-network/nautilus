@@ -42,12 +42,12 @@ import (
 )
 
 // Compile-time interface assertion.
-var _ core.PolarisHostChain = (*host)(nil)
+var _ core.BlackfuryHostChain = (*host)(nil)
 
 // Host is the interface that must be implemented by the host.
-// It includes core.PolarisHostChain and functions that are called in other packages.
+// It includes core.BlackfuryHostChain and functions that are called in other packages.
 type Host interface {
-	core.PolarisHostChain
+	core.BlackfuryHostChain
 	GetAllPlugins() []plugins.Base
 	Setup(
 		storetypes.StoreKey,
@@ -58,7 +58,7 @@ type Host interface {
 }
 
 type host struct {
-	// The various plugins that are are used to implement core.PolarisHostChain.
+	// The various plugins that are are used to implement core.BlackfuryHostChain.
 	bp  block.Plugin
 	cp  configuration.Plugin
 	gp  gas.Plugin

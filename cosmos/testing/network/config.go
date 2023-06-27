@@ -93,7 +93,7 @@ var (
 	ModuleBasics = module.NewBasicManager(ModuleBasicsList...)
 )
 
-func BuildPolarisEncodingConfig(mb module.BasicManager) simappparams.EncodingConfig {
+func BuildBlackfuryEncodingConfig(mb module.BasicManager) simappparams.EncodingConfig {
 	cdc := codec.NewLegacyAmino()
 	interfaceRegistry := types.NewInterfaceRegistry()
 	codec := codec.NewProtoCodec(interfaceRegistry)

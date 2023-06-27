@@ -45,7 +45,7 @@ var defaultEthConfig = ethconfig.Config{
 	FilterLogCacheSize: 0,
 }
 
-// NetworkingStack defines methods that allow a Polaris chain to build and expose JSON-RPC apis.
+// NetworkingStack defines methods that allow a Blackfury chain to build and expose JSON-RPC apis.
 type NetworkingStack interface {
 	// IsExtRPCEnabled returns true if the networking stack is configured to expose JSON-RPC APIs.
 	ExtRPCEnabled() bool
@@ -60,8 +60,8 @@ type NetworkingStack interface {
 	Start() error
 }
 
-// Polaris is the only object that an implementing chain should use.
-type Polaris struct {
+// Blackfury is the only object that an implementing chain should use.
+type Blackfury struct {
 	cfg *Config
 	// NetworkingStack represents the networking stack responsible for exposes the JSON-RPC APIs.
 	// Although possible, it does not handle p2p networking like its sibling in geth would.
@@ -81,19 +81,19 @@ type Polaris struct {
 
 func NewWithNetworkingStack(
 	cfg *Config,
-	host core.PolarisHostChain,
+	host core.BlackfuryHostChain,
 	stack NetworkingStack,
 	logHandler log.Handler,
-) *Polaris {
-	pl := &Polaris{
+) *Blackfury {
+	pl := &Blackfury{
 		cfg:        cfg,
 		blockchain: core.NewChain(host),
 		stack:      stack,
 	}
-	// When creating a Polaris EVM, we allow the implementing chain
+	// When creating a Blackfury EVM, we allow the implementing chain
 	// to specify their own log handler. If logHandler is nil then we
 	// we use the default geth log handler.
-	// When creating a Polaris EVM, we allow the implementing chain
+	// When creating a Blackfury EVM, we allow the implementing chain
 	// to specify their own log handler. If logHandler is nil then we
 	// we use the default geth log handler.
 	if logHandler != nil {
@@ -108,7 +108,7 @@ func NewWithNetworkingStack(
 
 // APIs return the collection of RPC services the polar package offers.
 // NOTE, some of these services probably need to be moved to somewhere else.
-func (pl *Polaris) APIs() []rpc.API {
+func (pl *Blackfury) APIs() []rpc.API {
 	// Grab a bunch of the apis from go-ethereum (thx bae)
 	apis := polarapi.GethAPIs(pl.backend, pl.blockchain)
 
@@ -126,7 +126,7 @@ func (pl *Polaris) APIs() []rpc.API {
 }
 
 // StartServices notifies the NetworkStack to spin up (i.e json-rpc).
-func (pl *Polaris) StartServices() error {
+func (pl *Blackfury) StartServices() error {
 	// Register the JSON-RPCs with the networking stack.
 	pl.stack.RegisterAPIs(pl.APIs())
 

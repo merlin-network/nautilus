@@ -58,11 +58,11 @@ func (k *Keeper) DenomKVStore(ctx sdk.Context) store.DenomKVStore {
 	return store.NewDenomKVStore(ctx.KVStore(k.storeKey))
 }
 
-// RegisterERC20CoinPair registers a new ERC20 originated token <> Polaris Coin pair and returns
-// the new Polaris Coin denom.
+// RegisterERC20CoinPair registers a new ERC20 originated token <> Blackfury Coin pair and returns
+// the new Blackfury Coin denom.
 func (k *Keeper) RegisterERC20CoinPair(ctx sdk.Context, token common.Address) string {
-	// store the denomination as a Polaris coin denomination.
-	polarisDenom := types.NewPolarisDenomForAddress(token)
+	// store the denomination as a Blackfury coin denomination.
+	polarisDenom := types.NewBlackfuryDenomForAddress(token)
 	k.DenomKVStore(ctx).SetAddressDenomPair(token, polarisDenom)
 	return polarisDenom
 }

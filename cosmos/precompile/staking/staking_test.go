@@ -149,7 +149,7 @@ var _ = Describe("Staking", func() {
 
 			// Set the denom.
 			defaultParams := stakingtypes.DefaultParams()
-			defaultParams.BondDenom = "stake"
+			defaultParams.BondDenom = "avblack"
 			err = sk.SetParams(ctx, defaultParams)
 			Expect(err).ToNot(HaveOccurred())
 

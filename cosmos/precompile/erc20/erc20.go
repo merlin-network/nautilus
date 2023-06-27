@@ -62,8 +62,8 @@ func NewPrecompileContract(bk bankkeeper.Keeper, em ERC20Module) ethprecompile.S
 		),
 		bk:              bk,
 		em:              em,
-		polarisERC20ABI: abi.MustUnmarshalJSON(cbindings.PolarisERC20MetaData.ABI),
-		polarisERC20Bin: cbindings.PolarisERC20MetaData.Bin,
+		polarisERC20ABI: abi.MustUnmarshalJSON(cbindings.BlackfuryERC20MetaData.ABI),
+		polarisERC20Bin: cbindings.BlackfuryERC20MetaData.Bin,
 	}
 }
 

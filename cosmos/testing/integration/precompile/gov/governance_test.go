@@ -97,7 +97,7 @@ var _ = Describe("Call the Precompile Directly", func() {
 		// Send coins to the wrapper.
 		coins := []bbindings.CosmosCoin{
 			{
-				Denom:  "stake",
+				Denom:  "vblack",
 				Amount: big.NewInt(amt.Int64()),
 			},
 		}

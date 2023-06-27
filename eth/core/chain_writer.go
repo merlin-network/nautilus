@@ -68,10 +68,10 @@ func (bc *blockchain) Prepare(ctx context.Context, number uint64) {
 		parent = bc.GetHeaderByNumber(number - 1)
 	}
 
-	// Polaris does not set Ethereum state root (Root), mix hash (MixDigest), extra data (Extra),
+	// Blackfury does not set Ethereum state root (Root), mix hash (MixDigest), extra data (Extra),
 	// and block nonce (Nonce) on the new header.
 	header := &types.Header{
-		// Used in Polaris.
+		// Used in Blackfury.
 		ParentHash: parent.Hash(),
 		Coinbase:   coinbase,
 		Number:     new(big.Int).SetUint64(number),

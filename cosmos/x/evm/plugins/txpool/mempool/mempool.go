@@ -57,8 +57,8 @@ type EthTxPool struct {
 	mu sync.RWMutex
 }
 
-// NewPolarisEthereumTxPool creates a new Ethereum transaction pool.
-func NewPolarisEthereumTxPool() *EthTxPool {
+// NewBlackfuryEthereumTxPool creates a new Ethereum transaction pool.
+func NewBlackfuryEthereumTxPool() *EthTxPool {
 	tpp := EthereumTxPriorityPolicy{
 		baseFee: big.NewInt(0),
 	}

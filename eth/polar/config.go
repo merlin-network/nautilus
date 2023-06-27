@@ -52,7 +52,7 @@ func DefaultConfig() *Config {
 	}
 }
 
-// Config represents the configurable parameters for Polaris.
+// Config represents the configurable parameters for Blackfury.
 type Config struct {
 	// Gas Price Oracle config.
 	GPO *gasprice.Config
@@ -68,7 +68,7 @@ type Config struct {
 	RPCTxFeeCap float64 `toml:""`
 }
 
-// LoadConfigFromFilePath reads in a Polaris config file from the fileystem.
+// LoadConfigFromFilePath reads in a Blackfury config file from the fileystem.
 func LoadConfigFromFilePath(filename string) (*Config, error) {
 	var config Config
 

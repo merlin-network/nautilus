@@ -83,7 +83,7 @@ func (s *suicides) RegistryKey() string {
 	return suicidesRegistryKey
 }
 
-// Suicide implements the PolarisStateDB interface by marking the given address as suicided.
+// Suicide implements the BlackfuryStateDB interface by marking the given address as suicided.
 // This clears the account balance, but the code and state of the address remains available
 // until after Commit is called.
 func (s *suicides) Suicide(addr common.Address) bool {
@@ -107,7 +107,7 @@ func (s *suicides) Suicide(addr common.Address) bool {
 	return true
 }
 
-// HasSuicided implements the PolarisStateDB interface by returning if the contract was suicided
+// HasSuicided implements the BlackfuryStateDB interface by returning if the contract was suicided
 // in current transaction.
 func (s *suicides) HasSuicided(addr common.Address) bool {
 	for i := s.journal.Size() - 1; i >= 0; i-- {

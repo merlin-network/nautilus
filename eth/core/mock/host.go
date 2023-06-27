@@ -22,10 +22,10 @@ package mock
 
 import "pkg.berachain.dev/polaris/eth/core"
 
-//go:generate moq -out ./host.mock.go -pkg mock ../ PolarisHostChain
+//go:generate moq -out ./host.mock.go -pkg mock ../ BlackfuryHostChain
 
 func NewMockHostAndPlugins() (
-	*PolarisHostChainMock, *BlockPluginMock, *ConfigurationPluginMock, *GasPluginMock,
+	*BlackfuryHostChainMock, *BlockPluginMock, *ConfigurationPluginMock, *GasPluginMock,
 	*HistoricalPluginMock, *PrecompilePluginMock, *StatePluginMock, *TxPoolPluginMock,
 ) {
 	bp := NewBlockPluginMock()
@@ -35,7 +35,7 @@ func NewMockHostAndPlugins() (
 	pp := NewPrecompilePluginMock()
 	sp := NewStatePluginMock()
 	tp := &TxPoolPluginMock{}
-	mockedPolarisHostChain := &PolarisHostChainMock{
+	mockedBlackfuryHostChain := &BlackfuryHostChainMock{
 		GetBlockPluginFunc: func() core.BlockPlugin {
 			return bp
 		},
@@ -58,5 +58,5 @@ func NewMockHostAndPlugins() (
 			return tp
 		},
 	}
-	return mockedPolarisHostChain, bp, cp, gp, hp, pp, sp, tp
+	return mockedBlackfuryHostChain, bp, cp, gp, hp, pp, sp, tp
 }

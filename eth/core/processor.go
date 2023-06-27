@@ -60,7 +60,7 @@ type StateProcessor struct {
 	// the entire block. This is done in order to reduce memory allocs.
 	evm *vm.GethEVM
 	// statedb is the state database that is used to mange state during transactions.
-	statedb vm.PolarisStateDB
+	statedb vm.BlackfuryStateDB
 	// vmConfig is the configuration for the EVM.
 	vmConfig *vm.Config
 
@@ -79,7 +79,7 @@ func NewStateProcessor(
 	cp ConfigurationPlugin,
 	gp GasPlugin,
 	pp PrecompilePlugin,
-	statedb vm.PolarisStateDB,
+	statedb vm.BlackfuryStateDB,
 	vmConfig *vm.Config,
 ) *StateProcessor {
 	sp := &StateProcessor{

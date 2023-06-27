@@ -29,7 +29,7 @@ import (
 )
 
 type (
-	// Plugin defines the methods that the chain running Polaris EVM should implement in order
+	// Plugin defines the methods that the chain running Blackfury EVM should implement in order
 	// to support running their own stateful precompiled contracts. Implementing this plugin is
 	// optional.
 	Plugin interface {

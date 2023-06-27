@@ -4,7 +4,7 @@
     "type": "separator",
     "title": "Getting Started"
   },
-  "introduction": "Polaris Overview",
+  "introduction": "Blackfury Overview",
   "system-config": "System Configuration",
   "running-a-node": "Running a Node",
   "using-metamask": "Using Metamask",
@@ -18,9 +18,9 @@
   "opcodes": "Opcodes",
   "json-rpc": "JSON-RPC",
   "tracing": "EVM Tracing",
-  "-- Polaris on Cosmos --": {
+  "-- Blackfury on Cosmos --": {
     "type": "separator",
-    "title": "Polaris on Cosmos"
+    "title": "Blackfury on Cosmos"
   },
   "json-rpc-cosmos": "JSON-RPC",
   "precompile-cosmos-overview": "Precompiles",

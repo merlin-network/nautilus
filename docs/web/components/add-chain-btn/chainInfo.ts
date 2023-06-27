@@ -18,10 +18,10 @@ const LOCAL_CHAIN_INFO: ChainInfo = {
   rpc: 'http://localhost:26657',
   rest: 'http://localhost:1317',
   chainId: 'highbury_710-1',
-  chainName: 'polaris',
+  chainName: 'blackfury',
   stakeCurrency: GAZER,
   bip44: gazerBip44,
-  bech32Config: Bech32Address.defaultBech32Config('polaris'),
+  bech32Config: Bech32Address.defaultBech32Config('black'),
   currencies: [GAZER],
   feeCurrencies: [{
     ...GAZER,

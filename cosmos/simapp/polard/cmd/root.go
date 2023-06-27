@@ -80,7 +80,7 @@ func NewRootCmd() *cobra.Command {
 		moduleBasicManager module.BasicManager
 	)
 	if err := depinject.Inject(depinject.Configs(simapp.AppConfig, depinject.Supply(
-		evmmepool.NewPolarisEthereumTxPool(), log.NewNopLogger())),
+		evmmepool.NewBlackfuryEthereumTxPool(), log.NewNopLogger())),
 		&interfaceRegistry,
 		&appCodec,
 		&txConfig,
@@ -206,7 +206,7 @@ func initAppConfig() (string, interface{}) {
 	//   own app.toml to override, or use this default value.
 	//
 	// In simapp, we set the min gas prices to 0.
-	srvCfg.MinGasPrices = "0stake"
+	srvCfg.MinGasPrices = "10avblack"
 	// srvCfg.BaseConfig.IAVLDisableFastNode = true // disable fastnode by default
 
 	customAppConfig := CustomAppConfig{
@@ -326,7 +326,7 @@ func newApp(
 ) servertypes.Application {
 	baseappOptions := server.DefaultBaseappOptions(appOpts)
 
-	return simapp.NewPolarisApp(
+	return simapp.NewBlackfuryApp(
 		logger, db, traceStore, true,
 		appOpts,
 		baseappOptions...,
@@ -362,13 +362,13 @@ func appExport(
 
 	var simApp *simapp.SimApp
 	if height != -1 {
-		simApp = simapp.NewPolarisApp(logger, db, traceStore, false, appOpts)
+		simApp = simapp.NewBlackfuryApp(logger, db, traceStore, false, appOpts)
 
 		if err := simApp.LoadHeight(height); err != nil {
 			return servertypes.ExportedApp{}, err
 		}
 	} else {
-		simApp = simapp.NewPolarisApp(logger, db, traceStore, true, appOpts)
+		simApp = simapp.NewBlackfuryApp(logger, db, traceStore, true, appOpts)
 	}
 
 	return simApp.ExportAppStateAndValidators(forZeroHeight, jailAllowedAddrs, modulesToExport)

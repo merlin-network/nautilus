@@ -103,7 +103,7 @@ func New(t TestingT, configs ...network.Config) *network.Network {
 // genesis and single validator. All other parameters are inherited from cosmos-sdk/testutil/network.DefaultConfig.
 func DefaultConfig(keysMap map[string]*ethsecp256k1.PrivKey) network.Config {
 	types.SetupCosmosConfig()
-	encoding := BuildPolarisEncodingConfig(ModuleBasics)
+	encoding := BuildBlackfuryEncodingConfig(ModuleBasics)
 	cfg := network.Config{
 		Codec:             encoding.Codec,
 		TxConfig:          encoding.TxConfig,
@@ -111,7 +111,7 @@ func DefaultConfig(keysMap map[string]*ethsecp256k1.PrivKey) network.Config {
 		InterfaceRegistry: encoding.InterfaceRegistry,
 		AccountRetriever:  authtypes.AccountRetriever{},
 		AppConstructor: func(val network.ValidatorI) servertypes.Application {
-			return simapp.NewPolarisApp(
+			return simapp.NewBlackfuryApp(
 				val.GetCtx().Logger, cdb.NewMemDB(), nil, true, sims.EmptyAppOptions{},
 				baseapp.SetPruning(pruningtypes.NewPruningOptionsFromString(val.GetAppConfig().Pruning)),
 				baseapp.SetMinGasPrices(val.GetAppConfig().MinGasPrices),
@@ -137,7 +137,7 @@ func DefaultConfig(keysMap map[string]*ethsecp256k1.PrivKey) network.Config {
 }
 
 func BuildGenesisState(keysMap map[string]*ethsecp256k1.PrivKey) map[string]json.RawMessage {
-	encoding := BuildPolarisEncodingConfig(ModuleBasics)
+	encoding := BuildBlackfuryEncodingConfig(ModuleBasics)
 	genState := ModuleBasics.DefaultGenesis(encoding.Codec)
 
 	// Auth, Bank, EVM module
@@ -183,7 +183,7 @@ func BuildGenesisState(keysMap map[string]*ethsecp256k1.PrivKey) map[string]json
 			Enabled: true,
 		},
 		{
-			Denom:   "stake",
+			Denom:   "vblack",
 			Enabled: true,
 		},
 	}

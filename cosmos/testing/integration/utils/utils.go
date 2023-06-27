@@ -41,8 +41,8 @@ const (
 	TxTimeout      = 30 * time.Second
 )
 
-// StartPolarisNetwork starts a new in-memory Polaris chain.
-func StartPolarisNetwork(t network.TestingT) (*network.Network, *ethclient.Client) {
+// StartBlackfuryNetwork starts a new in-memory Blackfury chain.
+func StartBlackfuryNetwork(t network.TestingT) (*network.Network, *ethclient.Client) {
 	var err error
 	net := network.New(t)
 	time.Sleep(1 * time.Second)

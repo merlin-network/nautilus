@@ -25,9 +25,9 @@ import (
 )
 
 type (
-	// PolarisStateDB defines an extension to the interface provided by Go-Ethereum to support
+	// BlackfuryStateDB defines an extension to the interface provided by Go-Ethereum to support
 	// additional state transition functionalities.
-	PolarisStateDB interface {
+	BlackfuryStateDB interface {
 		GethStateDB
 		// GetContext returns the current context of the state plugin.
 		GetContext() context.Context

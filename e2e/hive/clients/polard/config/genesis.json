@@ -239,7 +239,7 @@
       "params": {
         "min_deposit": [
           {
-            "denom": "stake",
+            "denom": "vblack",
             "amount": "10000000"
           }
         ],
@@ -255,7 +255,7 @@
         "expedited_threshold": "0.667000000000000000",
         "expedited_min_deposit": [
           {
-            "denom": "stake",
+            "denom": "vblack",
             "amount": "50000000"
           }
         ],

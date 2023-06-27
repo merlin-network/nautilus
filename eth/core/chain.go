@@ -49,9 +49,9 @@ type Blockchain interface {
 	ChainContext
 }
 
-// blockchain is the canonical, persistent object that operates the Polaris EVM.
+// blockchain is the canonical, persistent object that operates the Blackfury EVM.
 type blockchain struct {
-	// the host chain plugins that the Polaris EVM is running on.
+	// the host chain plugins that the Blackfury EVM is running on.
 	bp BlockPlugin
 	cp ConfigurationPlugin
 	hp HistoricalPlugin
@@ -62,7 +62,7 @@ type blockchain struct {
 	// StateProcessor is the canonical, persistent state processor that runs the EVM.
 	processor *StateProcessor
 	// statedb is the state database that is used to mange state during transactions.
-	statedb vm.PolarisStateDB
+	statedb vm.BlackfuryStateDB
 	// vmConfig is the configuration used to create the EVM.
 	vmConfig *vm.Config
 
@@ -104,7 +104,7 @@ type blockchain struct {
 // =========================================================================
 
 // NewChain creates and returns a `api.Chain` with the given EVM chain configuration and host.
-func NewChain(host PolarisHostChain) *blockchain { //nolint:revive // only used as `api.Chain`.
+func NewChain(host BlackfuryHostChain) *blockchain { //nolint:revive // only used as `api.Chain`.
 	bc := &blockchain{
 		bp:             host.GetBlockPlugin(),
 		cp:             host.GetConfigurationPlugin(),

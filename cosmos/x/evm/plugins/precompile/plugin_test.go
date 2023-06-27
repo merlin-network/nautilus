@@ -100,7 +100,7 @@ func (me *mockEVM) GetStateDB() vm.GethStateDB {
 }
 
 type mockSDB struct {
-	vm.PolarisStateDB
+	vm.BlackfuryStateDB
 	ctx sdk.Context
 }
 

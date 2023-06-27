@@ -29,17 +29,17 @@ import (
 
 // TODO: replace this file with a proper mining object and use message passing instead of direct calls.
 
-// Prepare prepares the Polaris chain for processing a new block at the given height.
-func (pl *Polaris) Prepare(ctx context.Context, number uint64) {
+// Prepare prepares the Blackfury chain for processing a new block at the given height.
+func (pl *Blackfury) Prepare(ctx context.Context, number uint64) {
 	pl.blockchain.Prepare(ctx, number)
 }
 
 // ProcessTransaction processes the given transaction and returns the receipt.
-func (pl *Polaris) ProcessTransaction(ctx context.Context, tx *types.Transaction) (*core.ExecutionResult, error) {
+func (pl *Blackfury) ProcessTransaction(ctx context.Context, tx *types.Transaction) (*core.ExecutionResult, error) {
 	return pl.blockchain.ProcessTransaction(ctx, tx)
 }
 
 // Finalize finalizes the current block.
-func (pl *Polaris) Finalize(ctx context.Context) error {
+func (pl *Blackfury) Finalize(ctx context.Context) error {
 	return pl.blockchain.Finalize(ctx)
 }

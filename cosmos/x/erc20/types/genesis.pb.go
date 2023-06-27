@@ -70,7 +70,7 @@ func (m *GenesisState) GetParams() Params {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "polaris.erc20.v1alpha1.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "blackfury.erc20.v1alpha1.GenesisState")
 }
 
 func init() {

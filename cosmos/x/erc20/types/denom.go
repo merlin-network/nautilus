@@ -27,24 +27,24 @@ import (
 )
 
 const (
-	// polarisDenomPrefix represents the bank module prefix all Polaris coin denominations will
+	// polarisDenomPrefix represents the bank module prefix all Blackfury coin denominations will
 	// have (ERC20 originated token).
-	polarisDenomPrefix = "polaris/"
+	polarisDenomPrefix = "blackfury/"
 
-	// lenPolarisDenomPrefix is the length of the polarisDenomPrefix.
-	lenPolarisDenomPrefix = 8
+	// lenBlackfuryDenomPrefix is the length of the polarisDenomPrefix.
+	lenBlackfuryDenomPrefix = 8
 
-	// lenPolarisDenom is the length of the (polarisDenomPrefix + 20 bytes + "0x") for the address.
-	lenPolarisDenom = 50
+	// lenBlackfuryDenom is the length of the (polarisDenomPrefix + 20 bytes + "0x") for the address.
+	lenBlackfuryDenom = 50
 )
 
-// NewPolarisDenomForAddress returns a new Polaris coin denomination for a given ERC20 originated
+// NewBlackfuryDenomForAddress returns a new Blackfury coin denomination for a given ERC20 originated
 // token address.
-func NewPolarisDenomForAddress(token common.Address) string {
+func NewBlackfuryDenomForAddress(token common.Address) string {
 	return fmt.Sprintf("%s%s", polarisDenomPrefix, token.Hex())
 }
 
-// IsPolarisDenom returns true if the given denom is a Polaris coin denomination.
-func IsPolarisDenom(denom string) bool {
-	return len(denom) == lenPolarisDenom && denom[:lenPolarisDenomPrefix] == polarisDenomPrefix
+// IsBlackfuryDenom returns true if the given denom is a Blackfury coin denomination.
+func IsBlackfuryDenom(denom string) bool {
+	return len(denom) == lenBlackfuryDenom && denom[:lenBlackfuryDenomPrefix] == polarisDenomPrefix
 }

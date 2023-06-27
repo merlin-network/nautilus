@@ -32,7 +32,7 @@ import (
 
 // stateDB is a struct that holds the plugins and controller to manage Ethereum state.
 type stateDB struct {
-	// Plugin is injected by the chain running the Polaris EVM.
+	// Plugin is injected by the chain running the Blackfury EVM.
 	Plugin
 
 	// Journals built internally and required for the stateDB.
@@ -46,19 +46,19 @@ type stateDB struct {
 	ctrl libtypes.Controller[string, libtypes.Controllable[string]]
 }
 
-// NewStateDB returns a vm.PolarisStateDB with the given StatePlugin and new journals.
-func NewStateDB(sp Plugin) vm.PolarisStateDB {
+// NewStateDB returns a vm.BlackfuryStateDB with the given StatePlugin and new journals.
+func NewStateDB(sp Plugin) vm.BlackfuryStateDB {
 	return newStateDBWithJournals(
 		sp, journal.NewLogs(), journal.NewRefund(), journal.NewAccesslist(),
 		journal.NewSuicides(sp), journal.NewTransientStorage(),
 	)
 }
 
-// newStateDBWithJournals returns a vm.PolarisStateDB with the given StatePlugin and journals.
+// newStateDBWithJournals returns a vm.BlackfuryStateDB with the given StatePlugin and journals.
 func newStateDBWithJournals(
 	sp Plugin, lj journal.Log, rj journal.Refund, aj journal.Accesslist,
 	sj journal.Suicides, tj journal.TransientStorage,
-) vm.PolarisStateDB {
+) vm.BlackfuryStateDB {
 	// Build the controller and register the plugins and journals
 	ctrl := snapshot.NewController[string, libtypes.Controllable[string]]()
 	_ = ctrl.Register(sp)
@@ -83,12 +83,12 @@ func newStateDBWithJournals(
 // Snapshot
 // =============================================================================
 
-// Snapshot implements vm.PolarisStateDB.
+// Snapshot implements vm.BlackfuryStateDB.
 func (sdb *stateDB) Snapshot() int {
 	return sdb.ctrl.Snapshot()
 }
 
-// RevertToSnapshot implements vm.PolarisStateDB.
+// RevertToSnapshot implements vm.BlackfuryStateDB.
 func (sdb *stateDB) RevertToSnapshot(id int) {
 	sdb.ctrl.RevertToSnapshot(id)
 }
@@ -113,9 +113,9 @@ func (sdb *stateDB) Commit(deleteEmptyObjects bool) (common.Hash, error) {
 // Prepare
 // =============================================================================
 
-// Implementation taken directly from the vm.PolarisStateDB in Go-Ethereum.
+// Implementation taken directly from the vm.BlackfuryStateDB in Go-Ethereum.
 //
-// Prepare implements vm.PolarisStateDB.
+// Prepare implements vm.BlackfuryStateDB.
 func (sdb *stateDB) Prepare(rules params.Rules, sender, coinbase common.Address,
 	dest *common.Address, precompiles []common.Address, txAccesses coretypes.AccessList) {
 	if rules.IsBerlin {
@@ -146,7 +146,7 @@ func (sdb *stateDB) Prepare(rules params.Rules, sender, coinbase common.Address,
 // PreImage
 // =============================================================================
 
-// AddPreimage implements the the vm.PolarisStateDB interface, but currently
+// AddPreimage implements the the vm.BlackfuryStateDB interface, but currently
 // performs a no-op since the EnablePreimageRecording flag is disabled.
 func (sdb *stateDB) AddPreimage(_ common.Hash, _ []byte) {}
 
@@ -160,7 +160,7 @@ func (sdb *stateDB) Preimages() map[common.Hash][]byte {
 // Code Size
 // =============================================================================
 
-// GetCodeSize implements the vm.PolarisStateDB interface by returning the size of the
+// GetCodeSize implements the vm.BlackfuryStateDB interface by returning the size of the
 // code associated with the given account.
 func (sdb *stateDB) GetCodeSize(addr common.Address) int {
 	return len(sdb.GetCode(addr))

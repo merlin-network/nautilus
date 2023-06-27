@@ -1,5 +1,5 @@
-# Polaris Cosmos-SDK Modules
+# Blackfury Cosmos-SDK Modules
 
-Polaris implements the following custom modules:
+Blackfury implements the following custom modules:
 
-* `evm` - Intergrates the Polaris Ethereum as a Cosmos-SDK module
+* `evm` - Intergrates the Blackfury Ethereum as a Cosmos-SDK module

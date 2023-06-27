@@ -20,8 +20,8 @@ var (
 )
 
 func init() {
-	file_polaris_evm_v1alpha1_tx_proto_init()
-	md_WrappedEthereumTransaction = File_polaris_evm_v1alpha1_tx_proto.Messages().ByName("WrappedEthereumTransaction")
+	file_blackfury_evm_v1alpha1_tx_proto_init()
+	md_WrappedEthereumTransaction = File_blackfury_evm_v1alpha1_tx_proto.Messages().ByName("WrappedEthereumTransaction")
 	fd_WrappedEthereumTransaction_data = md_WrappedEthereumTransaction.Fields().ByName("data")
 	fd_WrappedEthereumTransaction_hacky_fix_cause_cosmos = md_WrappedEthereumTransaction.Fields().ByName("hacky_fix_cause_cosmos")
 }
@@ -35,7 +35,7 @@ func (x *WrappedEthereumTransaction) ProtoReflect() protoreflect.Message {
 }
 
 func (x *WrappedEthereumTransaction) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_evm_v1alpha1_tx_proto_msgTypes[0]
+	mi := &file_blackfury_evm_v1alpha1_tx_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -118,15 +118,15 @@ func (x *fastReflection_WrappedEthereumTransaction) Range(f func(protoreflect.Fi
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_WrappedEthereumTransaction) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.data":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.data":
 		return len(x.Data) != 0
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
 		return x.HackyFixCauseCosmos != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransaction"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransaction"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -138,15 +138,15 @@ func (x *fastReflection_WrappedEthereumTransaction) Has(fd protoreflect.FieldDes
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_WrappedEthereumTransaction) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.data":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.data":
 		x.Data = nil
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
 		x.HackyFixCauseCosmos = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransaction"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransaction"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -158,17 +158,17 @@ func (x *fastReflection_WrappedEthereumTransaction) Clear(fd protoreflect.FieldD
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_WrappedEthereumTransaction) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.data":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.data":
 		value := x.Data
 		return protoreflect.ValueOfBytes(value)
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
 		value := x.HackyFixCauseCosmos
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransaction"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransaction"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -184,15 +184,15 @@ func (x *fastReflection_WrappedEthereumTransaction) Get(descriptor protoreflect.
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_WrappedEthereumTransaction) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.data":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.data":
 		x.Data = value.Bytes()
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
 		x.HackyFixCauseCosmos = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransaction"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransaction"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -208,15 +208,15 @@ func (x *fastReflection_WrappedEthereumTransaction) Set(fd protoreflect.FieldDes
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_WrappedEthereumTransaction) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.data":
-		panic(fmt.Errorf("field data of message polaris.evm.v1alpha1.WrappedEthereumTransaction is not mutable"))
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
-		panic(fmt.Errorf("field hacky_fix_cause_cosmos of message polaris.evm.v1alpha1.WrappedEthereumTransaction is not mutable"))
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.data":
+		panic(fmt.Errorf("field data of message blackfury.evm.v1alpha1.WrappedEthereumTransaction is not mutable"))
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
+		panic(fmt.Errorf("field hacky_fix_cause_cosmos of message blackfury.evm.v1alpha1.WrappedEthereumTransaction is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransaction"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransaction"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -225,15 +225,15 @@ func (x *fastReflection_WrappedEthereumTransaction) Mutable(fd protoreflect.Fiel
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_WrappedEthereumTransaction) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.data":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.data":
 		return protoreflect.ValueOfBytes(nil)
-	case "polaris.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransaction.hacky_fix_cause_cosmos":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransaction"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransaction"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransaction does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -243,7 +243,7 @@ func (x *fastReflection_WrappedEthereumTransaction) NewField(fd protoreflect.Fie
 func (x *fastReflection_WrappedEthereumTransaction) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in polaris.evm.v1alpha1.WrappedEthereumTransaction", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in blackfury.evm.v1alpha1.WrappedEthereumTransaction", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -507,8 +507,8 @@ var (
 )
 
 func init() {
-	file_polaris_evm_v1alpha1_tx_proto_init()
-	md_WrappedEthereumTransactionResult = File_polaris_evm_v1alpha1_tx_proto.Messages().ByName("WrappedEthereumTransactionResult")
+	file_blackfury_evm_v1alpha1_tx_proto_init()
+	md_WrappedEthereumTransactionResult = File_blackfury_evm_v1alpha1_tx_proto.Messages().ByName("WrappedEthereumTransactionResult")
 	fd_WrappedEthereumTransactionResult_gas_used = md_WrappedEthereumTransactionResult.Fields().ByName("gas_used")
 	fd_WrappedEthereumTransactionResult_vm_error = md_WrappedEthereumTransactionResult.Fields().ByName("vm_error")
 	fd_WrappedEthereumTransactionResult_return_data = md_WrappedEthereumTransactionResult.Fields().ByName("return_data")
@@ -523,7 +523,7 @@ func (x *WrappedEthereumTransactionResult) ProtoReflect() protoreflect.Message {
 }
 
 func (x *WrappedEthereumTransactionResult) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_evm_v1alpha1_tx_proto_msgTypes[1]
+	mi := &file_blackfury_evm_v1alpha1_tx_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -612,17 +612,17 @@ func (x *fastReflection_WrappedEthereumTransactionResult) Range(f func(protorefl
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_WrappedEthereumTransactionResult) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
 		return x.GasUsed != uint64(0)
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
 		return x.VmError != ""
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
 		return len(x.ReturnData) != 0
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransactionResult"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransactionResult"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -634,17 +634,17 @@ func (x *fastReflection_WrappedEthereumTransactionResult) Has(fd protoreflect.Fi
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_WrappedEthereumTransactionResult) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
 		x.GasUsed = uint64(0)
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
 		x.VmError = ""
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
 		x.ReturnData = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransactionResult"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransactionResult"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -656,20 +656,20 @@ func (x *fastReflection_WrappedEthereumTransactionResult) Clear(fd protoreflect.
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_WrappedEthereumTransactionResult) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
 		value := x.GasUsed
 		return protoreflect.ValueOfUint64(value)
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
 		value := x.VmError
 		return protoreflect.ValueOfString(value)
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
 		value := x.ReturnData
 		return protoreflect.ValueOfBytes(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransactionResult"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransactionResult"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -685,17 +685,17 @@ func (x *fastReflection_WrappedEthereumTransactionResult) Get(descriptor protore
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_WrappedEthereumTransactionResult) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
 		x.GasUsed = value.Uint()
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
 		x.VmError = value.Interface().(string)
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
 		x.ReturnData = value.Bytes()
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransactionResult"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransactionResult"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -711,17 +711,17 @@ func (x *fastReflection_WrappedEthereumTransactionResult) Set(fd protoreflect.Fi
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_WrappedEthereumTransactionResult) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
-		panic(fmt.Errorf("field gas_used of message polaris.evm.v1alpha1.WrappedEthereumTransactionResult is not mutable"))
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
-		panic(fmt.Errorf("field vm_error of message polaris.evm.v1alpha1.WrappedEthereumTransactionResult is not mutable"))
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
-		panic(fmt.Errorf("field return_data of message polaris.evm.v1alpha1.WrappedEthereumTransactionResult is not mutable"))
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
+		panic(fmt.Errorf("field gas_used of message blackfury.evm.v1alpha1.WrappedEthereumTransactionResult is not mutable"))
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
+		panic(fmt.Errorf("field vm_error of message blackfury.evm.v1alpha1.WrappedEthereumTransactionResult is not mutable"))
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
+		panic(fmt.Errorf("field return_data of message blackfury.evm.v1alpha1.WrappedEthereumTransactionResult is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransactionResult"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransactionResult"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -730,17 +730,17 @@ func (x *fastReflection_WrappedEthereumTransactionResult) Mutable(fd protoreflec
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_WrappedEthereumTransactionResult) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.gas_used":
 		return protoreflect.ValueOfUint64(uint64(0))
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.vm_error":
 		return protoreflect.ValueOfString("")
-	case "polaris.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
+	case "blackfury.evm.v1alpha1.WrappedEthereumTransactionResult.return_data":
 		return protoreflect.ValueOfBytes(nil)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.evm.v1alpha1.WrappedEthereumTransactionResult"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.evm.v1alpha1.WrappedEthereumTransactionResult"))
 		}
-		panic(fmt.Errorf("message polaris.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.evm.v1alpha1.WrappedEthereumTransactionResult does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -750,7 +750,7 @@ func (x *fastReflection_WrappedEthereumTransactionResult) NewField(fd protorefle
 func (x *fastReflection_WrappedEthereumTransactionResult) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in polaris.evm.v1alpha1.WrappedEthereumTransactionResult", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in blackfury.evm.v1alpha1.WrappedEthereumTransactionResult", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1081,7 +1081,7 @@ type WrappedEthereumTransaction struct {
 func (x *WrappedEthereumTransaction) Reset() {
 	*x = WrappedEthereumTransaction{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_evm_v1alpha1_tx_proto_msgTypes[0]
+		mi := &file_blackfury_evm_v1alpha1_tx_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1095,7 +1095,7 @@ func (*WrappedEthereumTransaction) ProtoMessage() {}
 
 // Deprecated: Use WrappedEthereumTransaction.ProtoReflect.Descriptor instead.
 func (*WrappedEthereumTransaction) Descriptor() ([]byte, []int) {
-	return file_polaris_evm_v1alpha1_tx_proto_rawDescGZIP(), []int{0}
+	return file_blackfury_evm_v1alpha1_tx_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *WrappedEthereumTransaction) GetData() []byte {
@@ -1129,7 +1129,7 @@ type WrappedEthereumTransactionResult struct {
 func (x *WrappedEthereumTransactionResult) Reset() {
 	*x = WrappedEthereumTransactionResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_evm_v1alpha1_tx_proto_msgTypes[1]
+		mi := &file_blackfury_evm_v1alpha1_tx_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1143,7 +1143,7 @@ func (*WrappedEthereumTransactionResult) ProtoMessage() {}
 
 // Deprecated: Use WrappedEthereumTransactionResult.ProtoReflect.Descriptor instead.
 func (*WrappedEthereumTransactionResult) Descriptor() ([]byte, []int) {
-	return file_polaris_evm_v1alpha1_tx_proto_rawDescGZIP(), []int{1}
+	return file_blackfury_evm_v1alpha1_tx_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *WrappedEthereumTransactionResult) GetGasUsed() uint64 {
@@ -1167,9 +1167,9 @@ func (x *WrappedEthereumTransactionResult) GetReturnData() []byte {
 	return nil
 }
 
-var File_polaris_evm_v1alpha1_tx_proto protoreflect.FileDescriptor
+var File_blackfury_evm_v1alpha1_tx_proto protoreflect.FileDescriptor
 
-var file_polaris_evm_v1alpha1_tx_proto_rawDesc = []byte{
+var file_blackfury_evm_v1alpha1_tx_proto_rawDesc = []byte{
 	0x0a, 0x1d, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2f, 0x65, 0x76, 0x6d, 0x2f, 0x76, 0x31,
 	0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2f, 0x74, 0x78, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12,
 	0x14, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2e, 0x65, 0x76, 0x6d, 0x2e, 0x76, 0x31, 0x61,
@@ -1217,25 +1217,25 @@ var file_polaris_evm_v1alpha1_tx_proto_rawDesc = []byte{
 }
 
 var (
-	file_polaris_evm_v1alpha1_tx_proto_rawDescOnce sync.Once
-	file_polaris_evm_v1alpha1_tx_proto_rawDescData = file_polaris_evm_v1alpha1_tx_proto_rawDesc
+	file_blackfury_evm_v1alpha1_tx_proto_rawDescOnce sync.Once
+	file_blackfury_evm_v1alpha1_tx_proto_rawDescData = file_blackfury_evm_v1alpha1_tx_proto_rawDesc
 )
 
-func file_polaris_evm_v1alpha1_tx_proto_rawDescGZIP() []byte {
-	file_polaris_evm_v1alpha1_tx_proto_rawDescOnce.Do(func() {
-		file_polaris_evm_v1alpha1_tx_proto_rawDescData = protoimpl.X.CompressGZIP(file_polaris_evm_v1alpha1_tx_proto_rawDescData)
+func file_blackfury_evm_v1alpha1_tx_proto_rawDescGZIP() []byte {
+	file_blackfury_evm_v1alpha1_tx_proto_rawDescOnce.Do(func() {
+		file_blackfury_evm_v1alpha1_tx_proto_rawDescData = protoimpl.X.CompressGZIP(file_blackfury_evm_v1alpha1_tx_proto_rawDescData)
 	})
-	return file_polaris_evm_v1alpha1_tx_proto_rawDescData
+	return file_blackfury_evm_v1alpha1_tx_proto_rawDescData
 }
 
-var file_polaris_evm_v1alpha1_tx_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_polaris_evm_v1alpha1_tx_proto_goTypes = []interface{}{
-	(*WrappedEthereumTransaction)(nil),       // 0: polaris.evm.v1alpha1.WrappedEthereumTransaction
-	(*WrappedEthereumTransactionResult)(nil), // 1: polaris.evm.v1alpha1.WrappedEthereumTransactionResult
+var file_blackfury_evm_v1alpha1_tx_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_blackfury_evm_v1alpha1_tx_proto_goTypes = []interface{}{
+	(*WrappedEthereumTransaction)(nil),       // 0: blackfury.evm.v1alpha1.WrappedEthereumTransaction
+	(*WrappedEthereumTransactionResult)(nil), // 1: blackfury.evm.v1alpha1.WrappedEthereumTransactionResult
 }
-var file_polaris_evm_v1alpha1_tx_proto_depIdxs = []int32{
-	0, // 0: polaris.evm.v1alpha1.MsgService.EthTransaction:input_type -> polaris.evm.v1alpha1.WrappedEthereumTransaction
-	1, // 1: polaris.evm.v1alpha1.MsgService.EthTransaction:output_type -> polaris.evm.v1alpha1.WrappedEthereumTransactionResult
+var file_blackfury_evm_v1alpha1_tx_proto_depIdxs = []int32{
+	0, // 0: blackfury.evm.v1alpha1.MsgService.EthTransaction:input_type -> blackfury.evm.v1alpha1.WrappedEthereumTransaction
+	1, // 1: blackfury.evm.v1alpha1.MsgService.EthTransaction:output_type -> blackfury.evm.v1alpha1.WrappedEthereumTransactionResult
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -1243,13 +1243,13 @@ var file_polaris_evm_v1alpha1_tx_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_polaris_evm_v1alpha1_tx_proto_init() }
-func file_polaris_evm_v1alpha1_tx_proto_init() {
-	if File_polaris_evm_v1alpha1_tx_proto != nil {
+func init() { file_blackfury_evm_v1alpha1_tx_proto_init() }
+func file_blackfury_evm_v1alpha1_tx_proto_init() {
+	if File_blackfury_evm_v1alpha1_tx_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_polaris_evm_v1alpha1_tx_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_evm_v1alpha1_tx_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*WrappedEthereumTransaction); i {
 			case 0:
 				return &v.state
@@ -1261,7 +1261,7 @@ func file_polaris_evm_v1alpha1_tx_proto_init() {
 				return nil
 			}
 		}
-		file_polaris_evm_v1alpha1_tx_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_evm_v1alpha1_tx_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*WrappedEthereumTransactionResult); i {
 			case 0:
 				return &v.state
@@ -1278,18 +1278,18 @@ func file_polaris_evm_v1alpha1_tx_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_polaris_evm_v1alpha1_tx_proto_rawDesc,
+			RawDescriptor: file_blackfury_evm_v1alpha1_tx_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_polaris_evm_v1alpha1_tx_proto_goTypes,
-		DependencyIndexes: file_polaris_evm_v1alpha1_tx_proto_depIdxs,
-		MessageInfos:      file_polaris_evm_v1alpha1_tx_proto_msgTypes,
+		GoTypes:           file_blackfury_evm_v1alpha1_tx_proto_goTypes,
+		DependencyIndexes: file_blackfury_evm_v1alpha1_tx_proto_depIdxs,
+		MessageInfos:      file_blackfury_evm_v1alpha1_tx_proto_msgTypes,
 	}.Build()
-	File_polaris_evm_v1alpha1_tx_proto = out.File
-	file_polaris_evm_v1alpha1_tx_proto_rawDesc = nil
-	file_polaris_evm_v1alpha1_tx_proto_goTypes = nil
-	file_polaris_evm_v1alpha1_tx_proto_depIdxs = nil
+	File_blackfury_evm_v1alpha1_tx_proto = out.File
+	file_blackfury_evm_v1alpha1_tx_proto_rawDesc = nil
+	file_blackfury_evm_v1alpha1_tx_proto_goTypes = nil
+	file_blackfury_evm_v1alpha1_tx_proto_depIdxs = nil
 }

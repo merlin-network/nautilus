@@ -20,8 +20,8 @@ var (
 )
 
 func init() {
-	file_polaris_erc20_v1alpha1_query_proto_init()
-	md_ERC20AddressForCoinDenomRequest = File_polaris_erc20_v1alpha1_query_proto.Messages().ByName("ERC20AddressForCoinDenomRequest")
+	file_blackfury_erc20_v1alpha1_query_proto_init()
+	md_ERC20AddressForCoinDenomRequest = File_blackfury_erc20_v1alpha1_query_proto.Messages().ByName("ERC20AddressForCoinDenomRequest")
 	fd_ERC20AddressForCoinDenomRequest_denom = md_ERC20AddressForCoinDenomRequest.Fields().ByName("denom")
 }
 
@@ -34,7 +34,7 @@ func (x *ERC20AddressForCoinDenomRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *ERC20AddressForCoinDenomRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[0]
+	mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -111,13 +111,13 @@ func (x *fastReflection_ERC20AddressForCoinDenomRequest) Range(f func(protorefle
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_ERC20AddressForCoinDenomRequest) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
 		return x.Denom != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -129,13 +129,13 @@ func (x *fastReflection_ERC20AddressForCoinDenomRequest) Has(fd protoreflect.Fie
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_ERC20AddressForCoinDenomRequest) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
 		x.Denom = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -147,14 +147,14 @@ func (x *fastReflection_ERC20AddressForCoinDenomRequest) Clear(fd protoreflect.F
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_ERC20AddressForCoinDenomRequest) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
 		value := x.Denom
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -170,13 +170,13 @@ func (x *fastReflection_ERC20AddressForCoinDenomRequest) Get(descriptor protoref
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_ERC20AddressForCoinDenomRequest) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
 		x.Denom = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -192,13 +192,13 @@ func (x *fastReflection_ERC20AddressForCoinDenomRequest) Set(fd protoreflect.Fie
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_ERC20AddressForCoinDenomRequest) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
-		panic(fmt.Errorf("field denom of message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest is not mutable"))
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
+		panic(fmt.Errorf("field denom of message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -207,13 +207,13 @@ func (x *fastReflection_ERC20AddressForCoinDenomRequest) Mutable(fd protoreflect
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_ERC20AddressForCoinDenomRequest) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest.denom":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -223,7 +223,7 @@ func (x *fastReflection_ERC20AddressForCoinDenomRequest) NewField(fd protoreflec
 func (x *fastReflection_ERC20AddressForCoinDenomRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -440,8 +440,8 @@ var (
 )
 
 func init() {
-	file_polaris_erc20_v1alpha1_query_proto_init()
-	md_ERC20AddressForCoinDenomResponse = File_polaris_erc20_v1alpha1_query_proto.Messages().ByName("ERC20AddressForCoinDenomResponse")
+	file_blackfury_erc20_v1alpha1_query_proto_init()
+	md_ERC20AddressForCoinDenomResponse = File_blackfury_erc20_v1alpha1_query_proto.Messages().ByName("ERC20AddressForCoinDenomResponse")
 	fd_ERC20AddressForCoinDenomResponse_token = md_ERC20AddressForCoinDenomResponse.Fields().ByName("token")
 }
 
@@ -454,7 +454,7 @@ func (x *ERC20AddressForCoinDenomResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *ERC20AddressForCoinDenomResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[1]
+	mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -531,13 +531,13 @@ func (x *fastReflection_ERC20AddressForCoinDenomResponse) Range(f func(protorefl
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_ERC20AddressForCoinDenomResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
 		return x.Token != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -549,13 +549,13 @@ func (x *fastReflection_ERC20AddressForCoinDenomResponse) Has(fd protoreflect.Fi
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_ERC20AddressForCoinDenomResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
 		x.Token = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -567,14 +567,14 @@ func (x *fastReflection_ERC20AddressForCoinDenomResponse) Clear(fd protoreflect.
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_ERC20AddressForCoinDenomResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
 		value := x.Token
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -590,13 +590,13 @@ func (x *fastReflection_ERC20AddressForCoinDenomResponse) Get(descriptor protore
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_ERC20AddressForCoinDenomResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
 		x.Token = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -612,13 +612,13 @@ func (x *fastReflection_ERC20AddressForCoinDenomResponse) Set(fd protoreflect.Fi
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_ERC20AddressForCoinDenomResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
-		panic(fmt.Errorf("field token of message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse is not mutable"))
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
+		panic(fmt.Errorf("field token of message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -627,13 +627,13 @@ func (x *fastReflection_ERC20AddressForCoinDenomResponse) Mutable(fd protoreflec
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_ERC20AddressForCoinDenomResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
+	case "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse.token":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -643,7 +643,7 @@ func (x *fastReflection_ERC20AddressForCoinDenomResponse) NewField(fd protorefle
 func (x *fastReflection_ERC20AddressForCoinDenomResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -860,8 +860,8 @@ var (
 )
 
 func init() {
-	file_polaris_erc20_v1alpha1_query_proto_init()
-	md_CoinDenomForERC20AddressRequest = File_polaris_erc20_v1alpha1_query_proto.Messages().ByName("CoinDenomForERC20AddressRequest")
+	file_blackfury_erc20_v1alpha1_query_proto_init()
+	md_CoinDenomForERC20AddressRequest = File_blackfury_erc20_v1alpha1_query_proto.Messages().ByName("CoinDenomForERC20AddressRequest")
 	fd_CoinDenomForERC20AddressRequest_token = md_CoinDenomForERC20AddressRequest.Fields().ByName("token")
 }
 
@@ -874,7 +874,7 @@ func (x *CoinDenomForERC20AddressRequest) ProtoReflect() protoreflect.Message {
 }
 
 func (x *CoinDenomForERC20AddressRequest) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[2]
+	mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -951,13 +951,13 @@ func (x *fastReflection_CoinDenomForERC20AddressRequest) Range(f func(protorefle
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_CoinDenomForERC20AddressRequest) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
 		return x.Token != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -969,13 +969,13 @@ func (x *fastReflection_CoinDenomForERC20AddressRequest) Has(fd protoreflect.Fie
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_CoinDenomForERC20AddressRequest) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
 		x.Token = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -987,14 +987,14 @@ func (x *fastReflection_CoinDenomForERC20AddressRequest) Clear(fd protoreflect.F
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_CoinDenomForERC20AddressRequest) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
 		value := x.Token
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1010,13 +1010,13 @@ func (x *fastReflection_CoinDenomForERC20AddressRequest) Get(descriptor protoref
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_CoinDenomForERC20AddressRequest) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
 		x.Token = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1032,13 +1032,13 @@ func (x *fastReflection_CoinDenomForERC20AddressRequest) Set(fd protoreflect.Fie
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_CoinDenomForERC20AddressRequest) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
-		panic(fmt.Errorf("field token of message polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest is not mutable"))
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
+		panic(fmt.Errorf("field token of message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1047,13 +1047,13 @@ func (x *fastReflection_CoinDenomForERC20AddressRequest) Mutable(fd protoreflect
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_CoinDenomForERC20AddressRequest) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest.token":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1063,7 +1063,7 @@ func (x *fastReflection_CoinDenomForERC20AddressRequest) NewField(fd protoreflec
 func (x *fastReflection_CoinDenomForERC20AddressRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1280,8 +1280,8 @@ var (
 )
 
 func init() {
-	file_polaris_erc20_v1alpha1_query_proto_init()
-	md_CoinDenomForERC20AddressResponse = File_polaris_erc20_v1alpha1_query_proto.Messages().ByName("CoinDenomForERC20AddressResponse")
+	file_blackfury_erc20_v1alpha1_query_proto_init()
+	md_CoinDenomForERC20AddressResponse = File_blackfury_erc20_v1alpha1_query_proto.Messages().ByName("CoinDenomForERC20AddressResponse")
 	fd_CoinDenomForERC20AddressResponse_denom = md_CoinDenomForERC20AddressResponse.Fields().ByName("denom")
 }
 
@@ -1294,7 +1294,7 @@ func (x *CoinDenomForERC20AddressResponse) ProtoReflect() protoreflect.Message {
 }
 
 func (x *CoinDenomForERC20AddressResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[3]
+	mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1371,13 +1371,13 @@ func (x *fastReflection_CoinDenomForERC20AddressResponse) Range(f func(protorefl
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_CoinDenomForERC20AddressResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
 		return x.Denom != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1389,13 +1389,13 @@ func (x *fastReflection_CoinDenomForERC20AddressResponse) Has(fd protoreflect.Fi
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_CoinDenomForERC20AddressResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
 		x.Denom = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1407,14 +1407,14 @@ func (x *fastReflection_CoinDenomForERC20AddressResponse) Clear(fd protoreflect.
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_CoinDenomForERC20AddressResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
 		value := x.Denom
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1430,13 +1430,13 @@ func (x *fastReflection_CoinDenomForERC20AddressResponse) Get(descriptor protore
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_CoinDenomForERC20AddressResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
 		x.Denom = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1452,13 +1452,13 @@ func (x *fastReflection_CoinDenomForERC20AddressResponse) Set(fd protoreflect.Fi
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_CoinDenomForERC20AddressResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
-		panic(fmt.Errorf("field denom of message polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse is not mutable"))
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
+		panic(fmt.Errorf("field denom of message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1467,13 +1467,13 @@ func (x *fastReflection_CoinDenomForERC20AddressResponse) Mutable(fd protoreflec
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_CoinDenomForERC20AddressResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
+	case "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse.denom":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse"))
 		}
-		panic(fmt.Errorf("message polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1483,7 +1483,7 @@ func (x *fastReflection_CoinDenomForERC20AddressResponse) NewField(fd protorefle
 func (x *fastReflection_CoinDenomForERC20AddressResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1740,7 +1740,7 @@ type ERC20AddressForCoinDenomRequest struct {
 func (x *ERC20AddressForCoinDenomRequest) Reset() {
 	*x = ERC20AddressForCoinDenomRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[0]
+		mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1754,7 +1754,7 @@ func (*ERC20AddressForCoinDenomRequest) ProtoMessage() {}
 
 // Deprecated: Use ERC20AddressForCoinDenomRequest.ProtoReflect.Descriptor instead.
 func (*ERC20AddressForCoinDenomRequest) Descriptor() ([]byte, []int) {
-	return file_polaris_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{0}
+	return file_blackfury_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *ERC20AddressForCoinDenomRequest) GetDenom() string {
@@ -1777,7 +1777,7 @@ type ERC20AddressForCoinDenomResponse struct {
 func (x *ERC20AddressForCoinDenomResponse) Reset() {
 	*x = ERC20AddressForCoinDenomResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[1]
+		mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1791,7 +1791,7 @@ func (*ERC20AddressForCoinDenomResponse) ProtoMessage() {}
 
 // Deprecated: Use ERC20AddressForCoinDenomResponse.ProtoReflect.Descriptor instead.
 func (*ERC20AddressForCoinDenomResponse) Descriptor() ([]byte, []int) {
-	return file_polaris_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{1}
+	return file_blackfury_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *ERC20AddressForCoinDenomResponse) GetToken() string {
@@ -1814,7 +1814,7 @@ type CoinDenomForERC20AddressRequest struct {
 func (x *CoinDenomForERC20AddressRequest) Reset() {
 	*x = CoinDenomForERC20AddressRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[2]
+		mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1828,7 +1828,7 @@ func (*CoinDenomForERC20AddressRequest) ProtoMessage() {}
 
 // Deprecated: Use CoinDenomForERC20AddressRequest.ProtoReflect.Descriptor instead.
 func (*CoinDenomForERC20AddressRequest) Descriptor() ([]byte, []int) {
-	return file_polaris_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{2}
+	return file_blackfury_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *CoinDenomForERC20AddressRequest) GetToken() string {
@@ -1851,7 +1851,7 @@ type CoinDenomForERC20AddressResponse struct {
 func (x *CoinDenomForERC20AddressResponse) Reset() {
 	*x = CoinDenomForERC20AddressResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_erc20_v1alpha1_query_proto_msgTypes[3]
+		mi := &file_blackfury_erc20_v1alpha1_query_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1865,7 +1865,7 @@ func (*CoinDenomForERC20AddressResponse) ProtoMessage() {}
 
 // Deprecated: Use CoinDenomForERC20AddressResponse.ProtoReflect.Descriptor instead.
 func (*CoinDenomForERC20AddressResponse) Descriptor() ([]byte, []int) {
-	return file_polaris_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{3}
+	return file_blackfury_erc20_v1alpha1_query_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *CoinDenomForERC20AddressResponse) GetDenom() string {
@@ -1875,9 +1875,9 @@ func (x *CoinDenomForERC20AddressResponse) GetDenom() string {
 	return ""
 }
 
-var File_polaris_erc20_v1alpha1_query_proto protoreflect.FileDescriptor
+var File_blackfury_erc20_v1alpha1_query_proto protoreflect.FileDescriptor
 
-var file_polaris_erc20_v1alpha1_query_proto_rawDesc = []byte{
+var file_blackfury_erc20_v1alpha1_query_proto_rawDesc = []byte{
 	0x0a, 0x22, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2f, 0x65, 0x72, 0x63, 0x32, 0x30, 0x2f,
 	0x76, 0x31, 0x61, 0x6c, 0x70, 0x68, 0x61, 0x31, 0x2f, 0x71, 0x75, 0x65, 0x72, 0x79, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x12, 0x16, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2e, 0x65, 0x72,
@@ -1946,29 +1946,29 @@ var file_polaris_erc20_v1alpha1_query_proto_rawDesc = []byte{
 }
 
 var (
-	file_polaris_erc20_v1alpha1_query_proto_rawDescOnce sync.Once
-	file_polaris_erc20_v1alpha1_query_proto_rawDescData = file_polaris_erc20_v1alpha1_query_proto_rawDesc
+	file_blackfury_erc20_v1alpha1_query_proto_rawDescOnce sync.Once
+	file_blackfury_erc20_v1alpha1_query_proto_rawDescData = file_blackfury_erc20_v1alpha1_query_proto_rawDesc
 )
 
-func file_polaris_erc20_v1alpha1_query_proto_rawDescGZIP() []byte {
-	file_polaris_erc20_v1alpha1_query_proto_rawDescOnce.Do(func() {
-		file_polaris_erc20_v1alpha1_query_proto_rawDescData = protoimpl.X.CompressGZIP(file_polaris_erc20_v1alpha1_query_proto_rawDescData)
+func file_blackfury_erc20_v1alpha1_query_proto_rawDescGZIP() []byte {
+	file_blackfury_erc20_v1alpha1_query_proto_rawDescOnce.Do(func() {
+		file_blackfury_erc20_v1alpha1_query_proto_rawDescData = protoimpl.X.CompressGZIP(file_blackfury_erc20_v1alpha1_query_proto_rawDescData)
 	})
-	return file_polaris_erc20_v1alpha1_query_proto_rawDescData
+	return file_blackfury_erc20_v1alpha1_query_proto_rawDescData
 }
 
-var file_polaris_erc20_v1alpha1_query_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_polaris_erc20_v1alpha1_query_proto_goTypes = []interface{}{
-	(*ERC20AddressForCoinDenomRequest)(nil),  // 0: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest
-	(*ERC20AddressForCoinDenomResponse)(nil), // 1: polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse
-	(*CoinDenomForERC20AddressRequest)(nil),  // 2: polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest
-	(*CoinDenomForERC20AddressResponse)(nil), // 3: polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse
+var file_blackfury_erc20_v1alpha1_query_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_blackfury_erc20_v1alpha1_query_proto_goTypes = []interface{}{
+	(*ERC20AddressForCoinDenomRequest)(nil),  // 0: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest
+	(*ERC20AddressForCoinDenomResponse)(nil), // 1: blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse
+	(*CoinDenomForERC20AddressRequest)(nil),  // 2: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest
+	(*CoinDenomForERC20AddressResponse)(nil), // 3: blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse
 }
-var file_polaris_erc20_v1alpha1_query_proto_depIdxs = []int32{
-	0, // 0: polaris.erc20.v1alpha1.QueryService.ERC20AddressForCoinDenom:input_type -> polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest
-	2, // 1: polaris.erc20.v1alpha1.QueryService.CoinDenomForERC20Address:input_type -> polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest
-	1, // 2: polaris.erc20.v1alpha1.QueryService.ERC20AddressForCoinDenom:output_type -> polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse
-	3, // 3: polaris.erc20.v1alpha1.QueryService.CoinDenomForERC20Address:output_type -> polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse
+var file_blackfury_erc20_v1alpha1_query_proto_depIdxs = []int32{
+	0, // 0: blackfury.erc20.v1alpha1.QueryService.ERC20AddressForCoinDenom:input_type -> blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest
+	2, // 1: blackfury.erc20.v1alpha1.QueryService.CoinDenomForERC20Address:input_type -> blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest
+	1, // 2: blackfury.erc20.v1alpha1.QueryService.ERC20AddressForCoinDenom:output_type -> blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse
+	3, // 3: blackfury.erc20.v1alpha1.QueryService.CoinDenomForERC20Address:output_type -> blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -1976,13 +1976,13 @@ var file_polaris_erc20_v1alpha1_query_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_polaris_erc20_v1alpha1_query_proto_init() }
-func file_polaris_erc20_v1alpha1_query_proto_init() {
-	if File_polaris_erc20_v1alpha1_query_proto != nil {
+func init() { file_blackfury_erc20_v1alpha1_query_proto_init() }
+func file_blackfury_erc20_v1alpha1_query_proto_init() {
+	if File_blackfury_erc20_v1alpha1_query_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_polaris_erc20_v1alpha1_query_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_erc20_v1alpha1_query_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ERC20AddressForCoinDenomRequest); i {
 			case 0:
 				return &v.state
@@ -1994,7 +1994,7 @@ func file_polaris_erc20_v1alpha1_query_proto_init() {
 				return nil
 			}
 		}
-		file_polaris_erc20_v1alpha1_query_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_erc20_v1alpha1_query_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ERC20AddressForCoinDenomResponse); i {
 			case 0:
 				return &v.state
@@ -2006,7 +2006,7 @@ func file_polaris_erc20_v1alpha1_query_proto_init() {
 				return nil
 			}
 		}
-		file_polaris_erc20_v1alpha1_query_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_erc20_v1alpha1_query_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CoinDenomForERC20AddressRequest); i {
 			case 0:
 				return &v.state
@@ -2018,7 +2018,7 @@ func file_polaris_erc20_v1alpha1_query_proto_init() {
 				return nil
 			}
 		}
-		file_polaris_erc20_v1alpha1_query_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_erc20_v1alpha1_query_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CoinDenomForERC20AddressResponse); i {
 			case 0:
 				return &v.state
@@ -2035,18 +2035,18 @@ func file_polaris_erc20_v1alpha1_query_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_polaris_erc20_v1alpha1_query_proto_rawDesc,
+			RawDescriptor: file_blackfury_erc20_v1alpha1_query_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_polaris_erc20_v1alpha1_query_proto_goTypes,
-		DependencyIndexes: file_polaris_erc20_v1alpha1_query_proto_depIdxs,
-		MessageInfos:      file_polaris_erc20_v1alpha1_query_proto_msgTypes,
+		GoTypes:           file_blackfury_erc20_v1alpha1_query_proto_goTypes,
+		DependencyIndexes: file_blackfury_erc20_v1alpha1_query_proto_depIdxs,
+		MessageInfos:      file_blackfury_erc20_v1alpha1_query_proto_msgTypes,
 	}.Build()
-	File_polaris_erc20_v1alpha1_query_proto = out.File
-	file_polaris_erc20_v1alpha1_query_proto_rawDesc = nil
-	file_polaris_erc20_v1alpha1_query_proto_goTypes = nil
-	file_polaris_erc20_v1alpha1_query_proto_depIdxs = nil
+	File_blackfury_erc20_v1alpha1_query_proto = out.File
+	file_blackfury_erc20_v1alpha1_query_proto_rawDesc = nil
+	file_blackfury_erc20_v1alpha1_query_proto_goTypes = nil
+	file_blackfury_erc20_v1alpha1_query_proto_depIdxs = nil
 }

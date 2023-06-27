@@ -19,7 +19,7 @@
 // TITLE.
 
 syntax = "proto3";
-package polaris.evm.v1alpha1;
+package blackfury.evm.v1alpha1;
 
 import "cosmos/msg/v1/msg.proto";
 

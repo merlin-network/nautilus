@@ -39,7 +39,7 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	MsgService_EthTransaction_FullMethodName = "/polaris.evm.v1alpha1.MsgService/EthTransaction"
+	MsgService_EthTransaction_FullMethodName = "/blackfury.evm.v1alpha1.MsgService/EthTransaction"
 )
 
 // MsgServiceClient is the client API for MsgService service.
@@ -118,7 +118,7 @@ func _MsgService_EthTransaction_Handler(srv interface{}, ctx context.Context, de
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var MsgService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "polaris.evm.v1alpha1.MsgService",
+	ServiceName: "blackfury.evm.v1alpha1.MsgService",
 	HandlerType: (*MsgServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

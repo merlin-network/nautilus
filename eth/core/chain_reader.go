@@ -91,7 +91,7 @@ func (bc *blockchain) CurrentBlock() *types.Header {
 	return block.Header()
 }
 
-// CurrentSnapBlock is UNUSED in Polaris.
+// CurrentSnapBlock is UNUSED in Blackfury.
 func (bc *blockchain) CurrentSnapBlock() *types.Header {
 	return nil
 }
@@ -111,7 +111,7 @@ func (bc *blockchain) CurrentFinalBlock() *types.Header {
 // CurrentSafeBlock retrieves the current safe block of the canonical
 // chain. The block is retrieved from the blockchain's internal cache.
 func (bc *blockchain) CurrentSafeBlock() *types.Header {
-	// TODO: determine the difference between safe and final in polaris.
+	// TODO: determine the difference between safe and final in blackfury.
 	return bc.CurrentFinalBlock()
 }
 

@@ -78,7 +78,7 @@ var _ = Describe("GRPC Query Server", func() {
 			Token: cosmlib.AddressToAccAddress(tokenAddr).String(),
 		})
 		Expect(err).ToNot(HaveOccurred())
-		Expect(resp.Denom).To(Equal(types.NewPolarisDenomForAddress(tokenAddr)))
+		Expect(resp.Denom).To(Equal(types.NewBlackfuryDenomForAddress(tokenAddr)))
 	})
 
 	It("should correctly handle coin --> erc20", func() {

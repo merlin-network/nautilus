@@ -60,7 +60,7 @@ func (m *Params) XXX_DiscardUnknown() {
 var xxx_messageInfo_Params proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Params)(nil), "polaris.erc20.v1alpha1.Params")
+	proto.RegisterType((*Params)(nil), "blackfury.erc20.v1alpha1.Params")
 }
 
 func init() {

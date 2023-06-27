@@ -214,10 +214,10 @@ func (m *CoinDenomForERC20AddressResponse) GetDenom() string {
 }
 
 func init() {
-	proto.RegisterType((*ERC20AddressForCoinDenomRequest)(nil), "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomRequest")
-	proto.RegisterType((*ERC20AddressForCoinDenomResponse)(nil), "polaris.erc20.v1alpha1.ERC20AddressForCoinDenomResponse")
-	proto.RegisterType((*CoinDenomForERC20AddressRequest)(nil), "polaris.erc20.v1alpha1.CoinDenomForERC20AddressRequest")
-	proto.RegisterType((*CoinDenomForERC20AddressResponse)(nil), "polaris.erc20.v1alpha1.CoinDenomForERC20AddressResponse")
+	proto.RegisterType((*ERC20AddressForCoinDenomRequest)(nil), "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomRequest")
+	proto.RegisterType((*ERC20AddressForCoinDenomResponse)(nil), "blackfury.erc20.v1alpha1.ERC20AddressForCoinDenomResponse")
+	proto.RegisterType((*CoinDenomForERC20AddressRequest)(nil), "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressRequest")
+	proto.RegisterType((*CoinDenomForERC20AddressResponse)(nil), "blackfury.erc20.v1alpha1.CoinDenomForERC20AddressResponse")
 }
 
 func init() {
@@ -280,7 +280,7 @@ func NewQueryServiceClient(cc grpc1.ClientConn) QueryServiceClient {
 
 func (c *queryServiceClient) ERC20AddressForCoinDenom(ctx context.Context, in *ERC20AddressForCoinDenomRequest, opts ...grpc.CallOption) (*ERC20AddressForCoinDenomResponse, error) {
 	out := new(ERC20AddressForCoinDenomResponse)
-	err := c.cc.Invoke(ctx, "/polaris.erc20.v1alpha1.QueryService/ERC20AddressForCoinDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/blackfury.erc20.v1alpha1.QueryService/ERC20AddressForCoinDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -289,7 +289,7 @@ func (c *queryServiceClient) ERC20AddressForCoinDenom(ctx context.Context, in *E
 
 func (c *queryServiceClient) CoinDenomForERC20Address(ctx context.Context, in *CoinDenomForERC20AddressRequest, opts ...grpc.CallOption) (*CoinDenomForERC20AddressResponse, error) {
 	out := new(CoinDenomForERC20AddressResponse)
-	err := c.cc.Invoke(ctx, "/polaris.erc20.v1alpha1.QueryService/CoinDenomForERC20Address", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/blackfury.erc20.v1alpha1.QueryService/CoinDenomForERC20Address", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -329,7 +329,7 @@ func _QueryService_ERC20AddressForCoinDenom_Handler(srv interface{}, ctx context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/polaris.erc20.v1alpha1.QueryService/ERC20AddressForCoinDenom",
+		FullMethod: "/blackfury.erc20.v1alpha1.QueryService/ERC20AddressForCoinDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServiceServer).ERC20AddressForCoinDenom(ctx, req.(*ERC20AddressForCoinDenomRequest))
@@ -347,7 +347,7 @@ func _QueryService_CoinDenomForERC20Address_Handler(srv interface{}, ctx context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/polaris.erc20.v1alpha1.QueryService/CoinDenomForERC20Address",
+		FullMethod: "/blackfury.erc20.v1alpha1.QueryService/CoinDenomForERC20Address",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServiceServer).CoinDenomForERC20Address(ctx, req.(*CoinDenomForERC20AddressRequest))
@@ -356,7 +356,7 @@ func _QueryService_CoinDenomForERC20Address_Handler(srv interface{}, ctx context
 }
 
 var _QueryService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "polaris.erc20.v1alpha1.QueryService",
+	ServiceName: "blackfury.erc20.v1alpha1.QueryService",
 	HandlerType: (*QueryServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -47,7 +47,7 @@ const (
 // ErrTokenDoesNotExist is returned when a token contract does not exist.
 var ErrTokenDoesNotExist = errors.New("ERC20 token contract does not exist")
 
-// transferCoinToERC20 transfers SDK/Polaris coins to ERC20 tokens for an owner.
+// transferCoinToERC20 transfers SDK/Blackfury coins to ERC20 tokens for an owner.
 func (c *Contract) transferCoinToERC20(
 	ctx context.Context,
 	evm ethprecompile.EVM,
@@ -59,16 +59,16 @@ func (c *Contract) transferCoinToERC20(
 ) error {
 	var (
 		sdkCtx         = sdk.UnwrapSDKContext(ctx)
-		isPolarisDenom = erc20types.IsPolarisDenom(denom)
+		isBlackfuryDenom = erc20types.IsBlackfuryDenom(denom)
 	)
 
-	// 1) Handle the incoming SDK/Polaris coins
-	if isPolarisDenom { // transferring Polaris coins to ERC20 originated tokens
-		// burn amount Polaris coins from owner
+	// 1) Handle the incoming SDK/Blackfury coins
+	if isBlackfuryDenom { // transferring Blackfury coins to ERC20 originated tokens
+		// burn amount Blackfury coins from owner
 		if err := cosmlib.BurnCoinsFromAddress(sdkCtx, c.bk, erc20types.ModuleName, owner, denom, amount); err != nil {
 			return err
 		}
-	} else { // transferring IBC-originated SDK coins to Polaris ERC20 tokens
+	} else { // transferring IBC-originated SDK coins to Blackfury ERC20 tokens
 		// send bank-module backed tokens from owner to recipient
 		if err := c.bk.SendCoins(
 			sdkCtx,
@@ -80,7 +80,7 @@ func (c *Contract) transferCoinToERC20(
 		}
 	}
 
-	// 2) Handle the outgoing (Polaris)ERC20 tokens
+	// 2) Handle the outgoing (Blackfury)ERC20 tokens
 	resp, err := c.em.ERC20AddressForCoinDenom(
 		ctx, &erc20types.ERC20AddressForCoinDenomRequest{
 			Denom: denom,
@@ -97,23 +97,23 @@ func (c *Contract) transferCoinToERC20(
 		// 	return fmt.Errorf("coin %s does not have metadata registered", denom)
 		// }
 
-		// deploy the new PolarisERC20 token contract
+		// deploy the new BlackfuryERC20 token contract
 		// NOTE: deployer of this contract is the ERC20 precompile account, NOT the msg.sender
 		// NOTE: the incoming coin's denom must have a denomMetadata set in the bank keeper
 		// (ref: https://github.com/berachain/polaris/issues/682)
 		var token common.Address
 		if token, _, err = cosmlib.DeployOnEVMFromPrecompile(
 			sdkCtx, c.GetPlugin(), evm,
-			c.RegistryKey(), c.polarisERC20ABI, value,
-			c.polarisERC20Bin, denom,
+			c.RegistryKey(), c.blackfuryERC20ABI, value,
+			c.blackfuryERC20Bin, denom,
 		); err != nil {
 			return err
 		}
 
 		// create the new ERC20 token contract pairing with SDK coin denomination
 		c.em.RegisterCoinERC20Pair(sdkCtx, denom, token)
-	} else if isPolarisDenom {
-		// subesequent occurrence of Polaris coins
+	} else if isBlackfuryDenom {
+		// subesequent occurrence of Blackfury coins
 
 		// convert ERC20 token bech32 address to common.Address
 		var tokenAcc sdk.AccAddress
@@ -131,7 +131,7 @@ func (c *Contract) transferCoinToERC20(
 		// NOTE: it is guaranteed that the ERC20 tokens were transferred to the ERC20 module
 		if _, err = cosmlib.CallEVMFromPrecompile(
 			sdkCtx, c.GetPlugin(), evm,
-			c.RegistryKey(), token, c.polarisERC20ABI, big.NewInt(0),
+			c.RegistryKey(), token, c.blackfuryERC20ABI, big.NewInt(0),
 			transfer, recipient, amount,
 		); err != nil {
 			return err
@@ -151,7 +151,7 @@ func (c *Contract) transferCoinToERC20(
 	return nil
 }
 
-// transferERC20ToCoin transfers ERC20 tokens to SDK/Polaris coins for an owner.
+// transferERC20ToCoin transfers ERC20 tokens to SDK/Blackfury coins for an owner.
 func (c *Contract) transferERC20ToCoin(
 	ctx context.Context,
 	_ common.Address,
@@ -163,7 +163,7 @@ func (c *Contract) transferERC20ToCoin(
 ) error {
 	sdkCtx := sdk.UnwrapSDKContext(ctx)
 
-	// get SDK/Polaris coin denomination pairing with ERC20 token
+	// get SDK/Blackfury coin denomination pairing with ERC20 token
 	resp, err := c.em.CoinDenomForERC20Address(
 		ctx, &erc20types.CoinDenomForERC20AddressRequest{
 			Token: cosmlib.Bech32FromEthAddress(token),
@@ -175,12 +175,12 @@ func (c *Contract) transferERC20ToCoin(
 
 	denom := resp.Denom
 	if denom == "" {
-		// if denomination not found, create new pair with ERC20 token <> Polaris coin denomination
+		// if denomination not found, create new pair with ERC20 token <> Blackfury coin denomination
 		denom = c.em.RegisterERC20CoinPair(sdkCtx, token)
 	}
 
 	//nolint:nestif // readability.
-	if erc20types.IsPolarisDenom(denom) { // transferring ERC20 originated tokens to Polaris coins
+	if erc20types.IsBlackfuryDenom(denom) { // transferring ERC20 originated tokens to Blackfury coins
 		// return an error if the ERC20 token contract does not exist to revert the tx
 		if !evm.GetStateDB().Exist(token) {
 			return ErrTokenDoesNotExist
@@ -195,7 +195,7 @@ func (c *Contract) transferERC20ToCoin(
 
 		// check the ERC20 module's balance of the ERC20-originated token
 		if balanceBefore, err = getBalanceOf(
-			sdkCtx, plugin, evm, erc20Module, token, c.polarisERC20ABI, erc20Module,
+			sdkCtx, plugin, evm, erc20Module, token, c.blackfuryERC20ABI, erc20Module,
 		); err != nil {
 			return err
 		}
@@ -205,7 +205,7 @@ func (c *Contract) transferERC20ToCoin(
 		// NOTE: owner must have previously approved the ERC20 Module to spend amount ERC20 tokens
 		if _, err = cosmlib.CallEVMFromPrecompile(
 			sdkCtx, plugin, evm,
-			erc20Module, token, c.polarisERC20ABI, big.NewInt(0),
+			erc20Module, token, c.blackfuryERC20ABI, big.NewInt(0),
 			transferFrom, owner, erc20Module, amount,
 		); err != nil {
 			return err
@@ -213,17 +213,17 @@ func (c *Contract) transferERC20ToCoin(
 
 		// check the ERC20 module's balance of the ERC20-originated token
 		if balanceAfter, err = getBalanceOf(
-			sdkCtx, plugin, evm, erc20Module, token, c.polarisERC20ABI, erc20Module,
+			sdkCtx, plugin, evm, erc20Module, token, c.blackfuryERC20ABI, erc20Module,
 		); err != nil {
 			return err
 		}
 
-		// mint amount Polaris Coins to recipient
+		// mint amount Blackfury Coins to recipient
 		amount = new(big.Int).Sub(balanceAfter, balanceBefore)
 		if err = cosmlib.MintCoinsToAddress(sdkCtx, c.bk, erc20types.ModuleName, recipient, denom, amount); err != nil {
 			return err
 		}
-	} else { // transferring Polaris ERC20 tokens to IBC-originated SDK coins
+	} else { // transferring Blackfury ERC20 tokens to IBC-originated SDK coins
 		// send bank module-backed tokens from owner to recipient
 		if err = c.bk.SendCoins(
 			sdkCtx,

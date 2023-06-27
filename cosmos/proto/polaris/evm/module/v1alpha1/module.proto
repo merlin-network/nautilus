@@ -20,7 +20,7 @@
 
 syntax = "proto3";
 
-package polaris.evm.module.v1alpha1;
+package blackfury.evm.module.v1alpha1;
 
 import "cosmos/app/v1alpha1/module.proto";
 

@@ -39,8 +39,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	QueryService_ERC20AddressForCoinDenom_FullMethodName = "/polaris.erc20.v1alpha1.QueryService/ERC20AddressForCoinDenom"
-	QueryService_CoinDenomForERC20Address_FullMethodName = "/polaris.erc20.v1alpha1.QueryService/CoinDenomForERC20Address"
+	QueryService_ERC20AddressForCoinDenom_FullMethodName = "/blackfury.erc20.v1alpha1.QueryService/ERC20AddressForCoinDenom"
+	QueryService_CoinDenomForERC20Address_FullMethodName = "/blackfury.erc20.v1alpha1.QueryService/CoinDenomForERC20Address"
 )
 
 // QueryServiceClient is the client API for QueryService service.
@@ -153,7 +153,7 @@ func _QueryService_CoinDenomForERC20Address_Handler(srv interface{}, ctx context
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var QueryService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "polaris.erc20.v1alpha1.QueryService",
+	ServiceName: "blackfury.erc20.v1alpha1.QueryService",
 	HandlerType: (*QueryServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -54,7 +54,7 @@ var _ = Describe("Network", func() {
 
 	It("should support eth_chainId", func() {
 		chainID, err := client.ChainID(ctx)
-		Expect(chainID.String()).To(Equal("2061"))
+		Expect(chainID.String()).To(Equal("710"))
 		Expect(err).ToNot(HaveOccurred())
 	})
 

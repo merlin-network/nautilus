@@ -33,7 +33,7 @@ import (
 	"github.com/magefile/mage/sh"
 )
 
-// custom tests for Polaris, struct follows {namespace, files_changed}
+// custom tests for Blackfury, struct follows {namespace, files_changed}
 // note: this requires an existing instance of the namespace in the Hive repo
 type tests struct {
 	Name  string
@@ -123,7 +123,7 @@ func (h Hive) View() error {
 }
 
 func (h Hive) copyFiles() error {
-	LogGreen("Copying Polaris Hive setup files...")
+	LogGreen("Copying Blackfury Hive setup files...")
 	if err := sh.RunV("mkdir", simulatorsPath); err != nil {
 		return err
 	}

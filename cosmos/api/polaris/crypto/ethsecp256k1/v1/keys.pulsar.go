@@ -18,8 +18,8 @@ var (
 )
 
 func init() {
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_init()
-	md_PubKey = File_polaris_crypto_ethsecp256k1_v1_keys_proto.Messages().ByName("PubKey")
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_init()
+	md_PubKey = File_blackfury_crypto_ethsecp256k1_v1_keys_proto.Messages().ByName("PubKey")
 	fd_PubKey_key = md_PubKey.Fields().ByName("key")
 }
 
@@ -32,7 +32,7 @@ func (x *PubKey) ProtoReflect() protoreflect.Message {
 }
 
 func (x *PubKey) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0]
+	mi := &file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -109,13 +109,13 @@ func (x *fastReflection_PubKey) Range(f func(protoreflect.FieldDescriptor, proto
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_PubKey) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PubKey.key":
+	case "blackfury.crypto.ethsecp256k1.v1.PubKey.key":
 		return len(x.Key) != 0
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PubKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PubKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PubKey does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PubKey does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -127,13 +127,13 @@ func (x *fastReflection_PubKey) Has(fd protoreflect.FieldDescriptor) bool {
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_PubKey) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PubKey.key":
+	case "blackfury.crypto.ethsecp256k1.v1.PubKey.key":
 		x.Key = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PubKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PubKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PubKey does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PubKey does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -145,14 +145,14 @@ func (x *fastReflection_PubKey) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_PubKey) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PubKey.key":
+	case "blackfury.crypto.ethsecp256k1.v1.PubKey.key":
 		value := x.Key
 		return protoreflect.ValueOfBytes(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PubKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PubKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PubKey does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PubKey does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -168,13 +168,13 @@ func (x *fastReflection_PubKey) Get(descriptor protoreflect.FieldDescriptor) pro
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_PubKey) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PubKey.key":
+	case "blackfury.crypto.ethsecp256k1.v1.PubKey.key":
 		x.Key = value.Bytes()
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PubKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PubKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PubKey does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PubKey does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -190,13 +190,13 @@ func (x *fastReflection_PubKey) Set(fd protoreflect.FieldDescriptor, value proto
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_PubKey) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PubKey.key":
-		panic(fmt.Errorf("field key of message polaris.crypto.ethsecp256k1.v1.PubKey is not mutable"))
+	case "blackfury.crypto.ethsecp256k1.v1.PubKey.key":
+		panic(fmt.Errorf("field key of message blackfury.crypto.ethsecp256k1.v1.PubKey is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PubKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PubKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PubKey does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PubKey does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -205,13 +205,13 @@ func (x *fastReflection_PubKey) Mutable(fd protoreflect.FieldDescriptor) protore
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_PubKey) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PubKey.key":
+	case "blackfury.crypto.ethsecp256k1.v1.PubKey.key":
 		return protoreflect.ValueOfBytes(nil)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PubKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PubKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PubKey does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PubKey does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -221,7 +221,7 @@ func (x *fastReflection_PubKey) NewField(fd protoreflect.FieldDescriptor) protor
 func (x *fastReflection_PubKey) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in polaris.crypto.ethsecp256k1.v1.PubKey", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in blackfury.crypto.ethsecp256k1.v1.PubKey", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -440,8 +440,8 @@ var (
 )
 
 func init() {
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_init()
-	md_PrivKey = File_polaris_crypto_ethsecp256k1_v1_keys_proto.Messages().ByName("PrivKey")
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_init()
+	md_PrivKey = File_blackfury_crypto_ethsecp256k1_v1_keys_proto.Messages().ByName("PrivKey")
 	fd_PrivKey_key = md_PrivKey.Fields().ByName("key")
 }
 
@@ -454,7 +454,7 @@ func (x *PrivKey) ProtoReflect() protoreflect.Message {
 }
 
 func (x *PrivKey) slowProtoReflect() protoreflect.Message {
-	mi := &file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1]
+	mi := &file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -531,13 +531,13 @@ func (x *fastReflection_PrivKey) Range(f func(protoreflect.FieldDescriptor, prot
 // a repeated field is populated if it is non-empty.
 func (x *fastReflection_PrivKey) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PrivKey.key":
+	case "blackfury.crypto.ethsecp256k1.v1.PrivKey.key":
 		return len(x.Key) != 0
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PrivKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PrivKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -549,13 +549,13 @@ func (x *fastReflection_PrivKey) Has(fd protoreflect.FieldDescriptor) bool {
 // Clear is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_PrivKey) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PrivKey.key":
+	case "blackfury.crypto.ethsecp256k1.v1.PrivKey.key":
 		x.Key = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PrivKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PrivKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -567,14 +567,14 @@ func (x *fastReflection_PrivKey) Clear(fd protoreflect.FieldDescriptor) {
 // of the value; to obtain a mutable reference, use Mutable.
 func (x *fastReflection_PrivKey) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PrivKey.key":
+	case "blackfury.crypto.ethsecp256k1.v1.PrivKey.key":
 		value := x.Key
 		return protoreflect.ValueOfBytes(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PrivKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PrivKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -590,13 +590,13 @@ func (x *fastReflection_PrivKey) Get(descriptor protoreflect.FieldDescriptor) pr
 // Set is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_PrivKey) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PrivKey.key":
+	case "blackfury.crypto.ethsecp256k1.v1.PrivKey.key":
 		x.Key = value.Bytes()
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PrivKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PrivKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -612,13 +612,13 @@ func (x *fastReflection_PrivKey) Set(fd protoreflect.FieldDescriptor, value prot
 // Mutable is a mutating operation and unsafe for concurrent use.
 func (x *fastReflection_PrivKey) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PrivKey.key":
-		panic(fmt.Errorf("field key of message polaris.crypto.ethsecp256k1.v1.PrivKey is not mutable"))
+	case "blackfury.crypto.ethsecp256k1.v1.PrivKey.key":
+		panic(fmt.Errorf("field key of message blackfury.crypto.ethsecp256k1.v1.PrivKey is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PrivKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PrivKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -627,13 +627,13 @@ func (x *fastReflection_PrivKey) Mutable(fd protoreflect.FieldDescriptor) protor
 // For lists, maps, and messages, this returns a new, empty, mutable value.
 func (x *fastReflection_PrivKey) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "polaris.crypto.ethsecp256k1.v1.PrivKey.key":
+	case "blackfury.crypto.ethsecp256k1.v1.PrivKey.key":
 		return protoreflect.ValueOfBytes(nil)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: polaris.crypto.ethsecp256k1.v1.PrivKey"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: blackfury.crypto.ethsecp256k1.v1.PrivKey"))
 		}
-		panic(fmt.Errorf("message polaris.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message blackfury.crypto.ethsecp256k1.v1.PrivKey does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -643,7 +643,7 @@ func (x *fastReflection_PrivKey) NewField(fd protoreflect.FieldDescriptor) proto
 func (x *fastReflection_PrivKey) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in polaris.crypto.ethsecp256k1.v1.PrivKey", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in blackfury.crypto.ethsecp256k1.v1.PrivKey", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -904,7 +904,7 @@ type PubKey struct {
 func (x *PubKey) Reset() {
 	*x = PubKey{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0]
+		mi := &file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -918,7 +918,7 @@ func (*PubKey) ProtoMessage() {}
 
 // Deprecated: Use PubKey.ProtoReflect.Descriptor instead.
 func (*PubKey) Descriptor() ([]byte, []int) {
-	return file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP(), []int{0}
+	return file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *PubKey) GetKey() []byte {
@@ -942,7 +942,7 @@ type PrivKey struct {
 func (x *PrivKey) Reset() {
 	*x = PrivKey{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1]
+		mi := &file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -956,7 +956,7 @@ func (*PrivKey) ProtoMessage() {}
 
 // Deprecated: Use PrivKey.ProtoReflect.Descriptor instead.
 func (*PrivKey) Descriptor() ([]byte, []int) {
-	return file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP(), []int{1}
+	return file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *PrivKey) GetKey() []byte {
@@ -966,9 +966,9 @@ func (x *PrivKey) GetKey() []byte {
 	return nil
 }
 
-var File_polaris_crypto_ethsecp256k1_v1_keys_proto protoreflect.FileDescriptor
+var File_blackfury_crypto_ethsecp256k1_v1_keys_proto protoreflect.FileDescriptor
 
-var file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDesc = []byte{
+var file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDesc = []byte{
 	0x0a, 0x29, 0x70, 0x6f, 0x6c, 0x61, 0x72, 0x69, 0x73, 0x2f, 0x63, 0x72, 0x79, 0x70, 0x74, 0x6f,
 	0x2f, 0x65, 0x74, 0x68, 0x73, 0x65, 0x63, 0x70, 0x32, 0x35, 0x36, 0x6b, 0x31, 0x2f, 0x76, 0x31,
 	0x2f, 0x6b, 0x65, 0x79, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x1e, 0x70, 0x6f, 0x6c,
@@ -998,23 +998,23 @@ var file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDesc = []byte{
 }
 
 var (
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescOnce sync.Once
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescData = file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDesc
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescOnce sync.Once
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescData = file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDesc
 )
 
-func file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP() []byte {
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescOnce.Do(func() {
-		file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescData = protoimpl.X.CompressGZIP(file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescData)
+func file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescGZIP() []byte {
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescOnce.Do(func() {
+		file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescData = protoimpl.X.CompressGZIP(file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescData)
 	})
-	return file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDescData
+	return file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDescData
 }
 
-var file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_polaris_crypto_ethsecp256k1_v1_keys_proto_goTypes = []interface{}{
-	(*PubKey)(nil),  // 0: polaris.crypto.ethsecp256k1.v1.PubKey
-	(*PrivKey)(nil), // 1: polaris.crypto.ethsecp256k1.v1.PrivKey
+var file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_blackfury_crypto_ethsecp256k1_v1_keys_proto_goTypes = []interface{}{
+	(*PubKey)(nil),  // 0: blackfury.crypto.ethsecp256k1.v1.PubKey
+	(*PrivKey)(nil), // 1: blackfury.crypto.ethsecp256k1.v1.PrivKey
 }
-var file_polaris_crypto_ethsecp256k1_v1_keys_proto_depIdxs = []int32{
+var file_blackfury_crypto_ethsecp256k1_v1_keys_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -1022,13 +1022,13 @@ var file_polaris_crypto_ethsecp256k1_v1_keys_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_polaris_crypto_ethsecp256k1_v1_keys_proto_init() }
-func file_polaris_crypto_ethsecp256k1_v1_keys_proto_init() {
-	if File_polaris_crypto_ethsecp256k1_v1_keys_proto != nil {
+func init() { file_blackfury_crypto_ethsecp256k1_v1_keys_proto_init() }
+func file_blackfury_crypto_ethsecp256k1_v1_keys_proto_init() {
+	if File_blackfury_crypto_ethsecp256k1_v1_keys_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PubKey); i {
 			case 0:
 				return &v.state
@@ -1040,7 +1040,7 @@ func file_polaris_crypto_ethsecp256k1_v1_keys_proto_init() {
 				return nil
 			}
 		}
-		file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PrivKey); i {
 			case 0:
 				return &v.state
@@ -1057,18 +1057,18 @@ func file_polaris_crypto_ethsecp256k1_v1_keys_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDesc,
+			RawDescriptor: file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_polaris_crypto_ethsecp256k1_v1_keys_proto_goTypes,
-		DependencyIndexes: file_polaris_crypto_ethsecp256k1_v1_keys_proto_depIdxs,
-		MessageInfos:      file_polaris_crypto_ethsecp256k1_v1_keys_proto_msgTypes,
+		GoTypes:           file_blackfury_crypto_ethsecp256k1_v1_keys_proto_goTypes,
+		DependencyIndexes: file_blackfury_crypto_ethsecp256k1_v1_keys_proto_depIdxs,
+		MessageInfos:      file_blackfury_crypto_ethsecp256k1_v1_keys_proto_msgTypes,
 	}.Build()
-	File_polaris_crypto_ethsecp256k1_v1_keys_proto = out.File
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_rawDesc = nil
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_goTypes = nil
-	file_polaris_crypto_ethsecp256k1_v1_keys_proto_depIdxs = nil
+	File_blackfury_crypto_ethsecp256k1_v1_keys_proto = out.File
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_rawDesc = nil
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_goTypes = nil
+	file_blackfury_crypto_ethsecp256k1_v1_keys_proto_depIdxs = nil
 }

@@ -31,7 +31,7 @@ import (
 	libtypes "pkg.berachain.dev/polaris/lib/types"
 )
 
-// defaultPlugin is the default precompile plugin, should any chain running Polaris EVM not
+// defaultPlugin is the default precompile plugin, should any chain running Blackfury EVM not
 // implement their own precompile plugin. Notably, this plugin can only run the default stateless
 // precompiles provided by Go-Ethereum.
 type defaultPlugin struct {

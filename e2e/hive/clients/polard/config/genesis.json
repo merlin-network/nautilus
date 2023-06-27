@@ -2,7 +2,7 @@
   "app_name": "polaris-cosmos",
   "app_version": "v0.0.0",
   "genesis_time": "2023-05-30T23:14:44.991554Z",
-  "chain_id": "polaris-2061",
+  "chain_id": "highbury_710",
   "initial_height": 1,
   "app_hash": null,
   "app_state": {
@@ -118,7 +118,7 @@
     },
     "evm": {
       "config": {
-        "chainId": 2061,
+        "chainId": 710,
         "homesteadBlock": 0,
         "daoForkBlock": 0,
         "daoForkSupport": true,
@@ -197,7 +197,7 @@
             "signer_infos": [
               {
                 "public_key": {
-                  "@type": "/polaris.crypto.ethsecp256k1.v1.PubKey",
+                  "@type": "/blackfury.crypto.ethsecp256k1.v1.PubKey",
                   "key": "AwjItkzy4rgPzJypyOxK2YmjNhQJtLfAKQhRgBccZGDW"
                 },
                 "mode_info": {

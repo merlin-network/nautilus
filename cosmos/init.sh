@@ -23,7 +23,7 @@
 KEYS[0]="dev0"
 KEYS[1]="dev1"
 KEYS[2]="dev2"
-CHAINID="polaris-2061"
+CHAINID="highbury_710"
 MONIKER="localtestnet"
 # Remember to change to other types of keyring like 'file' in-case exposing to outside world,
 # otherwise your balance will be wiped quickly
@@ -40,7 +40,7 @@ TRACE=""
 # Path variables
 CONFIG_TOML=$HOMEDIR/config/config.toml
 APP_TOML=$HOMEDIR/config/app.toml
-POLARIS_TOML=$HOMEDIR/config/polaris.toml
+POLARIS_TOML=$HOMEDIR/config/blackfury.toml
 GENESIS=$HOMEDIR/config/genesis.json
 TMP_GENESIS=$HOMEDIR/config/tmp_genesis.json
 
@@ -70,7 +70,7 @@ if [[ $overwrite == "y" || $overwrite == "Y" ]]; then
 
 	cp ./cosmos/docker/local/config/app.toml "$APP_TOML"
 	cp ./cosmos/docker/local/config/config.toml "$CONFIG_TOML"
-	cp ./cosmos/docker/local/config/polaris.toml "$POLARIS_TOML"
+	cp ./cosmos/docker/local/config/blackfury.toml "$POLARIS_TOML"
 
 	# Set client config
 	./bin/polard config set client keyring-backend $KEYRING --home "$HOMEDIR"

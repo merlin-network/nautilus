@@ -75,7 +75,7 @@ var _ = Describe("EthTxPool", func() {
 		sp.SetNonce(addr2, 2)
 		sp.Finalize()
 		sp.Reset(ctx)
-		etp = NewPolarisEthereumTxPool()
+		etp = NewBlackfuryEthereumTxPool()
 		etp.SetNonceRetriever(sp)
 	})
 
